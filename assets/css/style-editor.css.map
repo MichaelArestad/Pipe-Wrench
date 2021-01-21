@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "style-editor.css",
+	"sources": [
+		"../sass/style-editor.scss"
+	],
+	"names": [],
+	"mappings": "AAAA;;GAEG;AAEH;;;GAGG;AAGH;;GAEG;AAGH;;;GAGG;AAGH;;;GAGG;AAGH;;;;GAIG;AAGH;;GAEG"
+}

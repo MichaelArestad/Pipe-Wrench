@@ -1,0 +1,10 @@
+@mixin footer-variables() {
+	--footer--color-text: var(--global--color-secondary);
+	--footer--color-link: var(--global--color-secondary);
+	--footer--color-link-hover: var(--global--color-secondary-hover);
+	
+	--footer--font-family: var(--global--font-secondary);
+	--footer--font-size: var(--global--font-size-md);
+
+	--footer--color-background: var(--global--color-background-dark);
+}

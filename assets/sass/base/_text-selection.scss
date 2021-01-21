@@ -1,0 +1,10 @@
+// Text selection background color
+
+::selection {
+	color: var(--global--color-white);
+	background-color: var(--global--color-text-selection) !important;
+}
+::-moz-selection {
+	color: var(--global--color-white);
+	background-color: var(--global--color-text-selection) !important;
+}
