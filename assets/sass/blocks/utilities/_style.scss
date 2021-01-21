@@ -4,6 +4,7 @@
  * These selectors set the default max width for content appearing inside a post or page.
  */
 .entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.entry-attachment):not(.woocommerce),
+.entry-content > #pico > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.entry-attachment):not(.woocommerce),
 *[class*="inner-container"] > *:not(.entry-content):not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.entry-attachment):not(.woocommerce),
 .wp-block-template-part > *:not(.entry-content):not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.entry-attachment):not(.woocommerce) {
 	@extend %responsive-aligndefault-width;
@@ -136,136 +137,145 @@
 }
 
 // Gutenberg text color options
-.has-text-color {}
+// .has-text-color {}
 
-.has-primary-color[class] {
-	color: var(--global--color-primary);
-}
+// .has-primary-color[class] {
+// 	color: var(--global--color-primary);
+// }
 
-.has-secondary-color[class] {
-	color: var(--global--color-secondary);
-}
+// .has-secondary-color[class] {
+// 	color: var(--global--color-secondary);
+// }
 
-.has-foreground-color[class] {
-	color: var(--global--color-foreground);
-}
+// .has-foreground-color[class] {
+// 	color: var(--global--color-foreground);
+// }
 
-.has-foreground-light-color[class] {
-	color: var(--global--color-foreground-low-contrast);
-}
+// .has-foreground-light-color[class] {
+// 	color: var(--global--color-foreground-low-contrast);
+// }
 
-.has-foreground-high-contrast-color[class] {
-	color: var(--global--color-foreground-high-contrast);
-}
+// .has-foreground-high-contrast-color[class] {
+// 	color: var(--global--color-foreground-high-contrast);
+// }
 
-.has-tertiary-color[class] {
-	color: var(--global--color-tertiary);
-}
+// .has-tertiary-color[class] {
+// 	color: var(--global--color-tertiary);
+// }
 
-.has-background-dark-color[class] {
-	color: var(--global--color-background-dark);
-}
+// .has-background-dark-color[class] {
+// 	color: var(--global--color-background-dark);
+// }
 
-.has-background-color[class] {
-	color: var(--global--color-background);
-}
+// .has-background-color[class] {
+// 	color: var(--global--color-background);
+// }
 
-.has-white-color[class] {
-	color: var(--global--color-white);
-}
+// .has-white-color[class] {
+// 	color: var(--global--color-white);
+// }
 
-.has-black-color[class] {
-	color: var(--global--color-black);
-}
+// .has-black-color[class] {
+// 	color: var(--global--color-black);
+// }
+
 
 // Gutenberg background-color options
-.has-background {
-	&:not(.has-background-background-color) a:not(.has-text-color),
-	p, h1, h2, h3, h4, h5, h6 {
-		color: currentColor;
-	}
-}
+// .has-background {
+// 	&:not(.has-background-background-color) a:not(.has-text-color),
+// 	p, h1, h2, h3, h4, h5, h6 {
+// 		color: currentColor;
+// 	}
+// }
 
-.has-primary-background-color[class] {
-	background-color: var(--global--color-primary);
+// .has-primary-background-color[class] {
+// 	background-color: var(--global--color-primary);
 
-	&:not(.has-text-color) {
-		color: var(--global--color-background);
-	}
-}
+// 	&:not(.has-text-color) {
+// 		color: var(--global--color-background);
+// 	}
+// }
 
-.has-secondary-background-color[class] {
-	background-color: var(--global--color-secondary);
+// .has-accent-one-background-color[class] {
+// 	background-color: var(--global--color-accent-one);
 
-	&:not(.has-text-color) {
-		color: var(--global--color-background);
-	}
-}
+// 	&:not(.has-text-color) {
+// 		color: var(--global--color-white);
+// 	}
+// }
 
-.has-foreground-background-color[class] {
-	background-color: var(--global--color-foreground);
+// .has-secondary-background-color[class] {
+// 	background-color: var(--global--color-secondary);
 
-	&:not(.has-text-color) {
-		color: var(--global--color-background);
-	}
-}
+// 	&:not(.has-text-color) {
+// 		color: var(--global--color-background);
+// 	}
+// }
 
-.has-foreground-light-background-color[class] {
-	background-color: var(--global--color-foreground-low-contrast);
+// .has-foreground-background-color[class] {
+// 	background-color: var(--global--color-foreground);
 
-	&:not(.has-text-color) {
-		color: var(--global--color-background);
-	}
-}
+// 	&:not(.has-text-color) {
+// 		color: var(--global--color-background);
+// 	}
+// }
+
+// .has-foreground-light-background-color[class] {
+// 	background-color: var(--global--color-foreground-low-contrast);
+
+// 	&:not(.has-text-color) {
+// 		color: var(--global--color-background);
+// 	}
+// }
 
 
-.has-foreground-high-contrast-background-color[class] {
-	background-color: var(--global--color-foreground-high-contrast);
+// .has-foreground-high-contrast-background-color[class] {
+// 	background-color: var(--global--color-foreground-high-contrast);
 
-	&:not(.has-text-color) {
-		color: var(--global--color-background);
-	}
-}
+// 	&:not(.has-text-color) {
+// 		color: var(--global--color-background);
+// 	}
+// }
 
-.has-tertiary-background-color[class] {
-	background-color: var(--global--color-tertiary);
+// .has-tertiary-background-color[class] {
+// 	background-color: var(--global--color-tertiary);
 
-	&:not(.has-text-color) {
-		color: var(--global--color-foreground);
-	}
-}
+// 	&:not(.has-text-color) {
+// 		color: var(--global--color-foreground);
+// 	}
+// }
 
-.has-background-dark-background-color[class] {
-	background-color: var(--global--color-background-dark);
+// .has-background-dark-background-color[class] {
+// 	background-color: var(--global--color-background-dark);
 
-	&:not(.has-text-color) {
-		color: var(--global--color-foreground);
-	}
-}
+// 	&:not(.has-text-color) {
+// 		color: var(--global--color-foreground);
+// 	}
+// }
 
-.has-background-background-color[class] {
-	background-color: var(--global--color-background);
+// .has-background-background-color[class] {
+// 	background-color: var(--global--color-background);
 
-	&:not(.has-text-color) {
-		color: var(--global--color-foreground);
-	}
-}
+// 	&:not(.has-text-color) {
+// 		color: var(--global--color-foreground);
+// 	}
+// }
 
-.has-white-background-color[class] {
-	background-color: var(--global--color-white);
+// .has-white-background-color[class] {
+// 	background-color: var(--global--color-white);
 
-	&:not(.has-text-color) {
-		color: var(--global--color-secondary);
-	}
-}
+// 	&:not(.has-text-color) {
+// 		color: var(--global--color-secondary);
+// 	}
+// }
 
-.has-black-background-color[class] {
-	background-color: var(--global--color-black);
+// .has-black-background-color[class] {
+// 	background-color: var(--global--color-black);
 
-	&:not(.has-text-color) {
-		color: var(--global--color-primary);
-	}
-}
+// 	&:not(.has-text-color) {
+// 		color: var(--global--color-primary);
+// 	}
+// }
 
 // Gutenberg Font-size options
 :root {

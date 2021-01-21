@@ -88,4 +88,56 @@ function pipewrench_enqueue_styles() {
 	wp_enqueue_style( 'pipewrench-fonts', pipewrench_fonts_url(), array(), null );
 }
 
+if ( ! function_exists( 'pipewrench_setup' ) ) :
+	/**
+	 * Sets up theme defaults and registers support for various WordPress features.
+	 *
+	 * Note that this function is hooked into the after_setup_theme hook, which
+	 * runs before the init hook. The init hook is too late for some features, such
+	 * as indicating support for post thumbnails.
+	 */
+	function pipewrench_setup() {
+	// Editor color palette.
+	$colors_theme_mod = get_theme_mod( 'custom_colors_active' );
+	$primary          = ( ! empty( $colors_theme_mod ) && 'default' === $colors_theme_mod || empty( get_theme_mod( 'pipewrench_--global--color-primary' ) ) ) ? '#150619' : get_theme_mod( 'pipewrench_--global--color-primary' );
+	$accentOne        = ( ! empty( $colors_theme_mod ) && 'default' === $colors_theme_mod || empty( get_theme_mod( 'pipewrench_--global--color-secondary' ) ) ) ? '#5A2F67' : get_theme_mod( 'pipewrench_--global--color-secondary' );
+	$accentTwo       = ( ! empty( $colors_theme_mod ) && 'default' === $colors_theme_mod || empty( get_theme_mod( 'pipewrench_--global--color-foreground' ) ) ) ? '#2F4C67' : get_theme_mod( 'pipewrench_--global--color-foreground' );
+	$accentThree         = ( ! empty( $colors_theme_mod ) && 'default' === $colors_theme_mod || empty( get_theme_mod( 'pipewrench_--global--color-tertiary' ) ) ) ? '#D33838' : get_theme_mod( 'pipewrench_--global--color-tertiary' );
+	$background       = ( ! empty( $colors_theme_mod ) && 'default' === $colors_theme_mod || empty( get_theme_mod( 'pipewrench_--global--color-background' ) ) ) ? '#FFFEFA' : get_theme_mod( 'pipewrench_--global--color-background' );
+
+	add_theme_support(
+		'editor-color-palette',
+		array(
+			array(
+				'name'  => __( 'Primary', 'pipewrench' ),
+				'slug'  => 'primary',
+				'color' => $primary,
+			),
+			array(
+				'name'  => __( 'Accent One', 'pipewrench' ),
+				'slug'  => 'accent-one',
+				'color' => $accentOne,
+			),
+			array(
+				'name'  => __( 'Foreground', 'pipewrench' ),
+				'slug'  => 'accent-two',
+				'color' => $accentTwo,
+			),
+			array(
+				'name'  => __( 'Tertiary', 'pipewrench' ),
+				'slug'  => 'accent-three',
+				'color' => $accentThree,
+			),
+			array(
+				'name'  => __( 'Background', 'pipewrench' ),
+				'slug'  => 'background',
+				'color' => $background,
+			),
+		)
+	);
+
+}
+endif;
+add_action( 'after_setup_theme', 'pipewrench_setup', 100 );
+
 ?>

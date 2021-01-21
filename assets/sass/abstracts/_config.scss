@@ -53,6 +53,9 @@ $typescale-ratio: 1.2; // Run ratio math on 1em == $typescale-base * $typescale-
 	// --global--color-alert-info: skyblue;
 	// --global--color-alert-warning: gold;
 	// --global--color-alert-error: salmon;
+	--global--color-accent-one: #5a2f67;
+	--global--color-accent-two: #2F4C67;
+	--global--color-accent-three: #D33838;
 
 	/* Spacing */
 	--global--spacing-unit: #{1.5 * $baseline-unit}; // 12px

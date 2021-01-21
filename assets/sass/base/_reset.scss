@@ -69,20 +69,20 @@
 // 	}
 // }
 
-// // body resets
-// body {
-// 	font-size: var(--global--font-size-base); /* #{$typescale-base}; */
-// 	font-weight: var(--global--font-weight);
-// 	color: var(--global--color-foreground);
-// 	text-align: left;
-// 	background-color: var(--global--color-white);
-// }
+// body resets
+body {
+	font-size: var(--global--font-size-base); /* #{$typescale-base}; */
+	font-weight: var(--global--font-weight);
+	color: var(--global--color-foreground);
+	text-align: left;
+	background-color: var(--global--color-white);
+}
 
 // @import '../base/base';
 
-// // Focus styles
-// .site *:focus {
-// 	outline-width: 1px;
-// 	outline-style: dotted;
-// 	outline-color: var(--global--color-secondary);
-// }
+// Focus styles
+.site *:focus {
+	outline-width: 1px;
+	outline-style: dotted;
+	outline-color: var(--global--color-secondary);
+}
