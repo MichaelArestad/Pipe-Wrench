@@ -78,11 +78,11 @@ body {
 	background-color: var(--global--color-white);
 }
 
-// @import '../base/base';
+@import '../base/base';
 
 // Focus styles
 .site *:focus {
 	outline-width: 1px;
 	outline-style: dotted;
-	outline-color: var(--global--color-secondary);
+	outline-color: var(--global--color-primary);
 }

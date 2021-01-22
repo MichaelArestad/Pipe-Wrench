@@ -167,9 +167,9 @@
 // 	color: var(--global--color-background-dark);
 // }
 
-// .has-background-color[class] {
-// 	color: var(--global--color-background);
-// }
+.has-background-color[class] {
+	color: var(--global--color-white);
+}
 
 // .has-white-color[class] {
 // 	color: var(--global--color-white);
@@ -188,29 +188,21 @@
 // 	}
 // }
 
-// .has-primary-background-color[class] {
-// 	background-color: var(--global--color-primary);
+.has-primary-background-color[class] {
+	background-color: var(--global--color-black);
 
-// 	&:not(.has-text-color) {
-// 		color: var(--global--color-background);
-// 	}
-// }
+	&:not(.has-text-color) {
+		color: var(--global--color-white);
+	}
+}
 
-// .has-accent-one-background-color[class] {
-// 	background-color: var(--global--color-accent-one);
+.has-secondary-background-color[class] {
+	background-color: var(--global--color-secondary);
 
-// 	&:not(.has-text-color) {
-// 		color: var(--global--color-white);
-// 	}
-// }
-
-// .has-secondary-background-color[class] {
-// 	background-color: var(--global--color-secondary);
-
-// 	&:not(.has-text-color) {
-// 		color: var(--global--color-background);
-// 	}
-// }
+	&:not(.has-text-color) {
+		color: var(--global--color-white);
+	}
+}
 
 // .has-foreground-background-color[class] {
 // 	background-color: var(--global--color-foreground);
@@ -237,13 +229,13 @@
 // 	}
 // }
 
-// .has-tertiary-background-color[class] {
-// 	background-color: var(--global--color-tertiary);
+.has-tertiary-background-color[class] {
+	background-color: var(--global--color-tertiary);
 
-// 	&:not(.has-text-color) {
-// 		color: var(--global--color-foreground);
-// 	}
-// }
+	&:not(.has-text-color) {
+		color: var(--global--color-white);
+	}
+}
 
 // .has-background-dark-background-color[class] {
 // 	background-color: var(--global--color-background-dark);
@@ -253,13 +245,13 @@
 // 	}
 // }
 
-// .has-background-background-color[class] {
-// 	background-color: var(--global--color-background);
+.has-background-background-color[class] {
+	background-color: var(--global--color-white);
 
-// 	&:not(.has-text-color) {
-// 		color: var(--global--color-foreground);
-// 	}
-// }
+	&:not(.has-text-color) {
+		color: var(--global--color-black);
+	}
+}
 
 // .has-white-background-color[class] {
 // 	background-color: var(--global--color-white);

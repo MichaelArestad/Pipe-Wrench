@@ -12,11 +12,11 @@
 
 		&:hover {
 			color: var(--global--color-primary-hover);
-			border-color: var(--global--color-secondary);
+			border-color: var(--global--color-primary);
 		}
 
 		&:focus {
-			color: var(--global--color-secondary);
+			color: var(--global--color-primary);
 		}
 
 		&:active {

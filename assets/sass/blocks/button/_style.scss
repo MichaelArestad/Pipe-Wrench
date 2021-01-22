@@ -39,7 +39,10 @@ input[type="submit"],
 			&:hover,
 			&:focus,
 			&.has-focus {
-				color: var(--global--color-primary);
+				// color: var(--global--color-primary);
+				background: var(--global--color-primary);
+				color: var(--global--color-background);
+				border-color: var(--global--color-primary);
 			}
 		}
 	}

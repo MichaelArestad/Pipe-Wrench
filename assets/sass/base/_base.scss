@@ -1,22 +1,22 @@
 // Links styles
-// a {
-// 	border-bottom: 1px solid var(--global--color-secondary);
+a {
+	border-bottom: 1px solid var(--global--color-primary);
 // 	color: var( --wp--style--color--link, var(--global--color-primary) );
 // 	text-decoration: underline;
-// 	transition: border-color 0.1s ease-out;
+	transition: all 0.1s ease-out;
 
-// 	&:hover,
-// 	&:focus {
-// 		border-bottom-color: transparent;
-// 	}
+	&:hover,
+	&:focus {
+		border-bottom-color: transparent;
+	}
 
-// 	&:hover {
-// 		color: var(--global--color-primary-hover);
-// 	}
+	&:hover {
+		color: var(--global--color-link-highlight);
+	}
 
-// 	&:focus {
-// 		color: var(--global--color-secondary);
-// 	}
+	&:focus {
+		color: var(--global--color-primary);
+	}
 
 // 	&:active {
 // 		color: var( --wp--style--color--link, var(--global--color-primary) );
@@ -32,7 +32,7 @@
 // 			border-bottom-color: transparent;
 // 		}
 // 	}
-// }
+}
 // Enforce the custom link color even if a custom background color has been set.
 // The extra specificity here is required to override the background color styles.
 // .has-background:not(.has-background-background-color) {

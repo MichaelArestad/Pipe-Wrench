@@ -97,12 +97,26 @@ if ( ! function_exists( 'pipewrench_setup' ) ) :
 	 * as indicating support for post thumbnails.
 	 */
 	function pipewrench_setup() {
+		// Add support for editor styles.
+		add_theme_support( 'editor-styles' );
+
+		$editor_stylesheet_path = './assets/css/style-editor.css';
+
+		// Enqueue editor styles.
+		add_editor_style(
+			array(
+				pipewrench_fonts_url(),
+				'./assets/css/style-editor.css',
+			)
+		);
+
+
 	// Editor color palette.
 	$colors_theme_mod = get_theme_mod( 'custom_colors_active' );
 	$primary          = ( ! empty( $colors_theme_mod ) && 'default' === $colors_theme_mod || empty( get_theme_mod( 'pipewrench_--global--color-primary' ) ) ) ? '#150619' : get_theme_mod( 'pipewrench_--global--color-primary' );
-	$accentOne        = ( ! empty( $colors_theme_mod ) && 'default' === $colors_theme_mod || empty( get_theme_mod( 'pipewrench_--global--color-secondary' ) ) ) ? '#5A2F67' : get_theme_mod( 'pipewrench_--global--color-secondary' );
-	$accentTwo       = ( ! empty( $colors_theme_mod ) && 'default' === $colors_theme_mod || empty( get_theme_mod( 'pipewrench_--global--color-foreground' ) ) ) ? '#2F4C67' : get_theme_mod( 'pipewrench_--global--color-foreground' );
-	$accentThree         = ( ! empty( $colors_theme_mod ) && 'default' === $colors_theme_mod || empty( get_theme_mod( 'pipewrench_--global--color-tertiary' ) ) ) ? '#D33838' : get_theme_mod( 'pipewrench_--global--color-tertiary' );
+	$secondary        = ( ! empty( $colors_theme_mod ) && 'default' === $colors_theme_mod || empty( get_theme_mod( 'pipewrench_--global--color-secondary' ) ) ) ? '#5A2F67' : get_theme_mod( 'pipewrench_--global--color-secondary' );
+	$foreground       = ( ! empty( $colors_theme_mod ) && 'default' === $colors_theme_mod || empty( get_theme_mod( 'pipewrench_--global--color-foreground' ) ) ) ? '#2F4C67' : get_theme_mod( 'pipewrench_--global--color-foreground' );
+	$tertiary         = ( ! empty( $colors_theme_mod ) && 'default' === $colors_theme_mod || empty( get_theme_mod( 'pipewrench_--global--color-tertiary' ) ) ) ? '#D33838' : get_theme_mod( 'pipewrench_--global--color-tertiary' );
 	$background       = ( ! empty( $colors_theme_mod ) && 'default' === $colors_theme_mod || empty( get_theme_mod( 'pipewrench_--global--color-background' ) ) ) ? '#FFFEFA' : get_theme_mod( 'pipewrench_--global--color-background' );
 
 	add_theme_support(
@@ -114,25 +128,20 @@ if ( ! function_exists( 'pipewrench_setup' ) ) :
 				'color' => $primary,
 			),
 			array(
-				'name'  => __( 'Accent One', 'pipewrench' ),
-				'slug'  => 'accent-one',
-				'color' => $accentOne,
-			),
-			array(
-				'name'  => __( 'Foreground', 'pipewrench' ),
-				'slug'  => 'accent-two',
-				'color' => $accentTwo,
+				'name'  => __( 'Secondary', 'pipewrench' ),
+				'slug'  => 'secondary',
+				'color' => $secondary,
 			),
 			array(
 				'name'  => __( 'Tertiary', 'pipewrench' ),
-				'slug'  => 'accent-three',
-				'color' => $accentThree,
+				'slug'  => 'tertiary',
+				'color' => $tertiary,
 			),
 			array(
 				'name'  => __( 'Background', 'pipewrench' ),
 				'slug'  => 'background',
 				'color' => $background,
-			),
+			)
 		)
 	);
 

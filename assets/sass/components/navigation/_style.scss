@@ -37,6 +37,22 @@
 					display: inline-block;
 					padding: 5px 14px 0;
 					margin-top: -5px;
+					transition: all .1s ease-in-out;
+					box-shadow: 0 0 0 2px transparent;
+
+					&:hover,
+					&:active,
+					&:focus {
+						// background: var(--global--color-secondary);
+						background: var(--global--color-primary);
+						color: var(--global--color-background);
+						// border-radius: 8px;
+						// border-color: #CC87E1;
+						// border-color: var(--global--color-secondary);
+						// border-color: var(--global--color-s);
+						// border-color: var(--global--color-secondary);
+						// box-shadow: 0 0 0 2px #CC87E1;
+					}
 				}
 			}
 		}
@@ -383,16 +399,16 @@
 		font-size: 24px;
 		// font-family: var(--global--font-primary);
 		// text-transform: uppercase;
-		// color: var(--primary-nav--color-link);
+		color: var(--global--color-white);
 
 		// &:hover {
 		// 	color: var(--primary-nav--color-link-hover);
 		// 	border-color: var(--primary-nav--color-border);
 		// }
 
-		// &:focus {
-		// 	color: var(--global--color-secondary);
-		// }
+		&:focus {
+			color: var(--global--color-primary);
+		}
 
 		// &:active {
 		// 	color: var(--primary-nav--color-link);
@@ -400,8 +416,8 @@
 	}
 
 	// Menu Item Link
-	// a {
-		// color: currentColor;
+	a {
+		color: var(--global--color-primary);
 		// display: inline;
 		// font-family: var(--primary-nav--font-family-mobile);
 		// font-size: var(--primary-nav--font-size-mobile);
@@ -414,16 +430,16 @@
 		// 	font-weight: var(--primary-nav--font-weight);
 		// }
 
-		// & + svg {
-		// 	fill: currentColor;
-		// }
+		& + svg {
+			fill: currentColor;
+		}
 
-		// &:hover,
-		// &:link,
-		// &:visited {
-		// 	color: currentColor;
-		// }
-	// }
+		&:hover,
+		&:link,
+		&:visited {
+			color: var(--global--color-primary);
+		}
+	}
 
 	// Sub-menu depth indicators + text styles
 	// .sub-menu {
@@ -493,20 +509,20 @@
 
 .page-template-pageDark .primary-navigation,
 .page-template-pageDark .woo-navigation {
-	color: var(--global--color-secondary) !important;
+	color: var(--global--color-primary) !important;
 
 	.menu-item > a {
 		&:hover {
-			color: var(--global--color-secondary);
-			border-color: var(--global--color-secondary);
+			color: var(--global--color-primary);
+			border-color: var(--global--color-primary);
 		}
 
 		&:focus {
-			color: var(--global--color-secondary);
+			color: var(--global--color-primary);
 		}
 
 		&:active {
-			color: var(--global--color-secondary);
+			color: var(--global--color-primary);
 		}
 	}
 }

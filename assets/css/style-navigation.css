@@ -35,6 +35,12 @@
 		display: inline-block;
 		padding: 5px 14px 0;
 		margin-top: -5px;
+		transition: all .1s ease-in-out;
+		box-shadow: 0 0 0 2px transparent;
+	}
+	.primary-navigation.primary-navigation.primary-navigation .primary-menu-container > ul > li:last-child a:hover, .primary-navigation.primary-navigation.primary-navigation .primary-menu-container > ul > li:last-child a:active, .primary-navigation.primary-navigation.primary-navigation .primary-menu-container > ul > li:last-child a:focus {
+		background: var(--global--color-primary);
+		color: var(--global--color-background);
 	}
 }
 
@@ -42,27 +48,50 @@
 .woo-navigation .menu-item > a {
 	font-family: var(--global--font-primary);
 	font-size: 24px;
+	color: var(--global--color-white);
+}
+
+.primary-navigation .menu-item > a:focus,
+.woo-navigation .menu-item > a:focus {
+	color: var(--global--color-primary);
+}
+
+.primary-navigation a,
+.woo-navigation a {
+	color: var(--global--color-primary);
+}
+
+.primary-navigation a + svg,
+.woo-navigation a + svg {
+	fill: currentColor;
+}
+
+.primary-navigation a:hover, .primary-navigation a:link, .primary-navigation a:visited,
+.woo-navigation a:hover,
+.woo-navigation a:link,
+.woo-navigation a:visited {
+	color: var(--global--color-primary);
 }
 
 .page-template-pageDark .primary-navigation,
 .page-template-pageDark .woo-navigation {
-	color: var(--global--color-secondary) !important;
+	color: var(--global--color-primary) !important;
 }
 
 .page-template-pageDark .primary-navigation .menu-item > a:hover,
 .page-template-pageDark .woo-navigation .menu-item > a:hover {
-	color: var(--global--color-secondary);
-	border-color: var(--global--color-secondary);
+	color: var(--global--color-primary);
+	border-color: var(--global--color-primary);
 }
 
 .page-template-pageDark .primary-navigation .menu-item > a:focus,
 .page-template-pageDark .woo-navigation .menu-item > a:focus {
-	color: var(--global--color-secondary);
+	color: var(--global--color-primary);
 }
 
 .page-template-pageDark .primary-navigation .menu-item > a:active,
 .page-template-pageDark .woo-navigation .menu-item > a:active {
-	color: var(--global--color-secondary);
+	color: var(--global--color-primary);
 }
 
 /*# sourceMappingURL=style-navigation.css.map */

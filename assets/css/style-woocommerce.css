@@ -24,7 +24,7 @@
 
 @media only screen and (min-width: 652px) {
 	:root {
-		--responsive--aligndefault-width: min(calc(100vw - 2 * var(--global--spacing-horizontal)), 620px);
+		--responsive--aligndefault-width: min(calc(100vw - 2 * var(--global--spacing-horizontal)), 560px);
 		--responsive--alignwide-width: min(calc(100vw - 2 * var(--global--spacing-horizontal)), 790px);
 	}
 }
@@ -550,7 +550,7 @@ body[class*="woocommerce"] #page .site-content .woocommerce input.button:disable
 }
 
 #content .wc-block-grid .wc-block-grid__product-rating .star-rating span:before {
-	color: var(--global--color-secondary);
+	color: var(--global--color-primary);
 }
 
 #content .wc-block-grid .wc-block-grid__product-price {
