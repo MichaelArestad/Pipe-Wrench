@@ -15,6 +15,18 @@
 	border: none;
 	position: relative;
 	z-index: 1;
+	margin-top: 64px;
+
+	@include media(tablet-only) {
+		max-width: 50%;
+	}
+	@include media(mobile-only) {
+		max-width: 60%;
+		margin-top: 0;
+	}
+	@include media(tablet) {
+		margin-top: 0;
+	}
 }
 
 // Site title

@@ -23,18 +23,32 @@
 .site-header {
 	// margin: var(--global--spacing-vertical) var(--global--spacing-vertical) 0;
 	padding-top: 28px;
-	padding-bottom: $baseline-unit * 9;
+	padding-bottom: $baseline-unit;
 
 	.has-main-navigation & {
 		padding-top: 28px;
 	}
 
 	.page-template-pageDark & {
-		margin: var(--global--spacing-vertical) var(--global--spacing-vertical) 0;
+		margin: 16px 16px 0;
+
+		@include media(mobile) {
+			margin: var(--global--spacing-vertical) var(--global--spacing-vertical) 0;
+		}
 	}
 
 	.home & {
 		padding-top: 56px;
+	}
+
+	// @include media(mobile) {
+	// 	padding-bottom: $baseline-unit * 4;
+	// }
+	@include media(tablet) {
+		padding-bottom: $baseline-unit * 8;
+	}
+	@include media(laptop) {
+		padding-bottom: $baseline-unit * 9;
 	}
 
 	// padding-top: calc(3 * var(--global--spacing-vertical));
@@ -57,6 +71,12 @@
 .site-main {
 	margin: 0 var(--global--spacing-vertical) var(--global--spacing-vertical);
 	padding-bottom: #{$baseline-unit * 15};
+	padding-left: #{$baseline-unit * 5};
+	padding-right: #{$baseline-unit * 5};
+
+	@include media(mobile-only) {
+		margin: 0 16px 16px;
+	}
 }
 
 // .site-main > * {
@@ -109,38 +129,46 @@
 // }
 
 .entry-header.entry-header {
-	margin-bottom: $baseline-unit * 12;
+	margin-bottom: $baseline-unit * 5;
+
+	@include media(tablet) {
+		margin-bottom: $baseline-unit * 8;
+	}
+	@include media(laptop) {
+		margin-bottom: $baseline-unit * 12;
+	}
 }
 
 /*
  * Block & non-gutenberg content wrapper children
  * - Sets spacing-vertical margin logic
  */
-// .site-footer > *,
-// .site-main > article > *, // apply vertical margins to article level
-// .site-main > .not-found > *, // apply vertical margins to article level
-// .entry-content > *,
-// [class*="inner-container"] > *,
-// .wp-block-template-part > * {
+.site-footer > *,
+.site-main > article > *, // apply vertical margins to article level
+.site-main > .not-found > *, // apply vertical margins to article level
+.entry-content > *,
+.entry-content > #pico > *,
+[class*="inner-container"] > *,
+.wp-block-template-part > * {
 
-// 	// margin-top: calc( 0.666 * var(--global--spacing-vertical) );
-// 	// margin-bottom: calc( 0.666 * var(--global--spacing-vertical) );
-// 	margin-top: 40px;
-// 	margin-bottom: 40px;
+	// margin-top: calc( 0.666 * var(--global--spacing-vertical) );
+	// margin-bottom: calc( 0.666 * var(--global--spacing-vertical) );
+	margin-top: 40px;
+	margin-bottom: 40px;
 
-// 	@include media(mobile) {
-// 		margin-top: var(--global--spacing-vertical);
-// 		margin-bottom: var(--global--spacing-vertical);
-// 	}
+	@include media(mobile) {
+		margin-top: var(--global--spacing-vertical);
+		margin-bottom: var(--global--spacing-vertical);
+	}
 
-// 	&:first-child {
-// 		margin-top: 0;
-// 	}
+	&:first-child {
+		margin-top: 0;
+	}
 
-// 	&:last-child {
-// 		margin-bottom: 0;
-// 	}
-// }
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
 
 /*
  * Block & non-gutenberg content wrapper children

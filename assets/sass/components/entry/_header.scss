@@ -2,7 +2,6 @@
 .entry-header {
 	max-width: 1000px;
 	margin: 0 auto;
-	padding: 0 40px;
 }
 
 .entry-title,
@@ -13,6 +12,8 @@
 	text-align: center;
 	font-weight: 500;
 	line-height: 1;
+
+	
 	// letter-spacing: var(--heading--letter-spacing-h2);
 	// line-height: var(--heading--line-height);
 	// overflow-wrap: break-word;
@@ -32,4 +33,14 @@
 	// 		color: var(--entry-header--color-link);
 	// 	}
 	// }
+
+	@include media(laptop-only) {
+		font-size: 80px;
+	}
+	@include media(tablet-only) {
+		font-size: 40px;
+	}
+	@include media(mobile-only) {
+		font-size: 32px;
+	}
 }

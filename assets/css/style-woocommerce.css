@@ -22,7 +22,7 @@
 	}
 }
 
-@media only screen and (min-width: 652px) {
+@media only screen and (min-width: 960px) {
 	:root {
 		--responsive--aligndefault-width: min(calc(100vw - 2 * var(--global--spacing-horizontal)), 560px);
 		--responsive--alignwide-width: min(calc(100vw - 2 * var(--global--spacing-horizontal)), 790px);
@@ -1418,7 +1418,7 @@ body[class*="woocommerce"] #page table.shop_table td.product-remove {
 	border-width: 0;
 }
 
-@media only screen and (min-width: 822px) {
+@media only screen and (min-width: 1024px) {
 	body[class*="woocommerce"] #page table.shop_table td.product-remove {
 		height: var(--global--font-size-sm);
 		width: var(--global--font-size-sm);
@@ -1703,7 +1703,7 @@ body[class*="woocommerce"] #page .entry-content .woocommerce-MyAccount-navigatio
 	margin-top: 0;
 }
 
-@media only screen and (min-width: 592px) {
+@media only screen and (min-width: 768px) {
 	body[class*="woocommerce"] #page .entry-content .woocommerce-MyAccount-navigation {
 		width: 20%;
 	}
@@ -1723,7 +1723,7 @@ body[class*="woocommerce"] #page .woocommerce-MyAccount-content fieldset {
 	border-radius: 3px;
 }
 
-@media only screen and (min-width: 592px) {
+@media only screen and (min-width: 768px) {
 	body[class*="woocommerce"] #page .woocommerce-MyAccount-content {
 		width: calc(80% - var(--global--spacing-horizontal));
 	}

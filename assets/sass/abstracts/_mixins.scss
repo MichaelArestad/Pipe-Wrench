@@ -45,10 +45,10 @@
  $default_width: 560px;
  $alignwide_width: 790px;
  $breakpoint_sm: 482px;
- $breakpoint_md: 592px;
- $breakpoint_lg: 652px;
- $breakpoint_xl: 822px;
- $breakpoint_xxl: 1024px;
+ $breakpoint_md: 768px;
+ $breakpoint_lg: 960px;
+ $breakpoint_xl: 1024px;
+ $breakpoint_xxl: 1224px;
 
  // Responsive breakpoints mixin
  @mixin media( $res ) {
