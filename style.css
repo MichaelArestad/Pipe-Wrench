@@ -1434,15 +1434,19 @@ dd {
 }
 
 p {
-	line-height: var(--wp--typography--line-height, --global--line-height-body);
+	line-height: 1.5;
 }
 
-p.has-background {
-	padding: var(--global--spacing-unit);
+@media only screen and (min-width: 482px) {
+	p {
+		line-height: 1.7;
+	}
 }
 
-p.has-text-color a {
-	color: var(--wp--style--color--link, var(--global--color-primary));
+@media only screen and (min-width: 768px) {
+	p {
+		line-height: var(--wp--typography--line-height, --global--line-height-body);
+	}
 }
 
 .a8c-posts-list__listing {
