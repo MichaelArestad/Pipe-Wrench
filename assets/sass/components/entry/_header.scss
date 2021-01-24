@@ -8,7 +8,7 @@
 .editor-post-title__block .editor-post-title__input { // To target the editor
 	color: var(--global--color-primary);
 	font-family: var(--global--font-primary);
-	font-size: 120px;
+	font-size: 40px;
 	text-align: center;
 	font-weight: 500;
 	line-height: 1;
@@ -34,13 +34,10 @@
 	// 	}
 	// }
 
-	@include media(laptop-only) {
-		font-size: 80px;
+	@include media(mobile) {
+		font-size: 64px;
 	}
-	@include media(tablet-only) {
-		font-size: 40px;
-	}
-	@include media(mobile-only) {
-		font-size: 32px;
+	@include media(laptop) {
+		font-size: 120px;
 	}
 }

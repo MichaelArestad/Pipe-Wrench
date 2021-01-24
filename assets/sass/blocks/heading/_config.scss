@@ -2,11 +2,11 @@
 	--heading--font-family: var(--global--font-primary);
 	--heading--line-height: 1.3;
 
-	--heading--font-size-h6: var(--global--font-size-base);
+	--heading--font-size-h6: var(--global--font-size-sm);
 	--heading--font-size-h5: var(--global--font-size-md);
 	--heading--font-size-h4: var(--global--font-size-lg);
-	--heading--font-size-h3: 40px;
-	--heading--font-size-h2: 64px;
+	--heading--font-size-h3: var(--global--font-size-xl);
+	--heading--font-size-h2: var(--global--font-size-xxl);
 	--heading--font-size-h1: var(--global--font-size-xxxl);
 
 	--heading--letter-spacing-h6: var(--global--letter-spacing);
@@ -21,7 +21,7 @@
 	--heading--line-height-h4: 1.3;
 	--heading--line-height-h3: 1;
 	--heading--line-height-h2: 1;
-	--heading--line-height-h1: var(--heading--line-height);
+	--heading--line-height-h1: 1;
 
 	--heading--font-weight: normal;
 	--heading--font-weight-strong: 600;

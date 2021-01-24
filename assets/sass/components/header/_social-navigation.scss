@@ -1,4 +1,5 @@
 .social-navigation {
+	padding-bottom: $baseline-unit;
 
 	& > div > ul {
 		align-content: center;
@@ -26,14 +27,18 @@
 		color: var(--social-nav--color-link);
 		display: inline-block;
 		padding: 0 var(--social-nav--padding);
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
 
 		&:hover,
 		&:focus {
-			color: var(--social-nav--color-link-hover);
+			color: var(--global--color-black);
+			background: var(--global--color-white);
 		}
 
 		&:active {
-			color: var(--social-nav--color-link);
+			color: var(--social-nav--color-black);
 		}
 	}
 

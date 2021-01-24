@@ -24,3 +24,23 @@
 	background: var(--global--color-background);
 	color: var(--global--color-primary);
 }
+
+.page-template-pageFancy {
+	.entry-header {
+		background: url("./assets/img/leafy-dark.png") no-repeat center bottom;
+		padding-bottom: 20px;
+		background-size: 120px auto;
+		
+		@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+			background-image: url("./assets/img/leafy-dark_2x.png");
+		}
+		@include media(mobile) {
+			padding-bottom: 24px;
+		background-size: 160px auto;
+		}
+		@include media(laptop) {
+			padding-bottom: 50px;
+			background-size: 320px auto;
+		}
+	}
+}

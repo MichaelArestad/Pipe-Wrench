@@ -19,6 +19,10 @@ input[type="submit"],
 	// font-weight: var(--button--font-weight);
 	// line-height: var(--button--line-height);
 
+	@include media(mobile-only) {
+		font-size: 18px;
+	}
+
 	// Outline Style
 	&.is-style-outline {
 		// border: none;

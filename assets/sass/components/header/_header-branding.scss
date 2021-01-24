@@ -27,13 +27,23 @@
 	@include media(tablet) {
 		margin-top: 0;
 	}
+
+	&.is-compact {
+		@include media(mobile-only) {
+			max-width: 160px;
+			margin-top: #{$baseline-unit * 4};
+		}
+	}
 }
 
 // Site title
 
 .site-title {
+	margin-top: 40px;
+	margin-bottom: 0;
+	text-transform: uppercase;
 
-	color: var(--branding--color-link);
+	color: var(--global--color-primary);
 	// font-family: var(--branding--title--font-family);
 	// font-size: var(--branding--title--font-size-mobile);
 	// letter-spacing: normal;
@@ -59,7 +69,7 @@
 
 		&:hover,
 		&:focus {
-			color: var(--global--color-white);
+			color: var(--global--color-primary);
 			// background-size: 8px 0px;
 			text-decoration: underline;
 		}

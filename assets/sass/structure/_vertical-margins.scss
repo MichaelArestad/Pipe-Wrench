@@ -22,11 +22,11 @@
 
 .site-header {
 	// margin: var(--global--spacing-vertical) var(--global--spacing-vertical) 0;
-	padding-top: 28px;
+	padding-top: 36px;
 	padding-bottom: $baseline-unit;
 
 	.has-main-navigation & {
-		padding-top: 28px;
+		padding-top: 36px;
 	}
 
 	.page-template-pageDark & {
@@ -170,6 +170,12 @@
 	}
 }
 
+.site-footer > * {
+	@include media(mobile) {
+		margin-top: 0;
+	}
+}
+
 /*
  * Block & non-gutenberg content wrapper children
  * - Sets spacing-unit margins
@@ -230,5 +236,6 @@
 }
 
 .footer-navigation {
-	padding-top: var(--global--spacing-vertical);
+	padding-top: $baseline-unit * 4;
+	margin: 0;
 }

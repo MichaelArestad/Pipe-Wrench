@@ -8,7 +8,7 @@ Description: Seedlet is a free WordPress theme. A two-column layout and classica
 Requires at least: 4.9.6
 Tested up to: 5.4.1
 Requires PHP: 5.6.2
-Version: 0.0
+Version: 0.0.1
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Template: seedlet
@@ -45,7 +45,12 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	--global--font-primary: var(--font-headings, 'Teko', sans-serif);
 	--global--font-secondary: var(--font-base, -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif);
 	/* Font Size */
-	--global--font-size-md: 20px;
+	--global--font-size-sm: 16px;
+	--global--font-size-md: 24px;
+	--global--font-size-lg: 32px;
+	--global--font-size-xl: 40px;
+	--global--font-size-xxl: 64px;
+	--global--font-size-xxxl: 120px;
 	/* Font Weight */
 	/* Line Height */
 	--global--line-height-body: 1.9;
@@ -100,11 +105,11 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	--cover--color-background: var(--global--color-tertiary);
 	--heading--font-family: var(--global--font-primary);
 	--heading--line-height: 1.3;
-	--heading--font-size-h6: var(--global--font-size-base);
+	--heading--font-size-h6: var(--global--font-size-sm);
 	--heading--font-size-h5: var(--global--font-size-md);
 	--heading--font-size-h4: var(--global--font-size-lg);
-	--heading--font-size-h3: 40px;
-	--heading--font-size-h2: 64px;
+	--heading--font-size-h3: var(--global--font-size-xl);
+	--heading--font-size-h2: var(--global--font-size-xxl);
 	--heading--font-size-h1: var(--global--font-size-xxxl);
 	--heading--letter-spacing-h6: var(--global--letter-spacing);
 	--heading--letter-spacing-h5: var(--global--letter-spacing);
@@ -117,7 +122,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	--heading--line-height-h4: 1.3;
 	--heading--line-height-h3: 1;
 	--heading--line-height-h2: 1;
-	--heading--line-height-h1: var(--heading--line-height);
+	--heading--line-height-h1: 1;
 	--heading--font-weight: normal;
 	--heading--font-weight-strong: 600;
 	--latest-posts--title-font-family: var(--heading--font-family);
@@ -162,6 +167,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	--utilities--font-size-xxxl: var(--global--font-size-xxxl);
 	--primary-nav--font-weight: 600;
 	--primary-nav--color-link: var(--global--color-primary);
+	--social-nav--color-link: var(--global--color-white);
+	--social-nav--color-link-hover: var(--global--color-white);
 	--entry-header--color: var(--global--color-primary);
 	--entry-header--color-link: currentColor;
 	--entry-header--color-hover: var(--global--color-primary-hover);
@@ -181,7 +188,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	--footer--color-link: var(--global--color-primary);
 	--footer--color-link-hover: var(--global--color-primary-hover);
 	--footer--font-family: var(--global--font-secondary);
-	--footer--font-size: var(--global--font-size-md);
+	--footer--font-size: var(--global--font-size-sm);
 	--footer--color-background: var(--global--color-background-dark);
 	--pagination--color-text: var(--global--color-foreground);
 	--pagination--color-link: var(--global--color-primary);
@@ -215,6 +222,12 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	--global--color-background: #150619;
 	--global--color-background-dark: #FFFEFA;
 	--global--color-link-highlight: #CD8CE1;
+}
+
+@media only screen and (max-width: 481px) {
+	:root {
+		--global--line-height-body: 1.5;
+	}
 }
 
 /**
@@ -408,7 +421,7 @@ a:focus {
 
 @media only screen and (min-width: 960px) {
 	:root {
-		--responsive--aligndefault-width: min(calc(100vw - 2 * var(--global--spacing-horizontal)), 560px);
+		--responsive--aligndefault-width: min(calc(100vw - 2 * var(--global--spacing-horizontal)), 600px);
 		--responsive--alignwide-width: min(calc(100vw - 2 * var(--global--spacing-horizontal)), 790px);
 	}
 }
@@ -463,12 +476,12 @@ a:focus {
  * - Set vertical padding and horizontal margins
  */
 .site-header {
-	padding-top: 28px;
+	padding-top: 36px;
 	padding-bottom: 8px;
 }
 
 .has-main-navigation .site-header {
-	padding-top: 28px;
+	padding-top: 36px;
 }
 
 .page-template-pageDark .site-header {
@@ -591,6 +604,12 @@ a:focus {
 	margin-bottom: 0;
 }
 
+@media only screen and (min-width: 482px) {
+	.site-footer > * {
+		margin-top: 0;
+	}
+}
+
 /*
  * Block & non-gutenberg content wrapper children
  * - Sets spacing-unit margins
@@ -608,7 +627,8 @@ a:focus {
 }
 
 .footer-navigation {
-	padding-top: var(--global--spacing-vertical);
+	padding-top: 32px;
+	margin: 0;
 }
 
 body {
@@ -650,6 +670,12 @@ body {
 	font-family: var(--global--font-primary);
 	font-size: 24px;
 	font-weight: 500;
+}
+
+@media only screen and (max-width: 481px) {
+	.wp-block-button {
+		font-size: 18px;
+	}
 }
 
 .wp-block-button.is-style-outline.wp-block-button__link,
@@ -949,33 +975,13 @@ body {
 	max-width: none;
 }
 
-.wp-block-group .wp-block-group__inner-container {
-	margin-right: auto;
-	margin-left: auto;
-}
-
 .wp-block-group .wp-block-group__inner-container > * {
-	margin-top: calc( 0.666 * var(--global--spacing-vertical));
-	margin-bottom: calc( 0.666 * var(--global--spacing-vertical));
-}
-
-@media only screen and (min-width: 482px) {
-	.wp-block-group .wp-block-group__inner-container > * {
-		margin-top: var(--global--spacing-vertical);
-		margin-bottom: var(--global--spacing-vertical);
-	}
-}
-
-.wp-block-group .wp-block-group__inner-container > *:first-child {
-	margin-top: 0;
-}
-
-.wp-block-group .wp-block-group__inner-container > *:last-child {
-	margin-bottom: 0;
+	margin-top: 24px;
+	margin-bottom: 24px;
 }
 
 .wp-block-group.has-background {
-	padding: calc( 0.666 * var(--global--spacing-vertical));
+	padding: 24px;
 }
 
 @media only screen and (min-width: 482px) {
@@ -989,6 +995,11 @@ body {
 		margin-right: -56px;
 		margin-left: -56px;
 	}
+}
+
+.widget .wp-block-group {
+	margin-right: 0;
+	margin-left: 0;
 }
 
 h1, .h1,
@@ -1012,41 +1023,86 @@ h6 strong, .h6 strong {
 }
 
 h1, .h1 {
-	font-size: var(--heading--font-size-h1);
+	font-size: var(--heading--font-size-h3);
 	letter-spacing: var(--heading--letter-spacing-h1);
 	line-height: var(--heading--line-height-h1);
+	font-weight: 500;
+}
+
+@media only screen and (min-width: 482px) {
+	h1, .h1 {
+		font-size: var(--heading--font-size-h2);
+	}
+}
+
+@media only screen and (min-width: 960px) {
+	h1, .h1 {
+		font-size: var(--heading--font-size-h1);
+	}
 }
 
 h2, .h2 {
-	font-size: var(--heading--font-size-h2);
+	font-size: var(--heading--font-size-h4);
 	letter-spacing: var(--heading--letter-spacing-h2);
 	line-height: var(--heading--line-height-h2);
 	font-weight: 300;
 }
 
+@media only screen and (min-width: 482px) {
+	h2, .h2 {
+		font-size: var(--heading--font-size-h2);
+	}
+}
+
 h3, .h3 {
-	font-size: var(--heading--font-size-h3);
+	font-size: var(--heading--font-size-h5);
 	letter-spacing: var(--heading--letter-spacing-h3);
 	line-height: var(--heading--line-height-h3);
 	font-weight: 500;
 }
 
+@media only screen and (min-width: 482px) {
+	h3, .h3 {
+		font-size: var(--heading--font-size-h3);
+	}
+}
+
 h4, .h4 {
-	font-size: var(--heading--font-size-h4);
+	font-size: var(--heading--font-size-h5);
 	letter-spacing: var(--heading--letter-spacing-h4);
 	line-height: var(--heading--line-height-h4);
 }
 
+@media only screen and (min-width: 482px) {
+	h4, .h4 {
+		font-size: var(--heading--font-size-h4);
+		font-weight: 500;
+	}
+}
+
 h5, .h5 {
-	font-size: var(--heading--font-size-h5);
+	font-size: 18px;
 	letter-spacing: var(--heading--letter-spacing-h5);
 	line-height: var(--heading--line-height-h5);
+	font-weight: 500;
+}
+
+@media only screen and (min-width: 482px) {
+	h5, .h5 {
+		font-size: var(--heading--font-size-h5);
+	}
 }
 
 h6, .h6 {
 	font-size: var(--heading--font-size-h6);
 	letter-spacing: var(--heading--letter-spacing-h6);
 	line-height: var(--heading--line-height-h6);
+}
+
+@media only screen and (min-width: 482px) {
+	h6, .h6 {
+		font-weight: 600;
+	}
 }
 
 .wp-block-image {
@@ -1284,42 +1340,16 @@ img {
 	display: block;
 }
 
-ul,
-ol {
-	font-family: var(--list--font-family);
-	margin: 0;
-	padding-right: calc(2 * var(--global--spacing-horizontal));
+.entry-content ul li, .entry-content
+ol li {
+	margin-bottom: 24px;
 }
 
-ul.aligncenter,
-ol.aligncenter {
-	list-style-position: inside;
-	padding: 0;
-}
-
-ul.alignright,
-ol.alignright {
-	list-style-position: inside;
-	text-align: left;
-	padding: 0;
-}
-
-ul {
-	list-style-type: disc;
-}
-
-ol {
-	list-style-type: decimal;
-}
-
-dt {
-	font-family: var(--definition-term--font-family);
-	font-weight: bold;
-}
-
-dd {
-	margin: 0;
-	padding-right: calc(2 * var(--global--spacing-horizontal));
+@media only screen and (max-width: 481px) {
+	ul,
+	ol {
+		padding-right: var(--global--spacing-horizontal);
+	}
 }
 
 .wp-block-media-text {
@@ -1979,18 +2009,6 @@ pre.wp-block-verse {
 	clear: both;
 }
 
-.has-left-content {
-	justify-content: flex-start;
-}
-
-.has-right-content {
-	justify-content: flex-end;
-}
-
-.has-parallax {
-	background-attachment: fixed;
-}
-
 .has-background-color[class] {
 	color: var(--global--color-white);
 }
@@ -2273,8 +2291,18 @@ pre.wp-block-verse {
 	}
 }
 
+@media only screen and (max-width: 481px) {
+	.default-logo.is-compact {
+		max-width: 160px;
+		margin-top: 32px;
+	}
+}
+
 .site-title {
-	color: var(--branding--color-link);
+	margin-top: 40px;
+	margin-bottom: 0;
+	text-transform: uppercase;
+	color: var(--global--color-primary);
 }
 
 .site-title a {
@@ -2283,7 +2311,7 @@ pre.wp-block-verse {
 }
 
 .site-title a:hover, .site-title a:focus {
-	color: var(--global--color-white);
+	color: var(--global--color-primary);
 	text-decoration: underline;
 }
 
@@ -2294,6 +2322,10 @@ pre.wp-block-verse {
 .site-title > a {
 	text-underline-width: .125em;
 	text-decoration-color: var(--global--color-primary);
+}
+
+.social-navigation {
+	padding-bottom: 8px;
 }
 
 .social-navigation > div > ul {
@@ -2322,14 +2354,18 @@ pre.wp-block-verse {
 	color: var(--social-nav--color-link);
 	display: inline-block;
 	padding: 0 var(--social-nav--padding);
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
 }
 
 .social-navigation a:hover, .social-navigation a:focus {
-	color: var(--social-nav--color-link-hover);
+	color: var(--global--color-black);
+	background: var(--global--color-white);
 }
 
 .social-navigation a:active {
-	color: var(--social-nav--color-link);
+	color: var(--social-nav--color-black);
 }
 
 .social-navigation svg {
@@ -2362,6 +2398,7 @@ pre.wp-block-verse {
 
 .site-footer > .footer-navigation .footer-menu .menu-item a:hover {
 	color: var(--global--color-white);
+	border-color: var(--global--color-tertiary);
 }
 
 .site-footer > .footer-navigation .footer-menu .menu-item a:focus {
@@ -2380,30 +2417,23 @@ pre.wp-block-verse {
 .editor-post-title__block .editor-post-title__input {
 	color: var(--global--color-primary);
 	font-family: var(--global--font-primary);
-	font-size: 120px;
+	font-size: 40px;
 	text-align: center;
 	font-weight: 500;
 	line-height: 1;
 }
 
-@media only screen and (max-width: 959px) {
+@media only screen and (min-width: 482px) {
 	.entry-title,
 	.editor-post-title__block .editor-post-title__input {
-		font-size: 80px;
+		font-size: 64px;
 	}
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (min-width: 960px) {
 	.entry-title,
 	.editor-post-title__block .editor-post-title__input {
-		font-size: 40px;
-	}
-}
-
-@media only screen and (max-width: 481px) {
-	.entry-title,
-	.editor-post-title__block .editor-post-title__input {
-		font-size: 32px;
+		font-size: 120px;
 	}
 }
 
@@ -3016,6 +3046,32 @@ img#wpstats {
 .page-template-pageDark .site-main {
 	background: var(--global--color-background);
 	color: var(--global--color-primary);
+}
+
+.page-template-pageFancy .entry-header {
+	background: url("./assets/img/leafy-dark.png") no-repeat center bottom;
+	padding-bottom: 20px;
+	background-size: 120px auto;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+	.page-template-pageFancy .entry-header {
+		background-image: url("./assets/img/leafy-dark_2x.png");
+	}
+}
+
+@media only screen and (min-width: 482px) {
+	.page-template-pageFancy .entry-header {
+		padding-bottom: 24px;
+		background-size: 160px auto;
+	}
+}
+
+@media only screen and (min-width: 960px) {
+	.page-template-pageFancy .entry-header {
+		padding-bottom: 50px;
+		background-size: 320px auto;
+	}
 }
 
 /**
