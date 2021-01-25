@@ -2,7 +2,7 @@
 /**
  * Displays the post header
  *
- * @package Seedlet
+ * @package Pipe Wrench
  * @since 1.0.0
  */
 ?>

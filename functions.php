@@ -20,7 +20,7 @@ function pipewrench_fonts_url() {
 	* supported by Playfair Display, translate this to 'off'. Do not translate
 	* into your own language.
 	*/
-    // $playfair_display = esc_html_x( 'on', 'Playfair Display: on or off', 'seedlet' );
+    $bitter = esc_html_x( 'on', 'Bitter: on or off', 'pipewrench' );
     
     /* Translators: If there are characters in your language that are not
 	* supported by Playfair Display, translate this to 'off'. Do not translate
@@ -28,20 +28,20 @@ function pipewrench_fonts_url() {
 	*/
     $teko = esc_html_x( 'on', 'Teko: on or off', 'pipewrench' );
 
-	if ( 'off' !== $teko ) {
+	if ( 'off' !== $teko || 'off' !== $bitter  ) {
 		$font_families = array();
 
-		if ( 'off' !== $teko ) {
-			$font_families[] = 'Teko:wght@300;400;500;600;700';
+		if ( 'off' !== $bitter ) {
+			$font_families[] = 'Bitter:ital,wght@0,400;0,600;1,400;1,600';
 		}
 
-		// if ( 'off' !== $playfair_display ) {
-		// 	$font_families[] = 'Playfair Display:ital,wght@0,400;0,700;1,400';
-		// }
+		if ( 'off' !== $teko ) {
+			$font_families[] = 'Teko:wght@300;500;600';
+		}
 
 		$query_args = array(
-			'family' => urlencode( implode( '|', $font_families ) ),
-			'subset' => urlencode( 'latin,latin-ext' ),
+			'family' => implode( '&family=', $font_families ), // Removed urlencode because it was breaking things
+			'subset' => 'latin,latin-ext',
 		);
 
 		$fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css2' );

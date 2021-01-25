@@ -1,14 +1,14 @@
 @charset "UTF-8";
 /*
 Theme Name: Pipe Wrench
-Theme URI: https://wordpress.com/theme/seedlet
-Author: Automattic
-Author URI: https://automattic.com/
-Description: Seedlet is a free WordPress theme. A two-column layout and classically elegant typography creates a refined site that gives your works and images space to breathe - and shine. Seedlet was built to be the perfect partner to the block editor, and supports all the latest blocks. Writing, audio, illustrations, photography, video - use Seedlet to engage and direct visitors' eyes, without your theme getting in the way. And the responsive design shifts naturally between desktop and mobile devices. Seedlet is a great option for professionals and creatives looking for a sophisticated vibe. Whether you're looking to create a blog or a robust site promoting your business, do with simplicity, style, and Seedlet.
+Theme URI: https://github.com/MichaelArestad/Pipe-Wrench
+Author: Michael Arestad
+Author URI: https://michaelarestad.com/
+Description: Pipe Wrench is a Seedlet child theme. It is designed for pipewrenchmag.com.
 Requires at least: 4.9.6
 Tested up to: 5.4.1
 Requires PHP: 5.6.2
-Version: 0.0.2
+Version: 0.0.3
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Template: seedlet
@@ -43,7 +43,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 :root {
 	/* Font Family */
 	--global--font-primary: var(--font-headings, 'Teko', sans-serif);
-	--global--font-secondary: var(--font-base, -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif);
+	--global--font-secondary: var(--font-base, Bitter, serif);
 	/* Font Size */
 	--global--font-size-sm: 16px;
 	--global--font-size-md: 24px;
@@ -328,6 +328,20 @@ a:hover {
 
 a:focus {
 	color: var(--global--color-primary);
+}
+
+.entry-content a:hover, .entry-content a:focus {
+	border-bottom-color: transparent;
+}
+
+.entry-content a:hover {
+	color: var(--global--color-background);
+	background: var(--global--color-primary);
+	box-shadow: 0 -1px 0 5px var(--global--color-primary);
+}
+
+.entry-content a:focus {
+	color: var(--global--color-background);
 }
 
 .site *:focus {
@@ -698,6 +712,7 @@ body {
 	background: var(--global--color-primary);
 	color: var(--global--color-background);
 	border-color: var(--global--color-primary);
+	box-shadow: none;
 }
 
 /**
@@ -3049,14 +3064,14 @@ img#wpstats {
 }
 
 .page-template-pageFancy .entry-header {
-	background: url("./assets/img/leafy-dark.png") no-repeat center bottom;
+	background: url("./assets/img/logo-leaves-dark.png") no-repeat center bottom;
 	padding-bottom: 20px;
 	background-size: 120px auto;
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 	.page-template-pageFancy .entry-header {
-		background-image: url("./assets/img/leafy-dark_2x.png");
+		background-image: url("./assets/img/logo-leaves-dark_2x.png");
 	}
 }
 

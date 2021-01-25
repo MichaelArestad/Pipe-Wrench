@@ -27,12 +27,12 @@
 
 .page-template-pageFancy {
 	.entry-header {
-		background: url("./assets/img/leafy-dark.png") no-repeat center bottom;
+		background: url("./assets/img/logo-leaves-dark.png") no-repeat center bottom;
 		padding-bottom: 20px;
 		background-size: 120px auto;
 		
 		@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
-			background-image: url("./assets/img/leafy-dark_2x.png");
+			background-image: url("./assets/img/logo-leaves-dark_2x.png");
 		}
 		@include media(mobile) {
 			padding-bottom: 24px;
