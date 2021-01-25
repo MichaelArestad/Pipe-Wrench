@@ -8,7 +8,7 @@ Description: Pipe Wrench is a Seedlet child theme. It is designed for pipewrench
 Requires at least: 4.9.6
 Tested up to: 5.4.1
 Requires PHP: 5.6.2
-Version: 0.0.3
+Version: 0.0.4
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Template: seedlet
@@ -3695,6 +3695,29 @@ button[data-load-more-btn],
 
 #pico {
 	max-width: none;
+}
+
+#content div.wpforms-container-full .wpforms-form input[type="submit"],
+#content div.wpforms-container-full .wpforms-form button[type="submit"],
+#content div.wpforms-container-full .wpforms-form .wpforms-page-button {
+	font-family: var(--global--font-primary);
+	font-size: 24px;
+	font-weight: 500;
+	border: 2px solid var(--global--color-primary);
+	background: transparent;
+	padding: 8px 14px 6px;
+}
+
+#content div.wpforms-container-full .wpforms-form input[type="submit"]:hover, #content div.wpforms-container-full .wpforms-form input[type="submit"]:focus, #content div.wpforms-container-full .wpforms-form input[type="submit"].has-focus,
+#content div.wpforms-container-full .wpforms-form button[type="submit"]:hover,
+#content div.wpforms-container-full .wpforms-form button[type="submit"]:focus,
+#content div.wpforms-container-full .wpforms-form button[type="submit"].has-focus,
+#content div.wpforms-container-full .wpforms-form .wpforms-page-button:hover,
+#content div.wpforms-container-full .wpforms-form .wpforms-page-button:focus,
+#content div.wpforms-container-full .wpforms-form .wpforms-page-button.has-focus {
+	background: var(--global--color-primary);
+	color: var(--global--color-background);
+	border: 2px solid var(--global--color-primary);
 }
 
 /**
