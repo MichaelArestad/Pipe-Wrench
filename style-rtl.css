@@ -334,14 +334,10 @@ a:focus {
 	border-bottom-color: transparent;
 }
 
-.entry-content a:hover {
+.entry-content a:hover, .entry-content a:focus {
 	color: var(--global--color-background);
 	background: var(--global--color-primary);
 	box-shadow: 0 -1px 0 5px var(--global--color-primary);
-}
-
-.entry-content a:focus {
-	color: var(--global--color-background);
 }
 
 .site *:focus {

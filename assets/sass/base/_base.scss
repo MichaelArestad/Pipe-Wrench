@@ -24,14 +24,11 @@ a {
 			border-bottom-color: transparent;
 		}
 
-		&:hover {
+		&:hover,
+		&:focus {
 			color: var(--global--color-background);
 			background: var(--global--color-primary);
 			box-shadow: 0 -1px 0 5px var(--global--color-primary);
-		}
-
-		&:focus {
-			color: var(--global--color-background);
 		}
 	}
 
