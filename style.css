@@ -243,12 +243,12 @@ button,
 input[type="submit"],
 .wp-block-button__link, .a8c-posts-list__view-all, button[data-load-more-btn] {
 	line-height: var(--button--line-height);
-	color: var(--button--color-text);
+	color: var(--global--color-background);
 	cursor: pointer;
 	font-weight: var(--button--font-weight);
 	font-family: var(--button--font-family);
 	font-size: var(--button--font-size);
-	background-color: var(--button--color-background);
+	background-color: var(--global--color-primary);
 	border-radius: var(--button--border-radius);
 	border-width: 0;
 	text-decoration: none;
@@ -925,12 +925,12 @@ body {
 
 .wp-block-file .wp-block-file__button {
 	line-height: var(--button--line-height);
-	color: var(--button--color-text);
+	color: var(--global--color-background);
 	cursor: pointer;
 	font-weight: var(--button--font-weight);
 	font-family: var(--button--font-family);
 	font-size: var(--button--font-size);
-	background-color: var(--button--color-background);
+	background-color: var(--global--color-primary);
 	border-radius: var(--button--border-radius);
 	border-width: 0;
 	text-decoration: none;
@@ -1785,12 +1785,12 @@ p {
 
 .wp-block-search .wp-block-search__button {
 	line-height: var(--button--line-height);
-	color: var(--button--color-text);
+	color: var(--global--color-background);
 	cursor: pointer;
 	font-weight: var(--button--font-weight);
 	font-family: var(--button--font-family);
 	font-size: var(--button--font-size);
-	background-color: var(--button--color-background);
+	background-color: var(--global--color-primary);
 	border-radius: var(--button--border-radius);
 	border-width: 0;
 	text-decoration: none;
@@ -2453,6 +2453,17 @@ pre.wp-block-verse {
 	text-align: center;
 	font-weight: 500;
 	line-height: 1;
+}
+
+.entry-title a,
+.editor-post-title__block .editor-post-title__input a {
+	border: 0;
+}
+
+.entry-title a:hover, .entry-title a:focus,
+.editor-post-title__block .editor-post-title__input a:hover,
+.editor-post-title__block .editor-post-title__input a:focus {
+	color: var(--global--color-accent-one);
 }
 
 @media only screen and (min-width: 482px) {
@@ -3419,12 +3430,12 @@ button,
 input[type="submit"],
 .wp-block-button__link, .a8c-posts-list__view-all, button[data-load-more-btn] {
 	line-height: var(--button--line-height);
-	color: var(--button--color-text);
+	color: var(--global--color-background);
 	cursor: pointer;
 	font-weight: var(--button--font-weight);
 	font-family: var(--button--font-family);
 	font-size: var(--button--font-size);
-	background-color: var(--button--color-background);
+	background-color: var(--global--color-primary);
 	border-radius: var(--button--border-radius);
 	border-width: 0;
 	text-decoration: none;

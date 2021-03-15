@@ -1,11 +1,11 @@
 @mixin button-style {
 	@include crop-text(var(--button--line-height));
-	color: var(--button--color-text);
+	color: var(--global--color-background);
 	cursor: pointer;
 	font-weight: var(--button--font-weight);
 	font-family: var(--button--font-family);
 	font-size: var(--button--font-size);
-	background-color: var(--button--color-background);
+	background-color: var(--global--color-primary);
 	border-radius: var(--button--border-radius);
 	border-width: 0;
 	text-decoration: none;

@@ -18,21 +18,23 @@
 	// line-height: var(--heading--line-height);
 	// overflow-wrap: break-word;
 
-	// a {
-	// 	color: var(--entry-header--color-link);
+	a {
+		// color: var(--entry-header--color-link);
+		border: 0;
 
-	// 	&:hover {
-	// 		color: var(--entry-header--color-hover);
-	// 	}
+		&:hover,
+		&:focus {
+			color: var(--global--color-accent-one);
+		}
 
-	// 	&:focus {
-	// 		color: var(--entry-header--color-focus);
-	// 	}
+		// &:focus {
+			// color: var(--entry-header--color-focus);
+		// }
 
-	// 	&:active {
-	// 		color: var(--entry-header--color-link);
-	// 	}
-	// }
+		// &:active {
+			// color: var(--entry-header--color-link);
+		// }
+	}
 
 	@include media(mobile) {
 		font-size: 64px;
