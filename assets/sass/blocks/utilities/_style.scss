@@ -199,7 +199,7 @@
 .has-secondary-background-color[class]{
 	background-color: var(--global--color-secondary);
 
-	&:not(.has-text-color):not(:hover) {
+	&:not(.has-text-color) {
 		color: var(--global--color-white);
 	}
 }
@@ -232,13 +232,9 @@
 .has-tertiary-background-color[class] {
 	background-color: var(--global--color-tertiary);
 
-	&:not(.has-text-color):not(:hover) {
+	&:not(.has-text-color) {
 		color: var(--global--color-white);
 	}
-}
-
-.has-tertiary-background-color[class]:not(.has-text-color) {
-	color: var(--global--color-background);
 }
 
 // .has-background-dark-background-color[class] {

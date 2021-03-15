@@ -8,7 +8,7 @@ Description: Pipe Wrench is a Seedlet child theme. It is designed for pipewrench
 Requires at least: 4.9.6
 Tested up to: 5.4.1
 Requires PHP: 5.6.2
-Version: 0.0.7
+Version: 0.0.9
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Template: seedlet
@@ -736,6 +736,14 @@ body {
 	background: var(--global--color-primary);
 	color: var(--global--color-background);
 	border-color: var(--global--color-primary);
+}
+
+.page-template-pageDark.page-template-pageDark.page-template-pageDark.wp-block-button__link:hover, .page-template-pageDark.page-template-pageDark.page-template-pageDark.wp-block-button__link:focus, .page-template-pageDark.page-template-pageDark.page-template-pageDark.wp-block-button__link.has-focus,
+.page-template-pageDark.page-template-pageDark.page-template-pageDark .wp-block-button__link:hover,
+.page-template-pageDark.page-template-pageDark.page-template-pageDark .wp-block-button__link:focus,
+.page-template-pageDark.page-template-pageDark.page-template-pageDark .wp-block-button__link.has-focus {
+	color: var(--global--color-background);
+	background: var(--global--color-primary);
 }
 
 /**
@@ -2012,7 +2020,7 @@ pre.wp-block-verse {
 	background-color: var(--global--color-secondary);
 }
 
-.has-secondary-background-color[class]:not(.has-text-color):not(:hover) {
+.has-secondary-background-color[class]:not(.has-text-color) {
 	color: var(--global--color-white);
 }
 
@@ -2020,12 +2028,8 @@ pre.wp-block-verse {
 	background-color: var(--global--color-tertiary);
 }
 
-.has-tertiary-background-color[class]:not(.has-text-color):not(:hover) {
-	color: var(--global--color-white);
-}
-
 .has-tertiary-background-color[class]:not(.has-text-color) {
-	color: var(--global--color-background);
+	color: var(--global--color-white);
 }
 
 .has-background-background-color[class] {

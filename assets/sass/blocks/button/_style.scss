@@ -114,3 +114,15 @@ input[type="submit"],
 		}
 	}
 }
+
+.page-template-pageDark.page-template-pageDark.page-template-pageDark {
+	&.wp-block-button__link,
+	.wp-block-button__link {
+		&:hover,
+		&:focus,
+		&.has-focus {
+			color: var(--global--color-background );
+			background: var(--global--color-primary);
+		}
+	}
+}
