@@ -83,104 +83,8 @@ body[class*="woocommerce"] #page .site-content .woocommerce button.button,
 body[class*="woocommerce"] #page .site-content .woocommerce input.button,
 body[class*="woocommerce"] #page .site-content .woocommerce .widget_shopping_cart .buttons a,
 body[class*="woocommerce"] #page .site-content .woocommerce.widget_shopping_cart .buttons a {
-	line-height: var(--button--line-height);
 	color: var(--global--color-background);
 	cursor: pointer;
-	font-weight: var(--button--font-weight);
-	font-family: var(--button--font-family);
-	font-size: var(--button--font-size);
-	background-color: var(--global--color-primary);
-	border-radius: var(--button--border-radius);
-	border-width: 0;
-	text-decoration: none;
-	padding: var(--button--padding-vertical) var(--button--padding-horizontal);
-}
-
-body[class*="woocommerce"] #page .site-content #respond input#submit:before,
-body[class*="woocommerce"] #page .site-content #respond input#submit.alt:before,
-body[class*="woocommerce"] #page .site-content a.button:before,
-body[class*="woocommerce"] #page .site-content a.button.alt:before,
-body[class*="woocommerce"] #page .site-content button.button:before,
-body[class*="woocommerce"] #page .site-content button.button.alt:before,
-body[class*="woocommerce"] #page .site-content input.button:before,
-body[class*="woocommerce"] #page .site-content input.button.alt:before,
-body[class*="woocommerce"] #page .site-content .cart .button:before,
-body[class*="woocommerce"] #page .site-content a.added_to_cart:before,
-body[class*="woocommerce"] #page .site-content .woocommerce #respond input#submit:before,
-body[class*="woocommerce"] #page .site-content .woocommerce a.button:before,
-body[class*="woocommerce"] #page .site-content .woocommerce button.button:before,
-body[class*="woocommerce"] #page .site-content .woocommerce input.button:before,
-body[class*="woocommerce"] #page .site-content .woocommerce .widget_shopping_cart .buttons a:before,
-body[class*="woocommerce"] #page .site-content .woocommerce.widget_shopping_cart .buttons a:before, body[class*="woocommerce"] #page .site-content #respond input#submit:after,
-body[class*="woocommerce"] #page .site-content #respond input#submit.alt:after,
-body[class*="woocommerce"] #page .site-content a.button:after,
-body[class*="woocommerce"] #page .site-content a.button.alt:after,
-body[class*="woocommerce"] #page .site-content button.button:after,
-body[class*="woocommerce"] #page .site-content button.button.alt:after,
-body[class*="woocommerce"] #page .site-content input.button:after,
-body[class*="woocommerce"] #page .site-content input.button.alt:after,
-body[class*="woocommerce"] #page .site-content .cart .button:after,
-body[class*="woocommerce"] #page .site-content a.added_to_cart:after,
-body[class*="woocommerce"] #page .site-content .woocommerce #respond input#submit:after,
-body[class*="woocommerce"] #page .site-content .woocommerce a.button:after,
-body[class*="woocommerce"] #page .site-content .woocommerce button.button:after,
-body[class*="woocommerce"] #page .site-content .woocommerce input.button:after,
-body[class*="woocommerce"] #page .site-content .woocommerce .widget_shopping_cart .buttons a:after,
-body[class*="woocommerce"] #page .site-content .woocommerce.widget_shopping_cart .buttons a:after {
-	content: '';
-	display: block;
-	height: 0;
-	width: 0;
-}
-
-body[class*="woocommerce"] #page .site-content #respond input#submit:before,
-body[class*="woocommerce"] #page .site-content #respond input#submit.alt:before,
-body[class*="woocommerce"] #page .site-content a.button:before,
-body[class*="woocommerce"] #page .site-content a.button.alt:before,
-body[class*="woocommerce"] #page .site-content button.button:before,
-body[class*="woocommerce"] #page .site-content button.button.alt:before,
-body[class*="woocommerce"] #page .site-content input.button:before,
-body[class*="woocommerce"] #page .site-content input.button.alt:before,
-body[class*="woocommerce"] #page .site-content .cart .button:before,
-body[class*="woocommerce"] #page .site-content a.added_to_cart:before,
-body[class*="woocommerce"] #page .site-content .woocommerce #respond input#submit:before,
-body[class*="woocommerce"] #page .site-content .woocommerce a.button:before,
-body[class*="woocommerce"] #page .site-content .woocommerce button.button:before,
-body[class*="woocommerce"] #page .site-content .woocommerce input.button:before,
-body[class*="woocommerce"] #page .site-content .woocommerce .widget_shopping_cart .buttons a:before,
-body[class*="woocommerce"] #page .site-content .woocommerce.widget_shopping_cart .buttons a:before {
-	margin-bottom: -calc(.5em * var(--button--line-height) + -.38);
-}
-
-body[class*="woocommerce"] #page .site-content #respond input#submit:after,
-body[class*="woocommerce"] #page .site-content #respond input#submit.alt:after,
-body[class*="woocommerce"] #page .site-content a.button:after,
-body[class*="woocommerce"] #page .site-content a.button.alt:after,
-body[class*="woocommerce"] #page .site-content button.button:after,
-body[class*="woocommerce"] #page .site-content button.button.alt:after,
-body[class*="woocommerce"] #page .site-content input.button:after,
-body[class*="woocommerce"] #page .site-content input.button.alt:after,
-body[class*="woocommerce"] #page .site-content .cart .button:after,
-body[class*="woocommerce"] #page .site-content a.added_to_cart:after,
-body[class*="woocommerce"] #page .site-content .woocommerce #respond input#submit:after,
-body[class*="woocommerce"] #page .site-content .woocommerce a.button:after,
-body[class*="woocommerce"] #page .site-content .woocommerce button.button:after,
-body[class*="woocommerce"] #page .site-content .woocommerce input.button:after,
-body[class*="woocommerce"] #page .site-content .woocommerce .widget_shopping_cart .buttons a:after,
-body[class*="woocommerce"] #page .site-content .woocommerce.widget_shopping_cart .buttons a:after {
-	margin-top: -calc(.5em * var(--button--line-height) + -.39);
-}
-
-body[class*="woocommerce"] #page .site-content #respond input#submit:active,
-body[class*="woocommerce"] #page .site-content a.button:active,
-body[class*="woocommerce"] #page .site-content button.button:active,
-body[class*="woocommerce"] #page .site-content input.button:active,
-body[class*="woocommerce"] #page .site-content .cart .button:active,
-body[class*="woocommerce"] #page .site-content a.added_to_cart:active,
-body[class*="woocommerce"] #page .site-content .woocommerce .widget_shopping_cart .buttons a:active,
-body[class*="woocommerce"] #page .site-content .woocommerce.widget_shopping_cart .buttons a:active {
-	color: var(--button--color-text-active);
-	background-color: var(--button--color-background-active);
 }
 
 body[class*="woocommerce"] #page .site-content #respond input#submit:hover,
@@ -205,8 +109,7 @@ body[class*="woocommerce"] #page .site-content .cart .has-focus.button,
 body[class*="woocommerce"] #page .site-content a.has-focus.added_to_cart,
 body[class*="woocommerce"] #page .site-content .woocommerce .widget_shopping_cart .buttons a.has-focus,
 body[class*="woocommerce"] #page .site-content .woocommerce.widget_shopping_cart .buttons a.has-focus {
-	color: var(--button--color-text-hover);
-	background-color: var(--button--color-background-hover);
+	color: var(--global--color-background);
 }
 
 body[class*="woocommerce"] #page span.onsale, #content .wc-block-grid .wc-block-grid__product-onsale {

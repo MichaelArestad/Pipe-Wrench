@@ -1,26 +1,59 @@
 @mixin button-style {
-	@include crop-text(var(--button--line-height));
+	// @include crop-text(var(--button--line-height));
 	color: var(--global--color-background);
 	cursor: pointer;
-	font-weight: var(--button--font-weight);
-	font-family: var(--button--font-family);
-	font-size: var(--button--font-size);
-	background-color: var(--global--color-primary);
-	border-radius: var(--button--border-radius);
-	border-width: 0;
-	text-decoration: none;
-	padding: var(--button--padding-vertical) var(--button--padding-horizontal);
+	// font-weight: var(--button--font-weight);
+	// font-family: var(--button--font-family);
+	// font-size: var(--button--font-size);
+	// background-color: var(--global--color-primary);
+	// border-radius: var(--button--border-radius);
+	// border-width: 0;
+	// text-decoration: none;
+	// padding: var(--button--padding-vertical) var(--button--padding-horizontal);
 
 	&:active {
-		color: var(--button--color-text-active);
-		background-color: var(--button--color-background-active);
+		// color: var(--button--color-text-active);
+		// background-color: var(--button--color-background-active);
 	}
 
 	&:hover,
 	&:focus,
 	&.has-focus {
-		color: var(--button--color-text-hover);
-		background-color: var(--button--color-background-hover);
+		color: var(--global--color-background);
+		// background-color: var(--button--color-background-hover);
+	}
+}
+
+@mixin button-main-styles {
+	@include crop-text(var(--button--line-height));
+	color: var(--global--color-background);
+	// cursor: pointer;
+	font-weight: var(--button--font-weight);
+	font-family: var(--global--font-primary);
+	font-weight: 500;
+	// font-size: var(--button--font-size);
+	background-color: var(--global--color-primary);
+	// border-radius: var(--button--border-radius);
+	// border-width: 0;
+	// text-decoration: none;
+	// padding: var(--button--padding-vertical) var(--button--padding-horizontal);
+}
+
+@mixin button-hover-styles {
+	&:not(.has-background) {
+		&:active {
+			color: var(--global--color-background);
+			// color:unset;
+			background-color: var(--global--color-primary);
+		}
+
+		&:hover,
+		&:focus,
+		&.has-focus {
+			color: var(--global--color-background);
+			// color:unset;
+			background-color: var(--global--color-primary);
+		}
 	}
 }
 
