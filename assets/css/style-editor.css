@@ -149,6 +149,42 @@ a {
 	outline-color: var(--color-form-focus);
 }
 
+::selection {
+	color: #FFFEFA !important;
+	background-color: #5a2f67 !important;
+}
+
+::-moz-selection {
+	color: #FFFEFA !important;
+	background-color: #5a2f67 !important;
+}
+
+.has-background ::selection,
+.has-secondary-background-color ::selection,
+.has-tertiary-background-color ::selection,
+.has-background-background-color ::selection {
+	color: #FFFEFA !important;
+	background-color: black !important;
+}
+
+.has-background ::-moz-selection,
+.has-secondary-background-color ::-moz-selection,
+.has-tertiary-background-color ::-moz-selection,
+.has-background-background-color ::-moz-selection {
+	color: #FFFEFA !important;
+	background-color: black !important;
+}
+
+.has-primary-background-color ::selection {
+	color: #FFFEFA !important;
+	background-color: #5a2f67 !important;
+}
+
+.has-primary-background-color ::-moz-selection {
+	color: #FFFEFA !important;
+	background-color: #5a2f67 !important;
+}
+
 /**
  * Repsonsive Styles
  */

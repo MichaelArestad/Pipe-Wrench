@@ -8,7 +8,7 @@ Description: Pipe Wrench is a Seedlet child theme. It is designed for pipewrench
 Requires at least: 4.9.6
 Tested up to: 5.4.1
 Requires PHP: 5.6.2
-Version: 0.0.11
+Version: 0.1.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Template: seedlet
@@ -366,6 +366,32 @@ template {
 }
 
 ::-moz-selection {
+	color: #FFFEFA !important;
+	background-color: #5a2f67 !important;
+}
+
+.has-background ::selection,
+.has-secondary-background-color ::selection,
+.has-tertiary-background-color ::selection,
+.has-background-background-color ::selection {
+	color: #FFFEFA !important;
+	background-color: black !important;
+}
+
+.has-background ::-moz-selection,
+.has-secondary-background-color ::-moz-selection,
+.has-tertiary-background-color ::-moz-selection,
+.has-background-background-color ::-moz-selection {
+	color: #FFFEFA !important;
+	background-color: black !important;
+}
+
+.has-primary-background-color ::selection {
+	color: #FFFEFA !important;
+	background-color: #5a2f67 !important;
+}
+
+.has-primary-background-color ::-moz-selection {
 	color: #FFFEFA !important;
 	background-color: #5a2f67 !important;
 }

@@ -2,9 +2,34 @@
 
 ::selection {
 	color: #FFFEFA !important;
-	background-color: #5a2f67!important;
+	background-color: #5a2f67 !important;
 }
 ::-moz-selection {
 	color: #FFFEFA !important;
-	background-color: #5a2f67!important;
+	background-color: #5a2f67 !important;
+}
+
+.has-background,
+.has-secondary-background-color,
+.has-tertiary-background-color,
+.has-background-background-color {
+	::selection {
+		color: #FFFEFA !important;
+		background-color: black !important;
+	}
+	::-moz-selection {
+		color: #FFFEFA !important;
+		background-color: black !important;
+	}
+}
+
+.has-primary-background-color {
+	::selection {
+		color: #FFFEFA !important;
+		background-color: #5a2f67 !important;
+	}
+	::-moz-selection {
+		color: #FFFEFA !important;
+		background-color: #5a2f67 !important;
+	}
 }
