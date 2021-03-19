@@ -1,7 +1,7 @@
 .site-footer > .footer-navigation {
 	display: block;
 	text-align: center;
-	padding-top: rem(16px);
+	padding-top: rem(40px);
 	padding-left: var(--page-margin);
 	padding-right: var(--page-margin);
 
@@ -21,7 +21,7 @@
 		}
 
 		.menu-item {
-			padding: rem(16px);
+			padding: 0 rem(16px);
 			font-family: var(--font-family-display);
 			font-size: rem(14px);
 			font-weight: 400;

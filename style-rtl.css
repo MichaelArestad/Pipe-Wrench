@@ -8,7 +8,7 @@ Description: Pipe Wrench is a Seedlet child theme. It is designed for pipewrench
 Requires at least: 4.9.6
 Tested up to: 5.4.1
 Requires PHP: 5.6.2
-Version: 0.1.4
+Version: 0.1.5
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Template: seedlet
@@ -3276,7 +3276,7 @@ nav a {
 .site-footer > .footer-navigation {
 	display: block;
 	text-align: center;
-	padding-top: 1rem;
+	padding-top: 2.5rem;
 	padding-right: var(--page-margin);
 	padding-left: var(--page-margin);
 }
@@ -3296,7 +3296,7 @@ nav a {
 }
 
 .site-footer > .footer-navigation .footer-menu .menu-item {
-	padding: 1rem;
+	padding: 0 1rem;
 	font-family: var(--font-family-display);
 	font-size: 0.875rem;
 	font-weight: 400;
@@ -3324,7 +3324,7 @@ nav a {
 }
 
 .social-navigation {
-	padding-bottom: 0.5rem;
+	padding-bottom: 1rem;
 }
 
 .social-navigation > div > ul {
