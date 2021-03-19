@@ -1,10 +1,11 @@
 .wp-block-code {
-	color: var(--global--color-foreground);
-	font-size: var(--global--font-size-sm);
-	padding: var(--global--spacing-unit);
-	border-color: var(--global--color-border);
+	color: var(--color-foreground);
+	font-size: var(--font-size-xs);
+	padding: rem(24px);
+	border: rem(1px) solid var(--color-foreground);
+	border-radius: rem(3px);
 
 	pre {
-		color: var(--global--color-foreground);
+		color: var(--color-foreground);
 	}
 }

@@ -11,13 +11,14 @@
 }
 
 /**
- * .alignleft
- */
+* .alignleft
+*/
 .alignleft {
 	/*rtl:ignore*/
 	text-align: left;
 	margin-top: 0;
 }
+ 
 
 // Targeting the .entry-content class is necessary to ensure these styles
 // only apply when the block isn't nested.
@@ -25,7 +26,7 @@
 	max-width: var(--responsive--aligndefault-width);
 }
 
-@include media(mobile) {
+@include break-xs {
 
 	.alignleft {
 
@@ -33,8 +34,8 @@
 		float: left;
 
 		/*rtl:ignore*/
-		margin-right: var(--global--spacing-horizontal);
-		margin-bottom: var(--global--spacing-vertical);
+		margin-right: rem(24px);
+		margin-bottom: rem(40px);
 	}
 
 	.entry-content > .alignleft {
@@ -42,7 +43,7 @@
 		/*rtl:ignore*/
 		margin-left:  calc( 50% - var(--responsive--alignrightleft-width));
 		/*rtl:ignore*/
-		margin-right: var(--global--spacing-horizontal);
+		margin-right: rem(24px);
 	}
 }
 
@@ -63,7 +64,7 @@
  */
 .alignright {
 	margin-top: 0;
-	margin-bottom: var(--global--spacing-vertical);
+	margin-bottom: rem(40px);
 }
 
 // Targeting the .entry-content class is necessary to ensure these styles
@@ -72,7 +73,7 @@
 	max-width: var(--responsive--aligndefault-width);
 }
 
-@include media(mobile) {
+@include break-xs {
 
 	.alignright {
 
@@ -80,13 +81,13 @@
 		float: right;
 
 		/*rtl:ignore*/
-		margin-left: var(--global--spacing-horizontal);
+		margin-left: rem(24px);
 	}
 
 	.entry-content > .alignright {
 		max-width: var(--responsive--alignrightleft-width);
 		/*rtl:ignore*/
-		margin-left: var(--global--spacing-horizontal);
+		margin-left: rem(24px);
 		/*rtl:ignore*/
 		margin-right: calc( 50% - var(--responsive--alignrightleft-width));
 	}
@@ -116,6 +117,10 @@
 .alignfull {
 	clear: both;
 	@extend %responsive-alignfull-width;
+
+	.alignfull {
+		@extend %responsive-alignwide-width-nested;
+	}
 }
 
 .alignfull [class*="inner-container"] > .alignwide {
@@ -123,208 +128,130 @@
 }
 
 // Content alignment
-// .has-left-content {
-// 	justify-content: flex-start;
-// }
+.has-left-content {
+	justify-content: flex-start;
+}
 
-// .has-right-content {
-// 	justify-content: flex-end;
-// }
+.has-right-content {
+	justify-content: flex-end;
+}
 
 // Parallax
-// .has-parallax {
-// 	background-attachment: fixed;
-// }
-
-// Gutenberg text color options
-// .has-text-color {}
-
-// .has-primary-color[class] {
-// 	color: var(--global--color-primary);
-// }
-
-// .has-secondary-color[class] {
-// 	color: var(--global--color-secondary);
-// }
-
-// .has-foreground-color[class] {
-// 	color: var(--global--color-foreground);
-// }
-
-// .has-foreground-light-color[class] {
-// 	color: var(--global--color-foreground-low-contrast);
-// }
-
-// .has-foreground-high-contrast-color[class] {
-// 	color: var(--global--color-foreground-high-contrast);
-// }
-
-// .has-tertiary-color[class] {
-// 	color: var(--global--color-tertiary);
-// }
-
-// .has-background-dark-color[class] {
-// 	color: var(--global--color-background-dark);
-// }
-
-.has-background-color[class] {
-	color: var(--global--color-white);
+.has-parallax {
+	background-attachment: fixed;
 }
 
-// .has-white-color[class] {
-// 	color: var(--global--color-white);
-// }
-
-// .has-black-color[class] {
-// 	color: var(--global--color-black);
-// }
 
 
-// Gutenberg background-color options
-// .has-background {
-// 	&:not(.has-background-background-color) a:not(.has-text-color),
-// 	p, h1, h2, h3, h4, h5, h6 {
-// 		color: currentColor;
-// 	}
-// }
+/* Custom text colors */
+
+.has-primary-color.has-primary-color[class] {
+	color: var(--color-1);
+}
+
+.has-secondary-color.has-secondary-color[class] {
+	color: var(--color-2);
+}
+
+.has-tertiary-color.has-tertiary-color[class] {
+	color: var(--color-3);
+}
+
+.has-background-color.has-background-color[class] {
+	color: var(--color-5);
+}
+
+
+/* Custom background colors */
 
 .has-primary-background-color[class] {
-	background-color: var(--global--color-black);
+	background-color: var(--color-1);
 
 	&:not(.has-text-color) {
-		color: var(--global--color-white);
+		color: var(--color-5);
 	}
 }
 
-.has-secondary-background-color[class]{
-	background-color: var(--global--color-secondary);
+.has-secondary-background-color[class] {
+	background-color: var(--color-2);
 
 	&:not(.has-text-color) {
-		color: var(--global--color-white);
+		color: var(--color-5);
 	}
 }
-
-// .has-foreground-background-color[class] {
-// 	background-color: var(--global--color-foreground);
-
-// 	&:not(.has-text-color) {
-// 		color: var(--global--color-background);
-// 	}
-// }
-
-// .has-foreground-light-background-color[class] {
-// 	background-color: var(--global--color-foreground-low-contrast);
-
-// 	&:not(.has-text-color) {
-// 		color: var(--global--color-background);
-// 	}
-// }
-
-
-// .has-foreground-high-contrast-background-color[class] {
-// 	background-color: var(--global--color-foreground-high-contrast);
-
-// 	&:not(.has-text-color) {
-// 		color: var(--global--color-background);
-// 	}
-// }
 
 .has-tertiary-background-color[class] {
-	background-color: var(--global--color-tertiary);
+	background-color: var(--color-3);
 
 	&:not(.has-text-color) {
-		color: var(--global--color-white);
+		color: var(--color-5);
 	}
 }
-
-// .has-background-dark-background-color[class] {
-// 	background-color: var(--global--color-background-dark);
-
-// 	&:not(.has-text-color) {
-// 		color: var(--global--color-foreground);
-// 	}
-// }
 
 .has-background-background-color[class] {
-	background-color: var(--global--color-background);
+	background-color: var(--color-5);
 
 	&:not(.has-text-color) {
-		color: var(--global--color-primary);
+		color: var(--color-1);
 	}
 }
 
-// .has-white-background-color[class] {
-// 	background-color: var(--global--color-white);
 
-// 	&:not(.has-text-color) {
-// 		color: var(--global--color-secondary);
-// 	}
-// }
-
-// .has-black-background-color[class] {
-// 	background-color: var(--global--color-black);
-
-// 	&:not(.has-text-color) {
-// 		color: var(--global--color-primary);
-// 	}
-// }
 
 // Gutenberg Font-size options
 :root {
 	.is-tiny-text,
 	.has-tiny-font-size {
-		font-size: var(--global--font-size-xs);
+		font-size: rem(12px);
 	}
 
 	.is-small-text,
 	.has-small-font-size {
-		font-size: var(--global--font-size-sm);
+		font-size: var(--font-size-sm);
 	}
 
 	.is-regular-text,
 	.has-regular-font-size,
 	.has-normal-font-size,
 	.has-medium-font-size {
-		font-size: var(--global--font-size-base);
+		font-size: var(--font-size-base);
 	}
 
 	.is-large-text,
 	.has-large-font-size {
-		font-size: var(--global--font-size-lg);
-		line-height: var(--global--line-height-heading);
+		font-size: var(--font-size-md);
 	}
 
 	.is-larger-text,
 	.has-larger-font-size,
 	.has-huge-font-size {
-		font-size: var(--global--font-size-xl);
-		line-height: var(--global--line-height-heading);
+		font-size: var(--font-size-lg);
 	}
 }
 
 // Drop caps
 .has-drop-cap:not(:focus)::first-letter {
-	font-family: var(--heading--font-family);
-	font-size: calc(2 * var(--heading--font-size-h1));
-	font-weight: var(--heading--font-weight);
-	line-height: 0.66;
+	font-family: var(--font-family-display);
+	font-size: rem(76px);
+	font-weight: 500;
+	line-height: 0.7;
 	text-transform: uppercase;
 	font-style: normal;
 	float: left;
-	margin: 0.1em 0.1em 0 0;
+	margin: rem(12px) rem(8px) 0 0;
 }
 
 .has-drop-cap:not(:focus)::after {
 	content: "";
 	display: table;
 	clear: both;
-	padding-top: 14px;
+	padding-top: rem(14px);
 }
 
 .desktop-only {
 	display: none;
 
-	@include media(mobile) {
+	@include break-xs {
 		display: block;
 	}
 }
@@ -338,38 +265,38 @@
 /*
  * Custom gradients
 */
-.has-hard-diagonal-gradient-background {
-	background: linear-gradient(to bottom right, var(--global--color-secondary) 49.9%, var(--global--color-tertiary) 50%);
-}
+// .has-hard-diagonal-gradient-background {
+// 	background: linear-gradient(to bottom right, var(--global--color-secondary) 49.9%, var(--global--color-tertiary) 50%);
+// }
 
-.has-hard-diagonal-inverted-gradient-background {
-	background: linear-gradient(to top left, var(--global--color-secondary) 49.9%, var(--global--color-tertiary) 50%);
-}
+// .has-hard-diagonal-inverted-gradient-background {
+// 	background: linear-gradient(to top left, var(--global--color-secondary) 49.9%, var(--global--color-tertiary) 50%);
+// }
 
-.has-diagonal-gradient-background {
-	background: linear-gradient(to bottom right, var(--global--color-secondary), var(--global--color-tertiary));
-}
+// .has-diagonal-gradient-background {
+// 	background: linear-gradient(to bottom right, var(--global--color-secondary), var(--global--color-tertiary));
+// }
 
-.has-diagonal-inverted-gradient-background {
-	background: linear-gradient(to top left, var(--global--color-secondary), var(--global--color-tertiary));
-}
+// .has-diagonal-inverted-gradient-background {
+// 	background: linear-gradient(to top left, var(--global--color-secondary), var(--global--color-tertiary));
+// }
 
-.has-hard-horizontal-gradient-background {
-	background: linear-gradient(to bottom, var(--global--color-secondary) 50%, var(--global--color-tertiary) 50%);
-}
+// .has-hard-horizontal-gradient-background {
+// 	background: linear-gradient(to bottom, var(--global--color-secondary) 50%, var(--global--color-tertiary) 50%);
+// }
 
-.has-hard-horizontal-inverted-gradient-background {
-	background: linear-gradient(to top, var(--global--color-secondary) 50%, var(--global--color-tertiary) 50%);
-}
+// .has-hard-horizontal-inverted-gradient-background {
+// 	background: linear-gradient(to top, var(--global--color-secondary) 50%, var(--global--color-tertiary) 50%);
+// }
 
-.has-horizontal-gradient-background {
-	background: linear-gradient(to bottom, var(--global--color-secondary), var(--global--color-tertiary));
-}
+// .has-horizontal-gradient-background {
+// 	background: linear-gradient(to bottom, var(--global--color-secondary), var(--global--color-tertiary));
+// }
 
-.has-horizontal-inverted-gradient-background {
-	background: linear-gradient(to top, var(--global--color-secondary), var(--global--color-tertiary));
-}
+// .has-horizontal-inverted-gradient-background {
+// 	background: linear-gradient(to top, var(--global--color-secondary), var(--global--color-tertiary));
+// }
 
-.has-stripe-gradient-background {
-	background: linear-gradient(to bottom, transparent 20%, var(--global--color-secondary) 20%, var(--global--color-secondary) 80%, transparent 80%);
-}
+// .has-stripe-gradient-background {
+// 	background: linear-gradient(to bottom, transparent 20%, var(--global--color-secondary) 20%, var(--global--color-secondary) 80%, transparent 80%);
+// }

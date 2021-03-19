@@ -1,0 +1,45 @@
+$baseline-unit: rem(8px);
+$wpadmin-bar--height: rem(46px);
+
+:root {
+	--font-family-display: 'Teko', sans-serif; // Teko: 300, 500, 600
+	--font-family-serif: Bitter, serif; // 400, 600
+	
+	--font-size-xs: #{rem(14px)};
+	--font-size-sm: #{rem(16px)};
+	--font-size-base: #{rem(16px)};
+	--font-size-md: #{rem(24px)};
+	--font-size-lg: #{rem(32px)};
+	--font-size-xl: #{rem(40px)};
+	--font-size-xxl: #{rem(64px)};
+	--font-size-xxxl: #{rem(120px)};
+	--font-size-xxxxl: #{rem(150px)};
+
+	@include break-xs {
+	--font-size-base: #{rem(18px)};
+}
+
+
+	--page-margin: #{rem(16px)};
+
+	@include break-xs {
+		--page-margin: #{rem(40px)};
+	}
+
+	--color-1: #150619;
+	--color-2: #5a2f67;
+	--color-3: #D33838;
+	--color-4: #50B28C;
+	--color-5: #FFFEFA;
+
+	--color-foreground: var(--color-1);
+	--color-background: var(--color-5);
+	--color-link-hover: var(--color-2);
+	--color-form-focus: #AE55C9;
+
+	.page-template-pageDark {
+		--color-foreground: var(--color-5);
+		--color-background: var(--color-1);
+		--color-link-hover: var(--color-4);
+	}
+}

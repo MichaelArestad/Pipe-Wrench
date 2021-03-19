@@ -4,9 +4,9 @@
 	margin-bottom: 0 !important;
 	margin-top: 0 !important;
 
-	@include media(mobile-only) {
+	@include break-xs {
 		&[style] {
-			height: var(--global--spacing-unit) !important;
+			height: rem(16px) !important;
 		}
 	}
 }

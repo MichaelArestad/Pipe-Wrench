@@ -6,7 +6,7 @@
 
 .entry-author {
 
-	font-size: var(--global--font-size-xs);
+	font-size: var(--font-size-xs);
 	max-width: var(--responsive--aligndefault-width);
 
 	.author-avatar {
@@ -14,23 +14,21 @@
 	}
 
 	.site-main > article > & {
-		margin-top: calc(2 * var(--global--spacing-vertical));
+		margin-top: rem(80px);
 	}
 
 	.author-title {
-		font-family: var(--global--font-ui);
-		font-size: var(--global--font-size-xs);
+		font-size: var(--font-size-xs);
 
 		.author-name {
 			display: block;
-			margin-top: 4px;
-			font-family: var(--entry-author-bio--font-family);
-			font-size: var(--entry-author-bio--font-size);
+			margin-top: rem(4px);
+			font-size: var(--font-size-xl);
 		}
 	}
 
 	.author-bio {
-		font-size: var(--global--font-size-md);
+		font-size: var(--font-size-md);
 	}
 
 	.author-link::before {

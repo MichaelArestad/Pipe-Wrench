@@ -2,30 +2,40 @@
  * Repsonsive Styles
  */
 
-@import '../abstracts/mixins';
 
+ /**
+ * Required Variables
+ */
+ $default_width: 600px;
+ $alignwide_width: 790px;
+//  $breakpoint_sm: 482px;
+//  $breakpoint_md: 768px;
+//  $breakpoint_lg: 960px;
+//  $breakpoint_xl: 1024px;
+//  $breakpoint_xxl: 1224px
+ 
 /**
  * Root Media Query Variables
  */
 :root {
-	--responsive--spacing-horizontal: calc(2 * var(--global--spacing-horizontal));
+	--responsive--spacing-horizontal: calc(2 * #{rem(40px)});
 	--responsive--aligndefault-width: calc(100vw - var(--responsive--spacing-horizontal));
 	--responsive--alignwide-width: calc(100vw - var(--responsive--spacing-horizontal));
 	--responsive--alignfull-width: 100%;
-	--responsive--alignwide-width-multiplier: calc(16 * var(--global--spacing-horizontal));
-	--responsive--alignrightleft-width: var(--global--spacing-horizontal);
+	--responsive--alignwide-width-multiplier: calc(16 * #{rem(40px)});
+	--responsive--alignrightleft-width: rem(40px);
 }
 
-@include media(mobile) {
+@include break-xs {
 	:root {
 		--responsive--alignrightleft-width: calc( 50% - ( 0.5 * (100vw - var(--responsive--aligndefault-width))) ); //calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
 	}
 }
 
-@include media(laptop) {
+@include break-l {
 	:root {
-		--responsive--aligndefault-width: min(calc(100vw - 2 * var(--global--spacing-horizontal)), #{$default_width});
-		--responsive--alignwide-width: min(calc(100vw - 2 * var(--global--spacing-horizontal)), #{$alignwide_width});
+		--responsive--aligndefault-width: min(calc(100vw - 2 * #{rem(40px)}), #{$default_width});
+		--responsive--alignwide-width: min(calc(100vw - 2 * #{rem(40px)}), #{$alignwide_width});
 	}
 }
 
@@ -44,12 +54,17 @@
 	margin-right: auto;
 }
 
-@include media(mobile) {
+%responsive-alignfull-width {
+	width: auto;
+	max-width: none;
+	margin-left: calc( -1 * var(--page-margin) - #{rem(40px)});
+	margin-right: calc( -1 * var(--page-margin) - #{rem(40px)});
+ }
+
+@include break-xs {
 	%responsive-alignfull-width {
-		max-width: var(--responsive--alignfull-width);
-		width: auto;
-		margin-left: auto;
-		margin-right: auto;
+		margin-left: calc( -2 * var(--page-margin));
+		margin-right: calc( -2 * var(--page-margin));
  	}
  }
 
@@ -65,6 +80,7 @@
 	margin-right: auto;
 	width: calc(var(--responsive--alignfull-width) - calc(2 * var(--responsive--spacing-horizontal)));
 	max-width: var(--responsive--alignfull-width);
+	content: nested;
 }
 
 /**

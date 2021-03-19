@@ -1,10 +1,10 @@
 // Text selection background color
 
 ::selection {
-	color: var(--global--color-white);
-	background-color: var(--global--color-text-selection) !important;
+	color: #FFFEFA !important;
+	background-color: #5a2f67!important;
 }
 ::-moz-selection {
-	color: var(--global--color-white);
-	background-color: var(--global--color-text-selection) !important;
+	color: #FFFEFA !important;
+	background-color: #5a2f67!important;
 }

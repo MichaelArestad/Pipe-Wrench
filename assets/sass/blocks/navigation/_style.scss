@@ -3,13 +3,11 @@
 		padding: 0;
 
 		.wp-block-navigation-link__content {
-			padding: var(--primary-nav--padding);
+			padding: rem(16px);
 		}
 
 		.wp-block-navigation-link__label {
-			font-family: var(--primary-nav--font-family);
-			font-size: var(--primary-nav--font-size);
-			font-weight: var(--primary-nav--font-weight);
+			font-size: var(--font-size-sm);
 		}
 	}
 
@@ -27,7 +25,7 @@
 			.wp-block-navigation__container {
 				border: none;
 				left: 0;
-				margin-left: var(--primary-nav--padding);
+				margin-left: rem(16px);
 				//min-width: max-content;
 				opacity: 0;
 				padding: 0;
@@ -37,7 +35,7 @@
 				.wp-block-navigation-link {
 					.wp-block-navigation-link__content {
 						display: inline-block;
-						padding: calc( 0.5 * var(--primary-nav--padding) ) var(--primary-nav--padding);
+						padding: calc( 0.5 * #{rem(16px)} ) #{rem(16px)};
 					}
 				}
 
@@ -58,8 +56,8 @@
 	> .wp-block-navigation__container {
 		> .has-child {
 			> .wp-block-navigation__container {
-				background: var(--global--color-background);
-				box-shadow: var(--global--elevation);
+				background: var(--color-background);
+				box-shadow: 1px 1px 3px 0px rgba( 0, 0, 0, 0.2 );
 				margin: 0;
 				padding: 0;
 				position: absolute;
@@ -69,14 +67,14 @@
 	}
 
 	&:not(.has-background) .wp-block-navigation__container .wp-block-navigation-link:not(.has-text-color) {
-		color: var(--primary-nav--color-link);
+		color: var(--color-foreground);
 	}
 
 	&:not(.has-text-color){
 		.wp-block-navigation-link {
 			> a {
 				&:hover, &:focus {
-					color: var(--primary-nav--color-link-hover);
+					color: var(--color-2);
 				}
 			}
 		}

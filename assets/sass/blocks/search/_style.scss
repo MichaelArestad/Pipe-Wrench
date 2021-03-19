@@ -3,13 +3,12 @@
 	&.wp-block-search__button-inside {
 		.wp-block-search__inside-wrapper{
 			background: transparent;
-			border: var(--form--border-width) solid var(--form--border-color);
-			border-radius: var(--form--border-radius);
+			border: rem(2px) solid var(--color-foreground);
 			.wp-block-search__input {
-				padding: var(--form--spacing-unit);
+				padding: rem(16px);
 			}
 			.wp-block-search__button {
-				padding: var(--button--padding-vertical) var(--button--padding-horizontal);
+				padding: rem(12px) rem(16px);
 				&.has-icon {
 					padding: 0;
 				}
@@ -22,32 +21,53 @@
 	}
 
 	.wp-block-search__input {
-		font-family: var(--form--font-family);
-		font-size: var(--form--font-size);
-		line-height: var(--form--line-height);
-		border: var(--form--border-width) solid var(--form--border-color);
-		border-radius: var(--form--border-radius);
-		color: var(--form--color-text);
-		line-height: var(--global--line-height-body);
+		font-size: var(--font-size-base);
+		border: rem(2px) solid var(--color-foreground);
+		color: var(--color-foreground);
 		max-width: inherit;
-		margin-right: calc( .66 * var(--global--spacing-horizontal) );
-		padding: var(--form--spacing-unit);
+		// margin-right: calc( .66 * #{rem(24px)} );
+		padding: rem(16px);
 		background: transparent;
+		margin-right: 0;
+
+		&::placeholder {
+			// font-
+		}
 
 		&:focus {
-			color: var(--form--color-text);
-			border-color: var(--form--border-color);
+			color: var(--color-foreground);
+			border-color: var(--color-foreground);
 		}
 	}
 	.wp-block-search__button {
-		@include button-style();
-		border: none;
-		box-shadow: none;
+		color: var(--color-background);
+		cursor: pointer;
+		font-weight: 500;
+		font-family: var(--font-family-display);
+		font-size: rem(18px);
+		background-color: var(--color-foreground);
+		border: 0;
+		border-radius: 0;
+		text-decoration: none;
+		padding: rem(12px) rem(16px) rem(10px);
+		transition: all 0.1s ease-out;
+		margin-left: 0;
+
+		@include break-xs {
+			font-size: var(--font-size-md);
+		}
+
+		&:hover,
+		&:focus {
+			background: var(--color-foreground);
+			box-shadow: 0 -1px 0 5px var(--color-foreground);
+		}
+
 		&.has-icon {
 			transform: scaleX(-1);	
 			padding: 0;		
-			min-width: calc(2* var(--button--padding-vertical) + 16px);
-			min-height: calc(2* var(--button--padding-vertical) + 16px);
+			min-width: calc(2* #{rem(12px)} + #{rem(16px)});
+			min-height: calc(2* #{rem(12px)} + #{rem(16px)});
 			svg {
 				fill: currentColor;
 				width: 29px;

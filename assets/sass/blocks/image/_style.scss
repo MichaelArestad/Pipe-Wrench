@@ -2,20 +2,20 @@
 	text-align: center;
 
 	figcaption {
-		color: var(--global--color-foreground-low-contrast);
-		font-size: var(--global--font-size-xs);
-		line-height: var(--global--line-height-body);
-		margin-top: calc(0.5 * var(--global--spacing-unit));
-		margin-bottom: var(--global--spacing-unit);
+		color: var(--color-foreground);
+		font-size: var(--font-size-xs);
+		line-height: 1.9;
+		margin-top: rem(8px);
+		margin-bottom: rem(8px);
 		text-align: center;
 	}
 
 	.alignright {
-		margin-left: var(--global--spacing-horizontal);
+		margin-left: rem(24px);
 	}
 
 	.alignleft {
-		margin-right: var(--global--spacing-horizontal);
+		margin-right: rem(24px);
 	}
 }
 

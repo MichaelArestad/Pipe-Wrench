@@ -1,13 +1,12 @@
 .wp-block-columns {
-
 	.wp-block-column {
 		& > * {
-			margin-top: calc(0.66 * var(--global--spacing-vertical));
-			margin-bottom: calc(0.66 * var(--global--spacing-vertical));
+			margin-top: calc(0.66 * #{rem(40px)});
+			margin-bottom: calc(0.66 * #{rem(40px)});
 
-			@include media(mobile) {
-				margin-top: var(--global--spacing-vertical);
-				margin-bottom: var(--global--spacing-vertical);
+			@include break-xs {
+				margin-top: rem(40px);
+				margin-bottom: rem(40px);
 			}
 
 			&:first-child {
@@ -25,13 +24,13 @@
 	}
 
 	.wp-block-column:not(:last-child) {
-		margin-bottom: calc(0.66 * var(--global--spacing-vertical));
+		margin-bottom: calc(0.66 * #{rem(40px)});
 
-		@include media(mobile) {
-			margin-bottom: var(--global--spacing-vertical);
+		@include break-xs {
+			margin-bottom: rem(40px);
 		}
 
-		@include media(laptop) {
+		@include break-l {
 			/* Resetting margins to match _block-container.scss */
 			margin-bottom: 0;
 		}
@@ -41,7 +40,7 @@
 	 * Block Options
 	 */
 	&.alignfull {
-		padding-left: var(--global--spacing-unit);
-		padding-right: var(--global--spacing-unit);
+		padding-left: rem(16px);
+		padding-right: rem(16px);
 	}
 }

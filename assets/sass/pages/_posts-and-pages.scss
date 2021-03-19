@@ -2,14 +2,14 @@
 
 // }
 
-// .sticky-post {
-// 	color: var(--global--color-background);
-// 	background-color: var(--global--color-secondary);
-// 	font-family: var(--global--font-secondary);
-// 	font-size: var(--global--font-size-xs);
-// 	line-height: 1;
-// 	padding: calc(0.25 * var(--global--spacing-unit)) calc(0.33 * var(--global--spacing-unit));
-// }
+.sticky-post {
+	color: var(-color-background);
+	background-color: var(--color-2);
+	font-family: var(--font-family-serif);
+	font-size: var(--font-size-xs);
+	line-height: 1;
+	padding: rem(8px) rem(16px);
+}
 
 // .updated:not(.published) {
 
@@ -19,28 +19,27 @@
 
 // }
 
-// PAGES
 .page-template-pageDark .site-main {
-	background: var(--global--color-background);
-	color: var(--global--color-primary);
+	background: var(--color-background);
+	color: var(--color-foreground);
 }
 
 .page-template-pageFancy {
 	.entry-header {
 		background: url("./assets/img/logo-leaves-dark.png") no-repeat center bottom;
-		padding-bottom: 20px;
-		background-size: 120px auto;
+		padding-bottom: rem(20px);
+		background-size: rem(120px) auto;
 		
 		@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
 			background-image: url("./assets/img/logo-leaves-dark_2x.png");
 		}
-		@include media(mobile) {
-			padding-bottom: 24px;
-		background-size: 160px auto;
+		@include break-m {
+			padding-bottom: rem(24px);
+		background-size: rem(160px) auto;
 		}
-		@include media(laptop) {
-			padding-bottom: 50px;
-			background-size: 320px auto;
+		@include break-l {
+			padding-bottom: rem(50px);
+			background-size: rem(320px) auto;
 		}
 	}
 }

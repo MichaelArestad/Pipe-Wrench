@@ -1,12 +1,4 @@
-.wp-block-group {
-	&.has-background {
-		padding: 24px;
-
-		@include media(mobile) {
-			padding: var(--global--spacing-vertical);
-		}
-	}
-}
+@import "style";
 
 .wp-block-group .wp-block-group.has-background > .block-editor-block-list__layout > [data-align="full"] {
 	margin: 0;

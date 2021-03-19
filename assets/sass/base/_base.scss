@@ -1,63 +1,117 @@
+/**
+ * Reset specific elements to make them easier to style in other contexts.
+*/
+
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+form,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	padding: 0;
+	margin: 0;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+}
+
+/**
+* Apply generic border-box to all elements.
+* See:
+* https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+*/
+
+/**
+* Apply border-box across the entire page.
+*/
+html {
+	box-sizing: border-box;
+}
+
+/**
+* Relax the definition a bit, to allow components to override it manually.
+*/
+* {
+	&,
+	&::before,
+	&::after {
+		box-sizing: inherit;
+	}
+}
+
+body {
+	background-color: var(--color-5);
+	color: var(--color-1);
+	font-family: var(--font-family-serif);
+	font-size: var(--font-size-base);
+	line-height: 1.5;
+
+	@include break-xs {
+		line-height: 1.9;
+	}
+}
+
 // Links styles
 a {
-	border-bottom: 1px solid var(--global--color-primary);
-// 	color: var( --wp--style--color--link, var(--global--color-primary) );
-// 	text-decoration: underline;
-	transition: all 0.1s ease-out;
+	border-bottom: 1px solid currentColor;
+	color: var(--color-foreground);
+	text-decoration: none;
 
 	&:hover,
 	&:focus {
-		border-bottom-color: transparent;
+		color: var(--color-link-hover);
 	}
 
-	&:hover {
-		color: var(--global--color-link-highlight);
-	}
+	.entry-content p & {
+		transition: all .1s ease-in-out;
 
-	&:focus {
-		color: var(--global--color-primary);
-	}
-
-	.entry-content & {
 		&:hover,
 		&:focus {
 			border-bottom-color: transparent;
-		}
-
-		&:hover,
-		&:focus {
-			color: var(--global--color-background);
-			background: var(--global--color-primary);
-			box-shadow: 0 -1px 0 5px var(--global--color-primary);
+			color: var(--color-background);
+			background: var(--color-foreground);
+			box-shadow: 0 rem(-1px) 0 .5em var(--color-foreground);
 		}
 	}
-
-// 	&:active {
-// 		color: var( --wp--style--color--link, var(--global--color-primary) );
-// 	}
-
-// 	// If a custom link color has been assigned,
-// 	// switch the color of the bottom border too.
-// 	.has-link-color & {
-// 		border-bottom: 1px solid var( --wp--style--color--link, var(--global--color-primary) );
-
-// 		&:hover,
-// 		&:focus {
-// 			border-bottom-color: transparent;
-// 		}
-// 	}
 }
+
 // Enforce the custom link color even if a custom background color has been set.
 // The extra specificity here is required to override the background color styles.
-// .has-background:not(.has-background-background-color) {
-// 	// Target both current level and nested block.
-// 	.has-link-color a,
-// 	&.has-link-color a {
-// 		color: var( --wp--style--color--link, var(--global--color-primary) );
-// 	}
-// }
+.has-background:not(.has-background-background-color) {
+	// Target both current level and nested block.
+	.has-link-color a,
+	&.has-link-color a {
+		// color: var( --wp--style--color--link, var(--color-foreground) );
+	}
+}
 
-// button,
-// a {
-// 	cursor: pointer;
-// }
+button,
+a {
+	cursor: pointer;
+}
+
+
+
+// Focus styles
+.site *:focus {
+	outline-width: 1px;
+	outline-style: dotted;
+	outline-color: var(--color-form-focus);
+}

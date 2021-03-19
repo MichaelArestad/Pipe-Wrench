@@ -4,6 +4,20 @@
 	text-align: center;
 }
 
+
+.wp-block-image {
+	text-align: center;
+
+	figcaption {
+		color: var(--color-foreground);
+		font-size: var(--font-size-xs);
+		line-height: 1.9;
+		margin-top: rem(8px);
+		margin-bottom: rem(8px);
+		text-align: center;
+	}
+}
+
 [data-type="core/image"] .block-editor-block-list__block-edit figure.is-resized {
 	margin: 0 auto;
 }

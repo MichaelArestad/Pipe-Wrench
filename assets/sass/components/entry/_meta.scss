@@ -1,70 +1,48 @@
 .entry-meta,
 .entry-footer {
 
-	color: var(--global--color-primary);
+	color: var(--color-foreground);
 	clear: both;
 	float: none;
-	font-size: var(--entry-meta--font-size);
+	font-size: var(--font-size-xs);
 	display: block;
 
-	// > span {
-	// 	display: inline-block;
-	// 	margin-right: var(--global--spacing-unit);
+	> span {
+		display: inline-block;
+		margin-right: rem(24px);
 
-	// 	& > *,
-	// 	span .fn {
-	// 		display: inline-block;
-	// 		vertical-align: middle;
-	// 	}
-
-	// 	&:last-child {
-	// 		margin-right: 0;
-	// 	}
-
-	// 	.published + .updated {
-	// 		display: none; // Hide updated date?
-	// 	}
-	// }
-
-	a {
-		border-color: transparent;
-		color: var(--global--color-primary);
-
-		&:hover,
-		&:focus {
-			color: var(--global--color-primary);
+		& > *,
+		span .fn {
+			display: inline-block;
+			vertical-align: middle;
 		}
 
-		&:hover {
-			border-color: var(--global--color-primary);
+		&:last-child {
+			margin-right: 0;
 		}
 
-		&:focus {
-			color: var(--global--color-primary);
-		}
-
-		&:active {
-			color: var(--global--color-primary);
+		.published + .updated {
+			display: none; // Hide updated date?
 		}
 	}
 
-	// .svg-icon {
-	// 	fill: currentColor;
-	// 	position: relative;
-	// 	display: inline-block;
-	// 	vertical-align: middle;
-	// 	margin-right: calc(0.25 * var(--global--spacing-unit));
-	// }
+	.svg-icon {
+		fill: currentColor;
+		position: relative;
+		display: inline-block;
+		// vertical-align: top;
+		margin-right: rem(8px);
+	}
 }
 
 // Extra specificity to override rules in _vertical-margins.scss
-// .site-main > article > .entry-footer {
-// 	margin-top: calc( var(--global--spacing-vertical) * 3 );
-// 	padding-top: var(--global--spacing-unit);
-// 	border-top: var(--separator--height) solid var(--separator--border-color);
+.site-main > article > .entry-footer {
+	margin-top: rem(24px);
+	padding-top: rem(16px);
+	border-top: 2px solid var(--color-foreground);
 
-// 	// Remove the border if the homepage's main footer is also hidden.
-// 	.home.page.hide-homepage-footer & {
-// 		border-width: 0;
-// 	}
-// }
+	// Remove the border if the homepage's main footer is also hidden.
+	.home.page.hide-homepage-footer & {
+		border-width: 0;
+	}
+}

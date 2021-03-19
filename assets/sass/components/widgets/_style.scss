@@ -11,7 +11,7 @@
 
 	> label {
 		display: flex;
-		margin-right: var(--global--spacing-horizontal);
+		margin-right: rem(24px);
 		width: 100%;
 		.search-field {
 			width: 100%;

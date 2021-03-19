@@ -1,20 +1,25 @@
 .wp-block-pullquote {
-	padding: calc( 2 * var(--global--spacing-unit) ) 0;
+	padding: calc( 2 * #{rem(16px)} ) 0;
 	text-align: left;
-	// Theme?
-	border-top-color: var(--pullquote--border-color);
-	border-top-width: var(--pullquote--border-width);
-	border-bottom-color: var(--pullquote--border-color);
-	border-bottom-width: var(--pullquote--border-width);
-	color: var(--pullquote--color-foreground);
+	color: var(--color-foreground);
+	border: 0;
 
 	p {
-		font-family: var(--pullquote--font-family);
-		font-size: var(--pullquote--font-size);
-		font-style: var(--pullquote--font-style);
-		letter-spacing: var(--pullquote--letter-spacing);
-		line-height: var(--pullquote--line-height);
+		font-family: var(--font-family-display);
+		font-size: var(--font-size-lg);
+		font-weight: 300;
+		line-height: 1;
 		margin: 0;
+
+		@include break-xs {
+			font-size: var(--font-size-xl);
+		}
+		@include break-m {
+			font-size: var(--font-size-xxl);
+		}
+		@include break-l {
+			font-size: rem(80px);
+		}
 	}
 
 	a {
@@ -26,7 +31,7 @@
 	footer {
 		color: currentColor;
 		display: block;
-		font-size: var(--global--font-size-xs);
+		font-size: var(--font-size-xs);
 		text-transform: none;
 	}
 
@@ -37,9 +42,9 @@
 		background: none;
 	}
 
-    &.is-style-large {
-        border-left-color: var(--quote--border-color);
-        border-left-style: solid;
+	&.is-style-large {
+		border-left-color: var(--color-foreground);
+		border-left-style: solid;
 		border-left-width: var(--quote--border-width);
 		font-style: normal;
 	}
@@ -51,17 +56,31 @@
 	}
 	&.alignfull:not(.is-style-solid-color) > p,
 	&.alignfull:not(.is-style-solid-color) blockquote {
-		padding: 0 calc( 2 * var(--global--spacing-unit) );
+		padding: 0 calc( 2 * #{rem(16px)} );
 	}
 
 	&.is-style-solid-color {
 
 		background-color: var(--pullquote--color-foreground);
 		color: var(--pullquote--color-background);
-		padding: calc( 2 * var(--global--spacing-unit) );
+		padding: calc( 2 * #{rem(16px)} );
 
 		blockquote {
 			max-width: inherit;
+
+			p {
+				font-family: var(--font-family-serif);
+				font-size: var(--font-size-base);
+				line-height: 1.5;
+				font-style: italic;
+
+				@include break-xs {
+					font-size: var(--font-size-md);
+				}
+				@include break-m {
+					font-size: var(--font-size-lg);
+				}
+			}
 		}
 
 		.wp-block-pullquote__citation,

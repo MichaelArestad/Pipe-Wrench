@@ -52,26 +52,13 @@ function pipewrench_fonts_url() {
 
 /**
  * Add Parent styles
- *
- * - See: http://themeshaper.com/2014/08/13/how-to-add-google-fonts-to-wordpress-themes/
  */
 add_action( 'wp_enqueue_scripts', 'pipewrench_enqueue_styles' );
 function pipewrench_enqueue_styles() {
-	$parenthandle = 'seedlet-style'; // This is 'twentyfifteen-style' for the Twenty Fifteen theme.
 	$theme = wp_get_theme();
-	wp_enqueue_style( $parenthandle, get_template_directory_uri() . '/style.css', 
-		array(),
-		$theme->parent()->get('Version')
-	);
 
 	wp_enqueue_style( 'pipewrench-style', get_stylesheet_uri(),
-		array( $parenthandle ),
-		$theme->get('Version')
-	);
-
-	// Navigation styles
-	wp_enqueue_style( 'pipewrench-style-navigation', get_stylesheet_directory_uri() . '/assets/css/style-navigation.css',
-		array( $parenthandle ),
+		array(),
 		$theme->get('Version')
 	);
 
@@ -81,12 +68,25 @@ function pipewrench_enqueue_styles() {
 
 	// Print styles
 	wp_enqueue_style( 'pipewrench-print-style', get_stylesheet_directory_uri() . '/assets/css/print.css',
-		array( $parenthandle ), wp_get_theme()->get( 'Version' ), 'print'
+		array(), wp_get_theme()->get( 'Version' ), 'print'
 	);
 	
 	// Fonts
 	wp_enqueue_style( 'pipewrench-fonts', pipewrench_fonts_url(), array(), null );
 }
+
+function give_dequeue_plugin_css() {
+	wp_dequeue_style( 'seedlet-fonts' );
+	wp_deregister_style( 'seedlet-fonts' );
+	wp_dequeue_style( 'seedlet-style' );
+	wp_deregister_style( 'seedlet-style' );
+	wp_dequeue_style( 'seedlet-style-navigation' );
+	wp_deregister_style( 'seedlet-style-navigation' );
+	wp_dequeue_style( 'seedlet-print-style' );
+	wp_deregister_style( 'seedlet-print-stylen' );
+}
+
+add_action('wp_enqueue_scripts','give_dequeue_plugin_css', 100);
 
 if ( ! function_exists( 'pipewrench_setup' ) ) :
 	/**

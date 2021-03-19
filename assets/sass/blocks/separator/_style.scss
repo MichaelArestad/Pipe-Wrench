@@ -1,15 +1,16 @@
+.wp-block-seperator,
 hr {
 	border-style: none;
-	border-bottom: var(--separator--height) solid var(--separator--border-color);
+	border-bottom: rem(2px) solid var(--color-foreground);
 	clear: both;
 	margin-left: auto;
 	margin-right: auto;
 
 	&.wp-block-separator {
-		border-bottom: var(--separator--height) solid var(--separator--border-color);
+		border-bottom: rem(2px) solid var(--color-foreground);
 
 		&:not(.is-style-wide):not(.is-style-dots) {
-			max-width: var(--separator--width);
+			max-width: rem(144px);
 		}
 
 		/**
@@ -31,10 +32,10 @@ hr {
 			}
 
 			&:before {
-				color: var(--separator--border-color);
-				font-size: var(--global--font-size-xl);
-				letter-spacing: var(--global--font-size-sm);
-				padding-left: var(--global--font-size-sm);
+				color: var(--color-foreground);
+				font-size: var(--font-size-xl);
+				letter-spacing: var(--font-size-sm);
+				padding-left: var(--font-size-sm);
 			}
 		}
 

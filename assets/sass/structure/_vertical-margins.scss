@@ -11,154 +11,148 @@
  * Top Level Wrappers (header, main, footer)
  * - Set vertical padding and horizontal margins
  */
-// .site-header,
-// .site-main,
-// .site-footer {
-// 	padding-top: var(--global--spacing-vertical);
-// 	padding-bottom: var(--global--spacing-vertical);
-// 	margin-left: auto;
-// 	margin-right: auto;
-// }
-
+.site-header,
+.site-main,
+.site-footer {
+	padding-top: rem(36px);
+	padding-bottom: rem(40px);
+	margin-left: auto;
+	margin-right: auto;
+}
+ 
 .site-header {
-	// margin: var(--global--spacing-vertical) var(--global--spacing-vertical) 0;
-	padding-top: 36px;
-	padding-bottom: $baseline-unit;
+	padding-bottom: calc(3 * #{rem(40px)});
+	padding-top: rem(36px);
+	padding-bottom: rem(8px);
 
+	@include break-xs {
+		padding-top: calc(3 * #{rem(40px)});
+		padding-bottom: calc(3 * #{rem(40px)});
+	}
+
+	@include break-m {
+		padding-bottom: rem(64px);
+	}
+	@include break-l {
+		padding-bottom: rem(72px);
+	}
+ 
 	.has-main-navigation & {
-		padding-top: 36px;
+		padding-top: rem(36px);
+
+		@include break-xs {
+			padding-top: calc(3 * #{rem(40px)});
+		}
 	}
 
 	.page-template-pageDark & {
-		margin: 16px 16px 0;
+		margin: rem(16px) rem(16px) 0;
 
-		@include media(mobile) {
-			margin: var(--global--spacing-vertical) var(--global--spacing-vertical) 0;
+		@include break-xs {
+			margin: rem(40px) rem(40px) 0;
 		}
 	}
 
 	.home & {
-		padding-top: 56px;
+		padding-top: rem(56px);
 	}
-
-	// @include media(mobile) {
-	// 	padding-bottom: $baseline-unit * 4;
-	// }
-	@include media(tablet) {
-		padding-bottom: $baseline-unit * 8;
-	}
-	@include media(laptop) {
-		padding-bottom: $baseline-unit * 9;
-	}
-
-	// padding-top: calc(3 * var(--global--spacing-vertical));
-	// padding-bottom: calc(3 * var(--global--spacing-vertical));
-
-	// @include media(mobile) {
-	// 	padding-top: calc(3 * var(--global--spacing-vertical));
-	// 	padding-bottom: calc(3 * var(--global--spacing-vertical));
-
-	// 	.has-main-navigation & {
-	// 		padding-top: calc(3 * var(--global--spacing-vertical));
-	// 	}
-	// }
 }
 
 /**
- * Site-main children wrappers
- * - Add double vertical margins here for clearer heirarchy
- */
+* Site-main 
+*/
 .site-main {
-	margin: 0 var(--global--spacing-vertical) var(--global--spacing-vertical);
-	padding-bottom: #{$baseline-unit * 15};
-	padding-left: #{$baseline-unit * 5};
-	padding-right: #{$baseline-unit * 5};
+	margin: 0 var(--page-margin) var(--page-margin);
+	padding-bottom: rem(120px);
+	padding-left: rem(40px);
+	padding-right: rem(40px);
+}
+ 
+/**
+* Site-main children wrappers
+* - Add double vertical margins here for clearer heirarchy
+*/
+.site-main > * {
+	margin-top: calc(3 * #{rem(40px)});
+	margin-bottom: calc(3 * #{rem(40px)});
 
-	@include media(mobile-only) {
-		margin: 0 16px 16px;
+	&:first-child {
+		margin-top: 0;
+	}
+
+	&:last-child {
+		margin-bottom: 0;
 	}
 }
 
-// .site-main > * {
-// 	margin-top: calc(3 * var(--global--spacing-vertical));
-// 	margin-bottom: calc(3 * var(--global--spacing-vertical));
-
-// 	&:first-child {
-// 		margin-top: 0;
-// 	}
-
-// 	&:last-child {
-// 		margin-bottom: 0;
-// 	}
-// }
+/**
+* Set the default maximum responsive content-width
+*/
+.default-max-width {
+	@extend %responsive-aligndefault-width;
+}
 
 /**
- * Set the default maximum responsive content-width
- */
-// .default-max-width {
-// 	@extend %responsive-aligndefault-width;
-// }
+* Set the wide maximum responsive content-width
+*/
+.wide-max-width {
+	@extend %responsive-alignwide-width;
+}
 
 /**
- * Set the wide maximum responsive content-width
- */
-// .wide-max-width {
-// 	@extend %responsive-alignwide-width;
-// }
-
-/**
- * Set the full maximum responsive content-width
- */
-// .full-max-width {
-// 	@extend %responsive-alignfull-width;
-// }
+* Set the full maximum responsive content-width
+*/
+.full-max-width {
+	@extend %responsive-alignfull-width;
+}
 
 /*
- * Block & non-gutenberg content wrappers
- * - Set margins
- */
-// .entry-header,
-// .post-thumbnail,
-// .entry-content,
-// .entry-footer,
-// .entry-author {
-// 	margin-top: var(--global--spacing-vertical);
-// 	margin-right: auto;
-// 	margin-bottom: var(--global--spacing-vertical);
-// 	margin-left: auto;
-// }
+* Block & non-gutenberg content wrappers
+* - Set margins
+*/
+.entry-header,
+.post-thumbnail,
+.entry-content,
+.entry-footer,
+.entry-author,
+.widget-area {
+	margin-top: rem(40px);
+	margin-right: auto;
+	margin-bottom: rem(40px);
+	margin-left: auto;
+}
 
 .entry-header.entry-header {
-	margin-bottom: $baseline-unit * 5;
+	margin-bottom: rem(40px);
 
-	@include media(tablet) {
-		margin-bottom: $baseline-unit * 8;
+	@include break-m {
+		margin-bottom: rem(64px);
 	}
-	@include media(laptop) {
-		margin-bottom: $baseline-unit * 12;
+	@include break-l {
+		margin-bottom: rem(96px);
 	}
 }
 
 /*
- * Block & non-gutenberg content wrapper children
- * - Sets spacing-vertical margin logic
- */
+* Block & non-gutenberg content wrapper children
+* - Sets spacing-vertical margin logic
+*/
 .site-footer > *,
 .site-main > article > *, // apply vertical margins to article level
 .site-main > .not-found > *, // apply vertical margins to article level
 .entry-content > *,
 .entry-content > #pico > *,
 [class*="inner-container"] > *,
-.wp-block-template-part > * {
+.wp-block-template-part > *,
+.widget-area > *,
+.widget-column > * {
 
-	// margin-top: calc( 0.666 * var(--global--spacing-vertical) );
-	// margin-bottom: calc( 0.666 * var(--global--spacing-vertical) );
-	margin-top: 40px;
-	margin-bottom: 40px;
+	margin-top: rem(40px);
+	margin-bottom: rem(40px);
 
-	@include media(mobile) {
-		margin-top: var(--global--spacing-vertical);
-		margin-bottom: var(--global--spacing-vertical);
+	@include break-xs {
+		margin-top: rem(40px);
+		margin-bottom: rem(40px);
 	}
 
 	&:first-child {
@@ -171,71 +165,70 @@
 }
 
 .site-footer > * {
-	@include media(mobile) {
+	@include break-xs {
 		margin-top: 0;
 	}
 }
 
 /*
- * Block & non-gutenberg content wrapper children
- * - Sets spacing-unit margins
- */
-// .site-header > *,
-// .entry-header > *,
-// .post-thumbnail > *,
-// .page-content > *,
-// .comment-content > *,
-// .entry-author > * {
-// 	margin-top: var(--global--spacing-unit);
-// 	margin-bottom: var(--global--spacing-unit);
+* Block & non-gutenberg content wrapper children
+* - Sets spacing-unit margins
+*/
+.site-header > *,
+.entry-header > *,
+.post-thumbnail > *,
+.page-content > *,
+.comment-content > *,
+.entry-author > *,
+.widget > * {
+	margin-top: var(--global--spacing-unit);
+	margin-bottom: var(--global--spacing-unit);
 
-// 	&:first-child {
-// 		margin-top: 0;
-// 	}
+	&:first-child {
+		margin-top: 0;
+	}
 
-// 	&:last-child {
-// 		margin-bottom: 0;
-// 	}
-// }
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
 
 .widget-area.widget-area {
 	margin-bottom: 0;
 }
 
 /*
- * .entry-content children specific controls
- * - Adds special margin overrides for alignment utility classes
- */
-// .entry-content > * {
+* .entry-content children specific controls
+* - Adds special margin overrides for alignment utility classes
+*/
+.entry-content > * {
 
-// 	&.alignleft,
-// 	&.alignright,
-// 	&.alignleft:first-child + *,
-// 	&.alignright:first-child + *,
-// 	&.alignfull {
-// 		margin-top: 0;
-// 	}
+	&.alignleft,
+	&.alignright,
+	&.alignleft:first-child + *,
+	&.alignright:first-child + *,
+	&.alignfull {
+		margin-top: 0;
+	}
 
-// 	&:last-child,
-// 	&.alignfull {
-// 		margin-bottom: 0;
-// 	}
+	&:last-child,
+	&.alignfull {
+		margin-bottom: 0;
+	}
 
-// 	/* Reset alignleft and alignright margins after alignfull */
-// 	&.alignfull + .alignleft,
-// 	&.alignfull + .alignright {
-// 		margin-top: var(--global--spacing-vertical);
-// 	}
-// }
+	/* Reset alignleft and alignright margins after alignfull */
+	&.alignfull + .alignleft,
+	&.alignfull + .alignright {
+		margin-top: rem(40px);
+	}
+}
 
 .site-footer {
 	padding-top: 0;
-	// padding-bottom: var(--global--spacing-vertical);
-	// margin-left: auto;
-	// margin-right: auto;
+	padding-bottom: rem(8px);
 }
 
 .footer-navigation {
-	padding-top: $baseline-unit * 4;
+	padding-top: rem(32px);
 	margin: 0;
 }

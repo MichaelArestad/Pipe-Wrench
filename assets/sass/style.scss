@@ -1,5 +1,5 @@
 /*
-Theme Name: Pipe Wrench
+Theme Name: Pipe Wrench OVERHAUL
 Theme URI: https://github.com/MichaelArestad/Pipe-Wrench
 Author: Michael Arestad
 Author URI: https://michaelarestad.com/
@@ -7,7 +7,7 @@ Description: Pipe Wrench is a Seedlet child theme. It is designed for pipewrench
 Requires at least: 4.9.6
 Tested up to: 5.4.1
 Requires PHP: 5.6.2
-Version: 0.0.9
+Version: 0.0.11
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Template: seedlet
@@ -24,21 +24,21 @@ Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
 
-/**
- * Abstracts
- * - Mixins, variables and functions
- */
-@import "abstracts/style";
+// Blocks
+// - These styles replace key Gutenberg Block styles for fonts, colors, and
+//   spacing with CSS-variables overrides
+// - In the future the Block styles may get compiled to individual .css
+//   files and conditionally loaded
+
+
+@import "functions/rem";
+@import "mixins/break";
 
 /**
- * Child Theme Deep
+ * Config
+ * - It's all here, pals
  */
-@import "abstracts/config";
-
-/**
- * Variables
- */
-@import "variables";
+@import "config";
 
 /**
  * Base
@@ -46,17 +46,20 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
  */
 @import "base/style";
 
+
 /**
  * Layout
  * - Structral and responsive styles
  */
 @import "structure/style";
 
+
 /**
  * Elements
  * - Styles for basic HTML elemants
  */
 @import "elements/style";
+
 
 /**
  * Blocks
@@ -67,11 +70,13 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
  */
 @import "blocks/style";
 
+
 /**
  * Components
  * - Similar to Blocks but exist outside of the "current" editor context
  */
 @import "components/style";
+
 
 /**
  * Site Pages
@@ -79,13 +84,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
  */
 @import "pages/style";
 
-/**
- * Vendors
- * - Styles for 3rd party plugins and WP extensions
- */
-@import "vendors/style";
 
-/**
- * Child Theme Extra Styles
- */
-// @import "extra-child-theme";
+// Vendors
+// - Styles for 3rd party plugins and WP extensions
+@import "vendors/style";

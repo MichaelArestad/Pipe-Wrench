@@ -7,25 +7,26 @@
 @import "button/editor";
 @import "calendar/style";
 @import "code/style";
-@import "cover/editor";
+@import "cover/style";
 @import "file/editor";
 @import "gallery/editor";
 @import "group/editor";
 @import "heading/editor";
 @import "image/editor";
 @import "latest-comments/editor";
-@import "latest-posts/editor";
-@import "legacy/editor"; // "Blocks" from the legacy WP editor, ie: galleries, .button class, etc.
-@import "list/editor";
-@import "media-text/editor";
-@import "navigation/editor";
-@import "paragraph/editor";
-@import "posts-list/editor";
-@import "pullquote/editor";
-@import "quote/editor";
+@import "latest-posts/style";
+@import "legacy/style"; // "Blocks" from the legacy WP editor, ie: galleries, .button class, etc.
+@import "list/style";
+@import "media-text/style";
+// @import "navigation/editor";
+@import "paragraph/style";
+// @import "posts-list/editor";
+@import "pullquote/style";
+@import "quote/style";
 @import "search/style";
-@import "separator/editor";
-@import "slideshow/editor";
-@import "table/editor";
+@import "separator/style";
+@import "slideshow/style";
+@import "table/style";
 @import "verse/style";
+@import "video/style";
 @import "utilities/editor"; // Import LAST to cascade properly

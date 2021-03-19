@@ -1,59 +1,50 @@
 .site-footer > .footer-navigation {
-
 	display: block;
 	text-align: center;
+	padding-top: rem(16px);
 
-	// @include media(desktop) {
-	// 	margin-top: var(--global--spacing-unit);
-	// 	margin-bottom: var(--global--spacing-unit);
-	// 	text-align: left;
-	// }
 
-	// & > div {
-	// 	display: inline;
-	// }
+	& > div {
+		display: inline;
+	}
 
 	.footer-menu {
+		color: var(--color-5);
+		margin: 0;
+		padding-left: 0;
 
-	// 	color: var(--footer--color-text);
-	// 	margin: 0;
-	// 	padding-left: 0;
+		& > li {
+			display: inline-block;
 
-	// 	& > li {
-	// 		display: inline-block;
+			&:first-of-type > a {
+				padding-left: 0;
+			}
 
-	// 		&:first-of-type > a {
-	// 			padding-left: 0;
-	// 		}
-
-	// 		&:last-of-type {
-	// 			padding-right: 0;
-	// 		}
-	// 	}
+			&:last-of-type {
+				padding-right: 0;
+			}
+		}
 
 		.menu-item {
-	// 		padding: var(--primary-nav--padding) var(--primary-nav--padding) var(--primary-nav--padding) 0;
-
+			padding: rem(16px) rem(24px) rem(16px) 0;
+			font-family: var(--font-family-display);
+			font-size: rem(20px);
+			font-weight: 400;
+			color: var(--color-5);
+			
 			a {
-				font-family: var(--global--font-primary);
-				font-size: var(--footer--font-size);
-				font-weight: var(--primary-nav--font-weight);
-				color: var(--global--color-white);
+				color: var(--color-5);
 				text-transform: uppercase;
 
 				&:link,
-				&:visited,
-				&:active {
-					color: var(--global--color-white);
+				&:active,
+				&:focus {
+					color: var(--color-5);
 				}
 
 				&:hover {
-					color: var(--global--color-white);
-					border-color: var(--global--color-tertiary);
-				}
-
-				&:focus {
-					color: var(--global--color-white);
+					color: var(--color-5);
+					border-color: var(--color-3);
 				}
 			}
 		}

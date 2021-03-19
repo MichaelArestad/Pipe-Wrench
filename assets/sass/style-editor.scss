@@ -2,13 +2,15 @@
  * These styles should be loaded by the Block Editor only
  */
 
-// Variables
-@import "variables-editor";
+@import "functions/rem";
+@import "mixins/break";
 
-// Abstracts
-// - Mixins, variables and functions
-@import "abstracts/functions";
-@import "abstracts/mixins";
+/**
+ * Config
+ * - It's all here, pals
+ */
+ @import "config";
+
 
 // Base
 // - Reset the browser

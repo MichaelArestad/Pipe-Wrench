@@ -1,8 +1,8 @@
-// .page-title {
-// 	font-size: var(--heading--font-size-h4);
-// }
+.page-title {
+	font-size: var(--font-size-lg);
+}
 
-// .archive-description p {
-//     font-size: var(--global--font-size-sm);
-//     margin-top: calc(0.5 * var(--global--spacing-vertical));
-// }
+.archive-description p {
+		font-size: var(--font-size-sm);
+		margin-top: calc(0.5 * #{rem(40px)});
+}

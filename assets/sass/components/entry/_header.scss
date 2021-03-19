@@ -1,45 +1,28 @@
 // Post title style
+
 .entry-header {
-	max-width: 1000px;
+	max-width: rem(1000px);
 	margin: 0 auto;
 }
 
 .entry-title,
 .editor-post-title__block .editor-post-title__input { // To target the editor
-	color: var(--global--color-primary);
-	font-family: var(--global--font-primary);
-	font-size: 40px;
-	text-align: center;
+	color: var(--color-foreground);
+	font-family: var(--font-family-display);
+	font-size: rem(40px);
 	font-weight: 500;
+	text-align: center;
 	line-height: 1;
+	overflow-wrap: break-word;
 
-	
-	// letter-spacing: var(--heading--letter-spacing-h2);
-	// line-height: var(--heading--line-height);
-	// overflow-wrap: break-word;
+	@include break-xs {
+		font-size: rem(64px);
+	}
+	@include break-l {
+		font-size: rem(120px);
+	}
 
 	a {
-		// color: var(--entry-header--color-link);
 		border: 0;
-
-		&:hover,
-		&:focus {
-			color: var(--global--color-accent-one);
-		}
-
-		// &:focus {
-			// color: var(--entry-header--color-focus);
-		// }
-
-		// &:active {
-			// color: var(--entry-header--color-link);
-		// }
-	}
-
-	@include media(mobile) {
-		font-size: 64px;
-	}
-	@include media(laptop) {
-		font-size: 120px;
 	}
 }

@@ -1,10 +1,10 @@
 .comment-respond {
-	margin-top: var(--global--spacing-vertical);
+	margin-top: rem(40px);
 }
 
 .comment-respond > * {
-	margin-top: var(--global--spacing-unit);
-	margin-bottom: var(--global--spacing-unit);
+	margin-top: rem(16px);
+	margin-bottom: rem(16px);
 
 	&:first-child {
 		margin-top: 0;
@@ -13,7 +13,7 @@
 	&:last-child {
 		margin-bottom: 0;
 		&.comment-form {
-			margin-bottom: var(--global--spacing-vertical);
+			margin-bottom: rem(40px);
 		}
 	}
 }
@@ -23,6 +23,12 @@
 	.url {
 		border-bottom: none;
 		color: currentColor;
+		
+		&:hover,
+		&:focus {
+			color: var(--color-2);
+			border-bottom: 1px solid var(--color-foreground);
+		}
 	}
 }
 
@@ -34,7 +40,7 @@
 	}
 
 	.comment-notes {
-		font-size: var(--global--font-size-sm);
+		font-size: var(--font-size-sm);
 	}
 
 	.comment-form-url,
@@ -50,12 +56,12 @@
 
 	.comment-form-cookies-consent > label, 
 	.comment-notes {
-		font-size: var(--global--font-size-xs);
+		font-size: var(-font-size-xs);
 	}
 }
 
 .comment-form > p {
-	margin-bottom: var(--global--spacing-unit);
+	margin-bottom: rem(16px);
 
 	&:first-of-type {
 		margin-top: 0;
@@ -71,8 +77,8 @@
 	input[type="url"],
 	textarea {
 		display: block;
-		font-size: var(--global--font-size-sm);
-		margin-bottom: calc( .5 * var(--global--spacing-unit) );
+		font-size: var(-font-size-sm);
+		margin-bottom: calc( .5 * #{rem(16px)} );
 		width: 100%;
 	}
 
@@ -80,10 +86,10 @@
 		display: flex;
 	}
 
-	@include media(mobile) {
+	@include break-xs {
 
 		&.comment-form-author {
-			margin-right: calc( 1.5 * var(--global--spacing-horizontal) );
+			margin-right: rem(32px);
 		}
 
 		&.comment-notes,

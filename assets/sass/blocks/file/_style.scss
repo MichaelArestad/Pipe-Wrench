@@ -4,21 +4,41 @@
 	a.wp-block-file__button:focus,
 	a.wp-block-file__button:hover,
 	a.wp-block-file__button:visited {
-		color: var(--button--color-text-hover);
+		// color: var(--color-2);
 		opacity: inherit;
 	}
 
+	a:hover,
+	a:focus {
+		color: var(--color-link-hover);
+		background: none;
+		box-shadow: none;
+	}
 	a:after {
 		content: '';
 		display: block;
 	}
 
-	.wp-block-file__button {
+	a.wp-block-file__button {
 		// Extend button style
-		@include button-style;
-
 		display: inline-block;
-		margin: calc( 0.5 * var(--global--spacing-unit) ) 0 0 0;
-		padding: calc(0.5 * var(--button--padding-vertical)) calc(0.5 * var(--button--padding-horizontal));
+		color: var(--color-background);
+		cursor: pointer;
+		font-weight: 500;
+		font-size: rem(14px);
+		background-color: var(--color-foreground);
+		border: 0;
+		border-radius: 0;
+		text-decoration: none;
+		margin: calc( 0.5 * #{rem(16px)} ) 0 0 0;
+		padding: rem(8px) rem(16px);
+		transition: all 0.1s ease-out;
+
+		&:hover,
+		&:focus {
+			color: var(--color-background);
+			background: var(--color-foreground);
+			box-shadow: 0 -1px 0 5px var(--color-foreground);
+		}
 	}
 }

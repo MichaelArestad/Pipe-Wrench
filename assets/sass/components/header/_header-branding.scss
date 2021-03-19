@@ -1,13 +1,103 @@
 // Site branding
 
-.site-header {
-	background: var(--global--color-background);
+.site-branding {
+	color: var(--color-foreground);
+	text-align: center;
+	margin-bottom: 0;
 }
 
-.site-branding {
-	color: var(--global--color-primary);
-	// text-align: center;
+// Site title
+
+.site-title {
+	color: var(--color-foreground);
+	font-family: var(--font-family-display);
+	font-size: var(--font-size-xl);
+	font-weight: 600;
+	line-height: 1;
+	text-transform: uppercase;
+	margin-top: rem(40px);
 	margin-bottom: 0;
+
+	a {
+		background-image: linear-gradient(to right, var(--color-background) 100%, transparent 100%);
+		background-position: 0 1.22em;
+		background-repeat: repeat-x;
+		background-size: 8px 1.5px;
+		border-bottom: none;
+		color: currentColor;
+		font-weight: 600;
+		text-shadow:
+			1px 0px var(--color-background),
+			-1px 0px var(--color-background),
+			-2px 0px var(--color-background),
+			2px 0px var(--color-background),
+			-3px 0px var(--color-background),
+			3px 0px var(--color-background),
+			-4px 0px var(--color-background),
+			4px 0px var(--color-background),
+			-5px 0px var(--color-background),
+			5px 0px var(--color-background);
+		transition: background-size 0.1s ease-out;
+
+		&:link,
+		&:visited,
+		&:active {
+			color: currentColor;
+		}
+
+		&:hover,
+		&:focus {
+			color: var(--color-link-hover);
+			background-size: rem(8px) 0px;
+		}
+	}
+
+	@include break-xs {
+		font-size: var(--font-size-xxxl);
+
+		a {
+			background-size: rem(8px) rem(2px);
+		}
+	}
+
+	@include break-l {
+		font-size: var(--font-size-xxxxl);
+	}
+}
+
+// Site description
+.site-description {
+	color: currentColor;
+	font-size: var(--font-size-sm);
+}
+
+a.custom-logo-link,
+nav a {
+	border-bottom: 1px solid transparent;
+	text-decoration: none;
+}
+
+.site-title > a {
+	text-underline-width: .125em;
+	text-decoration-color: var(--color-2);
+}
+
+// Site logo
+
+.site-logo {
+	margin: calc( #{rem(40px)} / 2 ) #{rem(24px)};
+	text-align: center;
+
+	.custom-logo {
+		max-width: rem(120px);
+		max-height: rem(120px);
+		height: auto;
+
+		@include break-xs {
+			max-width: rem(96px);
+		max-height: rem(96px);
+		}
+	}
 }
 
 .default-logo {
@@ -15,114 +105,29 @@
 	border: none;
 	position: relative;
 	z-index: 1;
-	margin-top: 64px;
-
-	@include media(tablet-only) {
+	max-width: 60%;
+	margin-top: 0;
+	
+	@include break-xs {
 		max-width: 50%;
+		margin-top: rem(96px);
 	}
-	@include media(mobile-only) {
-		max-width: 60%;
+	
+	@include break-l {
 		margin-top: 0;
 	}
-	@include media(tablet) {
-		margin-top: 0;
-	}
-
+	
 	&.is-compact {
-		@include media(mobile-only) {
-			max-width: 160px;
-			margin-top: #{$baseline-unit * 4};
+		max-width: rem(160px);
+		margin-top: rem(32px);
+
+		@include break-xs {
+			max-width: 50%;
+			margin-top: rem(96px);
+		}
+		
+		@include break-l {
+			margin-top: rem(5px);
 		}
 	}
 }
-
-// Site title
-
-.site-title {
-	margin-top: 40px;
-	margin-bottom: 0;
-	text-transform: uppercase;
-
-	color: var(--global--color-primary);
-	// font-family: var(--branding--title--font-family);
-	// font-size: var(--branding--title--font-size-mobile);
-	// letter-spacing: normal;
-	// line-height: var(--global--line-height-heading);
-	// margin-bottom: calc( var(--global--spacing-vertical) / 2 );
-
-	a {
-		background: none;
-		// background-position: 0 1.22em;
-		// background-repeat: repeat-x;
-		// background-size: 8px 1.5px;
-		// border-bottom: none;
-		// color: currentColor;
-		// font-weight: var(--branding--title--font-weight);
-		text-shadow: none;
-		// transition: background-size 0.1s ease-out;
-
-		// &:link,
-		// &:visited,
-		// &:active {
-		// 	color: currentColor;
-		// }
-
-		&:hover,
-		&:focus {
-			color: var(--global--color-primary);
-			// background-size: 8px 0px;
-			text-decoration: underline;
-		}
-
-		&::selection {
-			text-shadow: none;
-		}
-	}
-
-	// @include media(mobile) {
-	// 	font-size: var(--branding--title--font-size);
-
-	// 	a {
-	// 		background-size: 8px 2px;
-	// 	}
-	// }
-}
-
-// Site description
-// .site-description {
-// 	color: currentColor;
-// 	font-family: var(--branding--description--font-family);
-// 	font-size: var(--branding--description--font-size);
-// }
-
-// a.custom-logo-link,
-// nav a {
-// 	border-bottom: 1px solid transparent;
-// 	text-decoration: none;
-// }
-
-.site-title > a {
-	text-underline-width: .125em;
-	text-decoration-color: var(--global--color-primary);
-}
-
-// Site logo
-
-// .site-logo {
-// 	margin: calc( var(--global--spacing-vertical) / 2 ) var(--global--spacing-horizontal);
-// 	text-align: center;
-
-// 	.custom-logo {
-// 		max-width: var(--branding--logo--max-width);
-// 		max-height: var(--branding--logo--max-height);
-// 		height: auto;
-// 	}
-// }
-
-// TODO - this should probably go in the variables declartion but we need the mixin...
-// @include media(mobile-only) {
-// 	:root {
-// 		--branding--logo--max-width: var(--branding--logo--max-width-mobile);
-// 		--branding--logo--max-height: var(--branding--logo--max-height-mobile);
-// 	}
-// }

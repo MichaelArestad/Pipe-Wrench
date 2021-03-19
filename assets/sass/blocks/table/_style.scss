@@ -1,17 +1,22 @@
 table,
 .wp-block-table {
 	width: 100%;
-	min-width: 240px;
+	min-width: rem(240px);
 	border-collapse: collapse;
 
+
+	thead {
+		border-bottom: 3px solid currentColor;
+	}
+
 	th {
-		font-family: var(--heading--font-family);
+		font-weight: 600;
 	}
 
 	td,
 	th {
-		padding: calc( 0.5 * var(--global--spacing-unit) );
-		border: 1px solid;
+		padding: calc( 0.5 * #{rem(16px)} );
+		border: rem(1px) solid;
 		word-break: break-all;
 	}
 }

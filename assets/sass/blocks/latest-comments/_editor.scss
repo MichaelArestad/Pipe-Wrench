@@ -1,3 +1,50 @@
 .wp-block-latest-comments {
-	margin-left: 0;
+	padding-left: 0;
+
+	.wp-block-latest-comments__comment {
+		font-size: var(--font-size-sm);
+
+		/* Vertical margins logic */
+		margin-top: rem(40px);
+		margin-bottom: rem(40px);
+
+		&:first-child {
+			margin-top: 0;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		.avatar {
+			margin-top: rem(2px);
+			border: rem(2px) solid var(--color-foreground);
+		}
+	}
+
+	.wp-block-latest-comments__comment-meta {
+		font-size: var(--font-size-xs);
+
+		a {
+			font-weight: 600;
+		}
+		time {
+			font-size: rem(12px);
+			text-transform: uppercase;
+			margin-top: rem(4px);
+		}
+	}
+
+	.wp-block-latest-comments__comment-date {
+		color: var(--color-foreground);
+		font-size: var(--font-size-sm);
+	}
+
+	.wp-block-latest-comments__comment-excerpt {
+		margin-top: rem(16px);
+		p {
+			font-size: var(--font-size-sm);
+			margin: 0;
+		}
+	}
 }

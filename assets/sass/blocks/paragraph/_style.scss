@@ -1,19 +1,14 @@
 p {
 	line-height: 1.5;
 
-	@include media(mobile) {
+	@include break-xs {
 		line-height: 1.7;
 	}
-	@include media(tablet) {
-		line-height: var(--wp--typography--line-height, --global--line-height-body);
+	@include break-m {
+		line-height: var(--wp--typography--line-height, 1.9);
 	}
-	// inherits general font style set at <body>
-	// &.has-background {
-	// 	padding: var(--global--spacing-unit);
-	// }
 
-	// Override `color: inherit` from Core styles.
-	// &.has-text-color a {
-	// 	color: var( --wp--style--color--link, var(--global--color-primary) );
-	// }
+	&.has-background {
+		padding: rem(8px) rem(16px);
+	}
 }

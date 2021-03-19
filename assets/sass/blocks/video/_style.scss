@@ -1,10 +1,10 @@
 .wp-block-video {
 
 	figcaption {
-		color: var(--global--color-foreground-low-contrast);
-		font-size: var(--global--font-size-xs);
-		margin-top: calc(0.5 * var(--global--spacing-unit));
-		margin-bottom: var(--global--spacing-unit);
+		color: var(--color-foreground);
+		font-size: var(--font-size-xs);
+		margin-top: calc(0.5 * #{rem(16px)});
+		margin-bottom: rem(16px);
 		text-align: center;
 	}
 }
