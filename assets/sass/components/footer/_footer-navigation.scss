@@ -2,6 +2,8 @@
 	display: block;
 	text-align: center;
 	padding-top: rem(16px);
+	padding-left: var(--page-margin);
+	padding-right: var(--page-margin);
 
 
 	& > div {
@@ -28,9 +30,13 @@
 		.menu-item {
 			padding: rem(16px) rem(24px) rem(16px) 0;
 			font-family: var(--font-family-display);
-			font-size: rem(20px);
+			font-size: rem(14px);
 			font-weight: 400;
 			color: var(--color-5);
+			
+			@include break-xs {
+				font-size: rem(20px);
+			}
 			
 			a {
 				color: var(--color-5);

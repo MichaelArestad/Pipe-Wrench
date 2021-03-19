@@ -1947,10 +1947,21 @@ pre.wp-block-verse {
 	display: block;
 }
 
+.entry-meta a,
+.entry-footer a {
+	border-color: transparent;
+}
+
+.entry-meta a:hover, .entry-meta a:focus,
+.entry-footer a:hover,
+.entry-footer a:focus {
+	border-color: currentColor;
+}
+
 .entry-meta > span,
 .entry-footer > span {
 	display: inline-block;
-	margin-right: 1.5rem;
+	margin-right: 1rem;
 }
 
 .entry-meta > span > *,
@@ -1977,10 +1988,11 @@ pre.wp-block-verse {
 	position: relative;
 	display: inline-block;
 	margin-right: 0.5rem;
+	margin-bottom: 0.1875rem;
 }
 
 .site-main > article > .entry-footer {
-	margin-top: 1.5rem;
+	margin-top: 7.5rem;
 	padding-top: 1rem;
 	border-top: 2px solid var(--color-foreground);
 }

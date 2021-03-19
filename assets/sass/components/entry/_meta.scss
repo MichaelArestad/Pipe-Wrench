@@ -7,9 +7,18 @@
 	font-size: var(--font-size-xs);
 	display: block;
 
+	a {
+		border-color: transparent;
+
+		&:hover,
+		&:focus {
+			border-color: currentColor;
+		}
+	}
+
 	> span {
 		display: inline-block;
-		margin-right: rem(24px);
+		margin-right: rem(16px);
 
 		& > *,
 		span .fn {
@@ -32,12 +41,13 @@
 		display: inline-block;
 		// vertical-align: top;
 		margin-right: rem(8px);
+		margin-bottom: rem(3px);
 	}
 }
 
 // Extra specificity to override rules in _vertical-margins.scss
 .site-main > article > .entry-footer {
-	margin-top: rem(24px);
+	margin-top: rem(120px);
 	padding-top: rem(16px);
 	border-top: 2px solid var(--color-foreground);
 

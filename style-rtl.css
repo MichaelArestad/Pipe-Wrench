@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*
-Theme Name: Pipe Wrench OVERHAUL
+Theme Name: Pipe Wrench
 Theme URI: https://github.com/MichaelArestad/Pipe-Wrench
 Author: Michael Arestad
 Author URI: https://michaelarestad.com/
@@ -8,7 +8,7 @@ Description: Pipe Wrench is a Seedlet child theme. It is designed for pipewrench
 Requires at least: 4.9.6
 Tested up to: 5.4.1
 Requires PHP: 5.6.2
-Version: 0.1.0
+Version: 0.1.1
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Template: seedlet
@@ -3277,6 +3277,8 @@ nav a {
 	display: block;
 	text-align: center;
 	padding-top: 1rem;
+	padding-right: var(--page-margin);
+	padding-left: var(--page-margin);
 }
 
 .site-footer > .footer-navigation > div {
@@ -3304,9 +3306,15 @@ nav a {
 .site-footer > .footer-navigation .footer-menu .menu-item {
 	padding: 1rem 0 1rem 1.5rem;
 	font-family: var(--font-family-display);
-	font-size: 1.25rem;
+	font-size: 0.875rem;
 	font-weight: 400;
 	color: var(--color-5);
+}
+
+@media (min-width: 480px) {
+	.site-footer > .footer-navigation .footer-menu .menu-item {
+		font-size: 1.25rem;
+	}
 }
 
 .site-footer > .footer-navigation .footer-menu .menu-item a {
@@ -3471,10 +3479,21 @@ nav a {
 	display: block;
 }
 
+.entry-meta a,
+.entry-footer a {
+	border-color: transparent;
+}
+
+.entry-meta a:hover, .entry-meta a:focus,
+.entry-footer a:hover,
+.entry-footer a:focus {
+	border-color: currentColor;
+}
+
 .entry-meta > span,
 .entry-footer > span {
 	display: inline-block;
-	margin-left: 1.5rem;
+	margin-left: 1rem;
 }
 
 .entry-meta > span > *,
@@ -3501,10 +3520,11 @@ nav a {
 	position: relative;
 	display: inline-block;
 	margin-left: 0.5rem;
+	margin-bottom: 0.1875rem;
 }
 
 .site-main > article > .entry-footer {
-	margin-top: 1.5rem;
+	margin-top: 7.5rem;
 	padding-top: 1rem;
 	border-top: 2px solid var(--color-foreground);
 }
