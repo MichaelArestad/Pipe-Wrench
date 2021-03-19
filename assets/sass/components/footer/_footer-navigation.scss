@@ -18,7 +18,7 @@
 		& > li {
 			display: inline-block;
 
-			&:first-of-type > a {
+			&:first-of-type {
 				padding-left: 0;
 			}
 
@@ -28,7 +28,7 @@
 		}
 
 		.menu-item {
-			padding: rem(16px) rem(24px) rem(16px) 0;
+			padding: rem(16px);
 			font-family: var(--font-family-display);
 			font-size: rem(14px);
 			font-weight: 400;
