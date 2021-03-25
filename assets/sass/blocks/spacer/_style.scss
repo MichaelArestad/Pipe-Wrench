@@ -4,7 +4,7 @@
 	margin-bottom: 0 !important;
 	margin-top: 0 !important;
 
-	@include break-xs {
+	@media (max-width: 480px) {
 		&[style] {
 			height: rem(16px) !important;
 		}

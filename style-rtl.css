@@ -2262,7 +2262,7 @@ hr.wp-block-separator {
 	margin-top: 0 !important;
 }
 
-@media (min-width: 480px) {
+@media (max-width: 480px) {
 	.wp-block-spacer[style] {
 		height: 1rem !important;
 	}
@@ -4073,4 +4073,27 @@ img#wpstats {
 
 #pico {
 	max-width: none;
+}
+
+#content div.wpforms-container-full .wpforms-form input[type="submit"],
+#content div.wpforms-container-full .wpforms-form button[type="submit"],
+#content div.wpforms-container-full .wpforms-form .wpforms-page-button {
+	font-family: var(--font-family-display);
+	font-size: 24px;
+	font-weight: 500;
+	border: 2px solid var(--color-foreground);
+	background: transparent;
+	padding: 8px 14px 6px;
+}
+
+#content div.wpforms-container-full .wpforms-form input[type="submit"]:hover, #content div.wpforms-container-full .wpforms-form input[type="submit"]:focus, #content div.wpforms-container-full .wpforms-form input[type="submit"].has-focus,
+#content div.wpforms-container-full .wpforms-form button[type="submit"]:hover,
+#content div.wpforms-container-full .wpforms-form button[type="submit"]:focus,
+#content div.wpforms-container-full .wpforms-form button[type="submit"].has-focus,
+#content div.wpforms-container-full .wpforms-form .wpforms-page-button:hover,
+#content div.wpforms-container-full .wpforms-form .wpforms-page-button:focus,
+#content div.wpforms-container-full .wpforms-form .wpforms-page-button.has-focus {
+	background: var(--color-foreground);
+	color: var(--color-background);
+	border: 2px solid var(--color-foreground);
 }
