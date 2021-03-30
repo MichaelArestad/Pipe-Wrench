@@ -123,13 +123,24 @@
 }
 
 .entry-header.entry-header {
-	margin-bottom: rem(40px);
+	margin-bottom: rem(32px);
 
 	@include break-m {
 		margin-bottom: rem(64px);
 	}
 	@include break-l {
 		margin-bottom: rem(96px);
+	}
+}
+
+.entry-content.entry-content {
+	margin-top: rem(24px);
+
+	@include break-xs {
+		margin-top: rem(40px);
+	}
+	@include break-l {
+		margin-top: rem(40px);
 	}
 }
 
@@ -147,8 +158,8 @@
 .widget-area > *,
 .widget-column > * {
 
-	margin-top: rem(40px);
-	margin-bottom: rem(40px);
+	margin-top: rem(28px);
+	margin-bottom: rem(28px);
 
 	@include break-xs {
 		margin-top: rem(40px);

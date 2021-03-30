@@ -36,13 +36,13 @@ Breakpoint mixin - about as simple as it gets and mobile first
 	--font-family-serif: Bitter, serif;
 	--font-size-xs: 0.875rem;
 	--font-size-sm: 1rem;
-	--font-size-base: 1rem;
+	--font-size-base: 0.875rem;
 	--font-size-md: 1.5rem;
 	--font-size-lg: 2rem;
 	--font-size-xl: 2.5rem;
 	--font-size-xxl: 4rem;
-	--font-size-xxxl: 7.5rem;
-	--font-size-xxxxl: 9.375rem;
+	--font-size-xxxl: 6.5rem;
+	--font-size-xxxxl: 8rem;
 	--page-margin: 1rem;
 	--color-1: #150619;
 	--color-2: #5a2f67;
@@ -699,7 +699,7 @@ hr.wp-block-separator.is-style-wide, .entry-content > *:not(.alignwide):not(.ali
 }
 
 .entry-header.entry-header {
-	margin-bottom: 2.5rem;
+	margin-bottom: 2rem;
 }
 
 @media (min-width: 782px) {
@@ -711,6 +711,22 @@ hr.wp-block-separator.is-style-wide, .entry-content > *:not(.alignwide):not(.ali
 @media (min-width: 960px) {
 	.entry-header.entry-header {
 		margin-bottom: 6rem;
+	}
+}
+
+.entry-content.entry-content {
+	margin-top: 1.5rem;
+}
+
+@media (min-width: 480px) {
+	.entry-content.entry-content {
+		margin-top: 2.5rem;
+	}
+}
+
+@media (min-width: 960px) {
+	.entry-content.entry-content {
+		margin-top: 2.5rem;
 	}
 }
 
@@ -727,8 +743,8 @@ hr.wp-block-separator.is-style-wide, .entry-content > *:not(.alignwide):not(.ali
 .wp-block-template-part > *,
 .widget-area > *,
 .widget-column > * {
-	margin-top: 2.5rem;
-	margin-bottom: 2.5rem;
+	margin-top: 1.75rem;
+	margin-bottom: 1.75rem;
 }
 
 @media (min-width: 480px) {
@@ -1431,12 +1447,12 @@ h6 a, .h6 a {
 }
 
 h1, .h1 {
-	font-size: var(--font-size-xl);
+	font-size: var(--font-size-md);
 }
 
 @media (min-width: 480px) {
 	h1, .h1 {
-		font-size: var(--font-size-xxl);
+		font-size: var(--font-size-xl);
 	}
 }
 
@@ -1447,55 +1463,85 @@ h1, .h1 {
 }
 
 h2, .h2 {
-	font-size: var(--font-size-lg);
+	font-size: var(--font-size-md);
 	font-weight: 300;
 }
 
 @media (min-width: 480px) {
+	h2, .h2 {
+		font-size: 2.25rem;
+	}
+}
+
+@media (min-width: 960px) {
 	h2, .h2 {
 		font-size: var(--font-size-xxl);
 	}
 }
 
 h3, .h3 {
-	font-size: var(--font-size-md);
+	font-size: 1.125rem;
 }
 
 @media (min-width: 480px) {
+	h3, .h3 {
+		font-size: var(--font-size-md);
+	}
+}
+
+@media (min-width: 960px) {
 	h3, .h3 {
 		font-size: var(--font-size-xl);
 	}
 }
 
 h4, .h4 {
-	font-size: var(--font-size-md);
+	font-size: var(--font-size-sm);
 	line-height: 1.3;
 }
 
 @media (min-width: 480px) {
+	h4, .h4 {
+		font-size: 1.25rem;
+	}
+}
+
+@media (min-width: 960px) {
 	h4, .h4 {
 		font-size: var(--font-size-lg);
 	}
 }
 
 h5, .h5 {
-	font-size: 1.125rem;
+	font-size: var(--font-size-xs);
 	line-height: 1.3;
 }
 
 @media (min-width: 480px) {
+	h5, .h5 {
+		font-size: var(--font-size-sm);
+	}
+}
+
+@media (min-width: 960px) {
 	h5, .h5 {
 		font-size: var(--font-size-md);
 	}
 }
 
 h6, .h6 {
-	font-size: var(--font-size-sm);
+	font-size: var(--font-size-xs);
 	line-height: 1.3;
 	font-weight: 300;
 }
 
 @media (min-width: 480px) {
+	h6, .h6 {
+		font-size: var(--font-size-sm);
+	}
+}
+
+@media (min-width: 960px) {
 	h6, .h6 {
 		font-weight: 600;
 	}
@@ -3411,7 +3457,7 @@ nav a {
 .editor-post-title__block .editor-post-title__input {
 	color: var(--color-foreground);
 	font-family: var(--font-family-display);
-	font-size: 2.5rem;
+	font-size: var(--font-size-md);
 	font-weight: 500;
 	text-align: center;
 	line-height: 1;
@@ -3421,14 +3467,14 @@ nav a {
 @media (min-width: 480px) {
 	.entry-title,
 	.editor-post-title__block .editor-post-title__input {
-		font-size: 4rem;
+		font-size: var(--font-size-xl);
 	}
 }
 
 @media (min-width: 960px) {
 	.entry-title,
 	.editor-post-title__block .editor-post-title__input {
-		font-size: 7.5rem;
+		font-size: var(--font-size-xxxl);
 	}
 }
 

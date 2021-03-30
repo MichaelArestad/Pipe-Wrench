@@ -5,15 +5,25 @@ $wpadmin-bar--height: rem(46px);
 	--font-family-display: 'Teko', sans-serif; // Teko: 300, 500, 600
 	--font-family-serif: Bitter, serif; // 400, 600
 	
+	// --font-size-xs: #{rem(14px)};
+	// --font-size-sm: #{rem(16px)};
+	// --font-size-base: #{rem(16px)};
+	// --font-size-md: #{rem(24px)};
+	// --font-size-lg: #{rem(32px)};
+	// --font-size-xl: #{rem(40px)};
+	// --font-size-xxl: #{rem(64px)};
+	// --font-size-xxxl: #{rem(120px)};
+	// --font-size-xxxxl: #{rem(150px)};
+
 	--font-size-xs: #{rem(14px)};
 	--font-size-sm: #{rem(16px)};
-	--font-size-base: #{rem(16px)};
+	--font-size-base: #{rem(14px)};
 	--font-size-md: #{rem(24px)};
 	--font-size-lg: #{rem(32px)};
 	--font-size-xl: #{rem(40px)};
 	--font-size-xxl: #{rem(64px)};
-	--font-size-xxxl: #{rem(120px)};
-	--font-size-xxxxl: #{rem(150px)};
+	--font-size-xxxl: #{rem(104px)};
+	--font-size-xxxxl: #{rem(128px)};
 
 	@include break-xs {
 	--font-size-base: #{rem(18px)};
