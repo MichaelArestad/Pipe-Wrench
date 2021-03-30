@@ -67,7 +67,9 @@ Breakpoint mixin - about as simple as it gets and mobile first
 	}
 }
 
-:root .page-template-pageDark {
+:root .page-template-pageDark,
+:root .page-template-pageDarkNoHeading,
+:root .page-template-pageFancyDark {
 	--color-foreground: var(--color-5);
 	--color-background: var(--color-1);
 	--color-link-hover: var(--color-4);
@@ -632,12 +634,16 @@ hr.wp-block-separator.is-style-wide, .entry-content > *:not(.alignwide):not(.ali
 	}
 }
 
-.page-template-pageDark .site-header {
+.page-template-pageDark .site-header,
+.page-template-pageDarkNoHeading .site-header,
+.page-template-pageFancyDark .site-header {
 	margin: 1rem 1rem 0;
 }
 
 @media (min-width: 480px) {
-	.page-template-pageDark .site-header {
+	.page-template-pageDark .site-header,
+	.page-template-pageDarkNoHeading .site-header,
+	.page-template-pageFancyDark .site-header {
 		margin: 2.5rem 2.5rem 0;
 	}
 }
@@ -2783,7 +2789,9 @@ pre.wp-block-verse {
 	padding-top: 2.25rem;
 }
 
-.page-template-pageDark .site-header {
+.page-template-pageDark .site-header,
+.page-template-pageDarkNoHeading .site-header,
+.page-template-pageFancyDark .site-header {
 	margin: var(--page-margin) var(--page-margin) 0;
 }
 
@@ -3143,13 +3151,25 @@ nav a {
 		left: 2.5rem;
 		right: 2.5rem;
 	}
-	.page-template-pageDark .primary-navigation, .page-template-pageDark
+	.page-template-pageDark .primary-navigation,
+	.page-template-pageDarkNoHeading .primary-navigation,
+	.page-template-pageFancyDark .primary-navigation, .page-template-pageDark
+	.woo-navigation,
+	.page-template-pageDarkNoHeading
+	.woo-navigation,
+	.page-template-pageFancyDark
 	.woo-navigation {
 		top: 4.5rem;
 		left: 5rem;
 		right: 5rem;
 	}
-	.admin-bar.page-template-pageDark .primary-navigation, .admin-bar.page-template-pageDark
+	.admin-bar.page-template-pageDark .primary-navigation,
+	.admin-bar.page-template-pageDarkNoHeading .primary-navigation,
+	.admin-bar.page-template-pageFancyDark .primary-navigation, .admin-bar.page-template-pageDark
+	.woo-navigation,
+	.admin-bar.page-template-pageDarkNoHeading
+	.woo-navigation,
+	.admin-bar.page-template-pageFancyDark
 	.woo-navigation {
 		top: 6.5rem;
 		left: 5rem;
@@ -4169,34 +4189,52 @@ img#wpstats {
 	padding: 0.5rem 1rem;
 }
 
-.page-template-pageDark .site-main {
+.page-template-pageDark .site-main,
+.page-template-pageDarkNoHeading .site-main,
+.page-template-pageFancyDark .site-main {
 	background: var(--color-background);
 	color: var(--color-foreground);
 }
 
-.page-template-pageFancy .entry-header {
-	background: url("./assets/img/logo-leaves-dark.png") no-repeat center bottom;
+.page-template-pageFancy .entry-header,
+.page-template-pageFancyDark .entry-header {
+	background-image: url("./assets/img/logo-leaves-dark.png");
+	background-repeat: no-repeat;
+	background-position: center bottom;
 	padding-bottom: 1.25rem;
 	background-size: 7.5rem auto;
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-	.page-template-pageFancy .entry-header {
+	.page-template-pageFancy .entry-header,
+	.page-template-pageFancyDark .entry-header {
 		background-image: url("./assets/img/logo-leaves-dark_2x.png");
 	}
 }
 
 @media (min-width: 782px) {
-	.page-template-pageFancy .entry-header {
+	.page-template-pageFancy .entry-header,
+	.page-template-pageFancyDark .entry-header {
 		padding-bottom: 1.5rem;
 		background-size: 10rem auto;
 	}
 }
 
 @media (min-width: 960px) {
-	.page-template-pageFancy .entry-header {
+	.page-template-pageFancy .entry-header,
+	.page-template-pageFancyDark .entry-header {
 		padding-bottom: 3.125rem;
 		background-size: 20rem auto;
+	}
+}
+
+.page-template-pageFancyDark .entry-header {
+	background-image: url("./assets/img/logo-leaves-light.png");
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+	.page-template-pageFancyDark .entry-header {
+		background-image: url("./assets/img/logo-leaves-light.png");
 	}
 }
 

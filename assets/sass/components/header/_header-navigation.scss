@@ -197,13 +197,17 @@
 			right: rem(40px);
 		}
 
-		.page-template-pageDark & {
+		.page-template-pageDark &,
+		.page-template-pageDarkNoHeading &,
+		.page-template-pageFancyDark & {
 			top: rem(72px);
 			left: rem(80px);
 			right: rem(80px);
 		}
 
-		.admin-bar.page-template-pageDark & {
+		.admin-bar.page-template-pageDark &,
+		.admin-bar.page-template-pageDarkNoHeading &,
+		.admin-bar.page-template-pageFancyDark & {
 			top: rem(104px);
 			left: rem(80px);
 			right: rem(80px);

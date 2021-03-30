@@ -19,14 +19,19 @@
 
 // }
 
-.page-template-pageDark .site-main {
+.page-template-pageDark .site-main,
+.page-template-pageDarkNoHeading .site-main,
+.page-template-pageFancyDark .site-main {
 	background: var(--color-background);
 	color: var(--color-foreground);
 }
 
-.page-template-pageFancy {
+.page-template-pageFancy,
+.page-template-pageFancyDark {
 	.entry-header {
-		background: url("./assets/img/logo-leaves-dark.png") no-repeat center bottom;
+		background-image: url("./assets/img/logo-leaves-dark.png");
+		background-repeat: no-repeat;
+		background-position: center bottom;
 		padding-bottom: rem(20px);
 		background-size: rem(120px) auto;
 		
@@ -40,6 +45,16 @@
 		@include break-l {
 			padding-bottom: rem(50px);
 			background-size: rem(320px) auto;
+		}
+	}
+}
+
+.page-template-pageFancyDark {
+	.entry-header {
+		background-image: url('./assets/img/logo-leaves-light.png');
+
+		@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+			background-image: url("./assets/img/logo-leaves-light.png");
 		}
 	}
 }

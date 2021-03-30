@@ -45,7 +45,9 @@ Breakpoint mixin - about as simple as it gets and mobile first
 	}
 }
 
-:root .page-template-pageDark {
+:root .page-template-pageDark,
+:root .page-template-pageDarkNoHeading,
+:root .page-template-pageFancyDark {
 	--color-foreground: var(--color-5);
 	--color-background: var(--color-1);
 	--color-link-hover: var(--color-4);

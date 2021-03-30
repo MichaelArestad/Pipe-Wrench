@@ -45,7 +45,9 @@
 		}
 	}
 
-	.page-template-pageDark & {
+	.page-template-pageDark &,
+	.page-template-pageDarkNoHeading &,
+	.page-template-pageFancyDark & {
 		margin: rem(16px) rem(16px) 0;
 
 		@include break-xs {

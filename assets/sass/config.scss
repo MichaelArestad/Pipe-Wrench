@@ -47,7 +47,9 @@ $wpadmin-bar--height: rem(46px);
 	--color-link-hover: var(--color-2);
 	--color-form-focus: #AE55C9;
 
-	.page-template-pageDark {
+	.page-template-pageDark,
+	.page-template-pageDarkNoHeading,
+	.page-template-pageFancyDark {
 		--color-foreground: var(--color-5);
 		--color-background: var(--color-1);
 		--color-link-hover: var(--color-4);

@@ -1,8 +1,8 @@
-<?php /* Template Name: Dark */ ?>
+<?php /* Template Name: Fancy Dark */ ?>
 
 <?php
 /**
- * The darker template for displaying all single posts
+ * The darker fancy template for displaying all single posts
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *

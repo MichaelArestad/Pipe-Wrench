@@ -7,7 +7,9 @@
 		padding-top: rem(36px);
 	}
 
-	.page-template-pageDark & {
+	.page-template-pageDark &,
+	.page-template-pageDarkNoHeading &,
+	.page-template-pageFancyDark & {
 		margin: var(--page-margin) var(--page-margin) 0;
 	}
 
