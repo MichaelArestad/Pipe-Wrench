@@ -17,9 +17,6 @@
 		@include break-m {
 			font-size: var(--font-size-xxl);
 		}
-		@include break-l {
-			font-size: rem(80px);
-		}
 	}
 
 	a {
@@ -38,6 +35,40 @@
 	/**
 	 * Block Options
 	 */
+	&.alignleft,
+	&.alignright {
+		padding: rem(16px);
+		margin-bottom: rem(16px);
+
+		@include  break-xs {
+			padding: rem(16px) 0;
+		}
+
+		p {
+			font-size: var(--font-size-sm);
+
+			@include  break-xs {
+				font-size: var(--font-size-md);
+			}
+		}
+	}
+
+	.entry-content &.alignleft {
+		margin-left: 0;
+
+		@include  break-xs {
+			margin-right: rem(16px);
+		}
+	}
+
+	.entry-content &.alignright {
+		margin-right: 0;
+		
+		@include  break-xs {
+			margin-left: rem(16px);
+		}
+	}
+
 	&:not(.is-style-solid-color) {
 		background: none;
 	}

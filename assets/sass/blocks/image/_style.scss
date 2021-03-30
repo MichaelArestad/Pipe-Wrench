@@ -12,10 +12,24 @@
 
 	.alignright {
 		margin-left: rem(24px);
+
+		@include break-xs {
+			margin-right : rem(-40px);
+		}
+		@include break-l {
+			margin-right : rem(-128px);
+		}
 	}
 
 	.alignleft {
 		margin-right: rem(24px);
+
+		@include break-xs {
+			margin-left : rem(-40px);
+		}
+		@include break-l {
+			margin-left : rem(-128px);
+		}
 	}
 }
 
