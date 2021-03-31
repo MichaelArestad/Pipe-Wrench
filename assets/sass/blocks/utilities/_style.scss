@@ -119,7 +119,7 @@
 	@extend %responsive-alignfull-width;
 
 	.alignfull {
-		@extend %responsive-alignwide-width-nested;
+		@extend %responsive-alignfull-width-nested;
 	}
 }
 

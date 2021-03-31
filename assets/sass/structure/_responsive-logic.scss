@@ -59,13 +59,11 @@
 	max-width: none;
 	margin-left: calc( -1 * var(--page-margin) - #{rem(40px)});
 	margin-right: calc( -1 * var(--page-margin) - #{rem(40px)});
- }
 
-@include break-xs {
-	%responsive-alignfull-width {
+	@include break-xs {
 		margin-left: calc( -2 * var(--page-margin));
 		margin-right: calc( -2 * var(--page-margin));
- 	}
+	}
  }
 
 %responsive-alignwide-width-nested {
@@ -73,14 +71,19 @@
 	margin-right: auto;
 	width: var(--responsive--alignwide-width);
 	max-width: var(--responsive--alignfull-width);
+	
 }
 
 %responsive-alignfull-width-nested {
 	margin-left: auto;
 	margin-right: auto;
-	width: calc(var(--responsive--alignfull-width) - calc(2 * var(--responsive--spacing-horizontal)));
-	max-width: var(--responsive--alignfull-width);
+	width: auto;
+	max-width: calc( 100% - ( 7 * var(--page-margin) ));
 	content: nested;
+
+	@include break-xs {
+		max-width: calc( 100% - ( 4 * var(--page-margin) ));
+	}
 }
 
 /**
