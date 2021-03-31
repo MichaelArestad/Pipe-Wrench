@@ -17,11 +17,20 @@ $header_class = $show_title ? 'site-title' : 'screen-reader-text';
 <?php endif; ?>
 
 <div class="site-branding">
+	<?php 
+		function is_template_dark() {
+			if ( is_page_template( 'pageDark.php') || is_page_template( 'pageDarkNoHeading.php') || is_page_template( 'pageFancyDark.php') ) {
+				return true;
+			} else {
+				return false;
+			}
+		}
+	?>
 	<?php if ( has_custom_logo() && ! $show_title ) : ?>
 		<div class="site-logo"><?php the_custom_logo(); ?></div>
 	<?php endif; ?>
 
-	<?php if ( ! has_custom_logo() && ! $show_title && is_front_page() && is_page_template( 'pageDark.php' ) || ! has_custom_logo() && $show_title && is_front_page()  && is_page_template( 'pageDark.php' ) ) : ?>
+	<?php if ( ! has_custom_logo() && ! $show_title && is_front_page() && is_template_dark() || ! has_custom_logo() && $show_title && is_front_page()  && is_template_dark() ) : ?>
 		<a class="default-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 			<img
 				srcset="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo-light.png,
@@ -31,7 +40,7 @@ $header_class = $show_title ? 'site-title' : 'screen-reader-text';
 				alt="Pipe Wrench" />
 		</a>
 	<?php endif; ?>
-	<?php if ( ! has_custom_logo() && ! $show_title && is_front_page() && ! is_page_template( 'pageDark.php' ) || ! has_custom_logo() && $show_title && is_front_page()  && ! is_page_template( 'pageDark.php' ) ) : ?>
+	<?php if ( ! has_custom_logo() && ! $show_title && is_front_page() && ! is_template_dark() || ! has_custom_logo() && $show_title && is_front_page()  && ! is_template_dark() ) : ?>
 		<a class="default-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 		<img
 				srcset="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo-dark.png,
@@ -41,7 +50,7 @@ $header_class = $show_title ? 'site-title' : 'screen-reader-text';
 				alt="Pipe Wrench" />
 		</a>
 	<?php endif; ?>
-	<?php if ( ! has_custom_logo() && ! $show_title && ! is_front_page() && is_page_template( 'pageDark.php' ) || ! has_custom_logo() && $show_title && ! is_front_page() && is_page_template( 'pageDark.php' ) ) : ?>
+	<?php if ( ! has_custom_logo() && ! $show_title && ! is_front_page() && is_template_dark() || ! has_custom_logo() && $show_title && ! is_front_page() && is_template_dark() ) : ?>
 		<a class="default-logo is-compact" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 			<img
 				srcset="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo-banner-light.png,
@@ -50,7 +59,7 @@ $header_class = $show_title ? 'site-title' : 'screen-reader-text';
 				alt="Pipe Wrench" />
 		</a>
 	<?php endif; ?>
-	<?php if ( ! has_custom_logo() && ! $show_title && ! is_front_page() && ! is_page_template( 'pageDark.php' ) || ! has_custom_logo() && $show_title && ! is_front_page() && ! is_page_template( 'pageDark.php' ) ) : ?>
+	<?php if ( ! has_custom_logo() && ! $show_title && ! is_front_page() && ! is_template_dark() || ! has_custom_logo() && $show_title && ! is_front_page() && ! is_template_dark() ) : ?>
 		<a class="default-logo is-compact" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 			<img
 				srcset="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo-banner-dark.png,
