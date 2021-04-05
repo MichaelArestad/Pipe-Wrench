@@ -185,16 +185,24 @@
 
 	@include break-xs {
 		width: auto;
-		top: rem(32px);
-		left: rem(40px);
-		right: rem(40px);
+		// top: rem(32px);
+		// left: rem(40px);
+		// right: rem(40px);
+
+		top: rem(72px);
+		left: rem(80px);
+		right: rem(80px);
 		display: flex;
 		justify-content: center;
 
 		.admin-bar & {
-			top: rem(64px);
-			left: rem(40px);
-			right: rem(40px);
+			// top: rem(64px);
+			// left: rem(40px);
+			// right: rem(40px);
+
+			top: rem(104px);
+			left: rem(80px);
+			right: rem(80px);
 		}
 
 		.page-template-pageDark &,

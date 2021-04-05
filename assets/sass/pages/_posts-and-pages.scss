@@ -1,7 +1,3 @@
-// .sticky {
-
-// }
-
 .sticky-post {
 	color: var(-color-background);
 	background-color: var(--color-2);
@@ -11,19 +7,14 @@
 	padding: rem(8px) rem(16px);
 }
 
-// .updated:not(.published) {
-
-// }
-
-// .entry {
-
-// }
-
-.page-template-pageDark .site-main,
-.page-template-pageDarkNoHeading .site-main,
-.page-template-pageFancyDark .site-main {
+.site-main {
 	background: var(--color-background);
-	color: var(--color-foreground);
+
+	.page-template-pageDark &,
+	.page-template-pageDarkNoHeading &,
+	.page-template-pageFancyDark & {
+		color: var(--color-foreground);
+	}
 }
 
 .page-template-pageFancy,

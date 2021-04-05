@@ -451,7 +451,7 @@ html {
 }
 
 body {
-	background-color: var(--color-5);
+	background-color: var(--color-foreground);
 	color: var(--color-1);
 	font-family: var(--font-family-serif);
 	font-size: var(--font-size-base);
@@ -617,12 +617,14 @@ hr.wp-block-separator.is-style-wide, .entry-content > *:not(.alignwide):not(.ali
 	padding-bottom: calc(3 * 2.5rem);
 	padding-top: 2.25rem;
 	padding-bottom: 0.5rem;
+	margin: 1rem 1rem 0;
 }
 
 @media (min-width: 480px) {
 	.site-header {
 		padding-top: calc(3 * 2.5rem);
 		padding-bottom: calc(3 * 2.5rem);
+		margin: 2.5rem 2.5rem 0;
 	}
 }
 
@@ -645,20 +647,6 @@ hr.wp-block-separator.is-style-wide, .entry-content > *:not(.alignwide):not(.ali
 @media (min-width: 480px) {
 	.has-main-navigation .site-header {
 		padding-top: calc(3 * 2.5rem);
-	}
-}
-
-.page-template-pageDark .site-header,
-.page-template-pageDarkNoHeading .site-header,
-.page-template-pageFancyDark .site-header {
-	margin: 1rem 1rem 0;
-}
-
-@media (min-width: 480px) {
-	.page-template-pageDark .site-header,
-	.page-template-pageDarkNoHeading .site-header,
-	.page-template-pageFancyDark .site-header {
-		margin: 2.5rem 2.5rem 0;
 	}
 }
 
@@ -2823,16 +2811,11 @@ pre.wp-block-verse {
 	background: var(--color-background);
 	padding-top: 2.25rem;
 	padding-bottom: 1rem;
+	margin: var(--page-margin) var(--page-margin) 0;
 }
 
 .has-main-navigation .site-header {
 	padding-top: 2.25rem;
-}
-
-.page-template-pageDark .site-header,
-.page-template-pageDarkNoHeading .site-header,
-.page-template-pageFancyDark .site-header {
-	margin: var(--page-margin) var(--page-margin) 0;
 }
 
 .home .site-header {
@@ -3179,17 +3162,17 @@ nav a {
 	.primary-navigation,
 	.woo-navigation {
 		width: auto;
-		top: 2rem;
-		right: 2.5rem;
-		left: 2.5rem;
+		top: 4.5rem;
+		right: 5rem;
+		left: 5rem;
 		display: flex;
 		justify-content: center;
 	}
 	.admin-bar .primary-navigation, .admin-bar
 	.woo-navigation {
-		top: 4rem;
-		right: 2.5rem;
-		left: 2.5rem;
+		top: 6.5rem;
+		right: 5rem;
+		left: 5rem;
 	}
 	.page-template-pageDark .primary-navigation,
 	.page-template-pageDarkNoHeading .primary-navigation,
@@ -4228,10 +4211,13 @@ img#wpstats {
 	padding: 0.5rem 1rem;
 }
 
+.site-main {
+	background: var(--color-background);
+}
+
 .page-template-pageDark .site-main,
 .page-template-pageDarkNoHeading .site-main,
 .page-template-pageFancyDark .site-main {
-	background: var(--color-background);
 	color: var(--color-foreground);
 }
 

@@ -3,14 +3,10 @@
 	padding-top: rem(36px);
 	padding-bottom: rem(16px);
 
+	margin: var(--page-margin) var(--page-margin) 0;
+
 	.has-main-navigation & {
 		padding-top: rem(36px);
-	}
-
-	.page-template-pageDark &,
-	.page-template-pageDarkNoHeading &,
-	.page-template-pageFancyDark & {
-		margin: var(--page-margin) var(--page-margin) 0;
 	}
 
 	.home & {

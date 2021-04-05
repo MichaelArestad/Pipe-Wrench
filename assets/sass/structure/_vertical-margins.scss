@@ -24,10 +24,12 @@
 	padding-bottom: calc(3 * #{rem(40px)});
 	padding-top: rem(36px);
 	padding-bottom: rem(8px);
+	margin: rem(16px) rem(16px) 0;
 
 	@include break-xs {
 		padding-top: calc(3 * #{rem(40px)});
 		padding-bottom: calc(3 * #{rem(40px)});
+		margin: rem(40px) rem(40px) 0;
 	}
 
 	@include break-m {
@@ -42,16 +44,6 @@
 
 		@include break-xs {
 			padding-top: calc(3 * #{rem(40px)});
-		}
-	}
-
-	.page-template-pageDark &,
-	.page-template-pageDarkNoHeading &,
-	.page-template-pageFancyDark & {
-		margin: rem(16px) rem(16px) 0;
-
-		@include break-xs {
-			margin: rem(40px) rem(40px) 0;
 		}
 	}
 

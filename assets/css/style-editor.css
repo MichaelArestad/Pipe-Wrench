@@ -106,7 +106,7 @@ html {
 }
 
 body {
-	background-color: var(--color-5);
+	background-color: var(--color-foreground);
 	color: var(--color-1);
 	font-family: var(--font-family-serif);
 	font-size: var(--font-size-base);
