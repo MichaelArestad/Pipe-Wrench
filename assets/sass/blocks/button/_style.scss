@@ -69,3 +69,47 @@ input[type="submit"],
 		}
 	}
 }
+
+/* secret home page styles */
+.is-toc {
+	.wp-block-spacer[style] {
+		@media (max-width: 959px) {
+			height: 1rem !important;
+		}
+		@media (max-width: 479px) {
+			height: 0 !important;
+		}
+	}
+	
+	.wp-block-column {
+		@media (max-width: 959px) {
+			margin-bottom: 0 !important;
+		}
+	}
+}
+
+
+.wp-block-buttons {
+	.is-toc & {
+		flex-direction: column;
+		
+		.wp-block-button {
+			margin-bottom: var(--page-margin);
+		}
+		&.is-content-justification-center {
+			align-items: center;
+
+			.wp-block-button {
+				margin-right: 0;
+			}
+		}
+		&.is-content-justification-right {
+			align-items: flex-end;
+		}
+		em {
+			display: block;
+			font-size: rem(12px);
+			font-family: var(--font-family-serif);
+		}
+	}
+}

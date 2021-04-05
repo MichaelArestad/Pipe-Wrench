@@ -39,9 +39,14 @@
 	&.alignright {
 		padding: rem(16px);
 		margin-bottom: rem(16px);
+		display: none;
 
 		@include  break-xs {
 			padding: rem(16px) 0;
+		}
+		
+		@include break-l {
+			display: block;
 		}
 
 		p {
