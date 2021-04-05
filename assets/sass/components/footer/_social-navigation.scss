@@ -1,5 +1,9 @@
 .social-navigation {
-	padding-bottom: rem(16px);
+	// padding-bottom: rem(16px);
+
+	.site-footer & {
+		margin-bottom: 0;
+	}
 
 	& > div > ul {
 		align-content: center;

@@ -3468,11 +3468,10 @@ nav a {
 }
 
 .site-footer > .site-info {
+	margin-top: 1.5rem;
+	margin-bottom: 4rem;
+	font-size: 0.75rem;
 	color: var(--color-5);
-}
-
-.site-footer > .site-info .site-name {
-	font-weight: bold;
 }
 
 .site-footer > .footer-navigation {
@@ -3525,8 +3524,8 @@ nav a {
 	border-color: var(--color-3);
 }
 
-.social-navigation {
-	padding-bottom: 1rem;
+.site-footer .social-navigation {
+	margin-bottom: 0;
 }
 
 .social-navigation > div > ul {

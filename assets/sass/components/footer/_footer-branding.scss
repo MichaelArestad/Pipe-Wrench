@@ -10,9 +10,8 @@
 // Footer Branding
 
 .site-footer > .site-info {
+	margin-top: rem(24px);
+	margin-bottom: rem(64px);
+	font-size: rem(12px);
 	color: var(--color-5);
-
-	.site-name {
-		font-weight: bold;
-	}
 }

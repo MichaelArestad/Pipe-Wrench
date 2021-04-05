@@ -24,9 +24,11 @@
 					'depth'          => 1,
 				)
 			);
-			?>
-		</nav><!-- .social-navigation -->
-	<?php endif; ?>
+		?>
+	</nav><!-- .social-navigation -->
+<?php endif; ?>
+
+<?php get_template_part( 'template-parts/footer/footer-info' ); ?>
 
 <?php
 // get_template_part( 'template-parts/footer/footer-info' );
