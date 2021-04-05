@@ -185,10 +185,6 @@
 
 	@include break-xs {
 		width: auto;
-		// top: rem(32px);
-		// left: rem(40px);
-		// right: rem(40px);
-
 		top: rem(72px);
 		left: rem(80px);
 		right: rem(80px);
@@ -196,26 +192,6 @@
 		justify-content: center;
 
 		.admin-bar & {
-			// top: rem(64px);
-			// left: rem(40px);
-			// right: rem(40px);
-
-			top: rem(104px);
-			left: rem(80px);
-			right: rem(80px);
-		}
-
-		.page-template-pageDark &,
-		.page-template-pageDarkNoHeading &,
-		.page-template-pageFancyDark & {
-			top: rem(72px);
-			left: rem(80px);
-			right: rem(80px);
-		}
-
-		.admin-bar.page-template-pageDark &,
-		.admin-bar.page-template-pageDarkNoHeading &,
-		.admin-bar.page-template-pageFancyDark & {
 			top: rem(104px);
 			left: rem(80px);
 			right: rem(80px);

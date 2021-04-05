@@ -3195,30 +3195,6 @@ nav a {
 		left: 5rem;
 		right: 5rem;
 	}
-	.page-template-pageDark .primary-navigation,
-	.page-template-pageDarkNoHeading .primary-navigation,
-	.page-template-pageFancyDark .primary-navigation, .page-template-pageDark
-	.woo-navigation,
-	.page-template-pageDarkNoHeading
-	.woo-navigation,
-	.page-template-pageFancyDark
-	.woo-navigation {
-		top: 4.5rem;
-		left: 5rem;
-		right: 5rem;
-	}
-	.admin-bar.page-template-pageDark .primary-navigation,
-	.admin-bar.page-template-pageDarkNoHeading .primary-navigation,
-	.admin-bar.page-template-pageFancyDark .primary-navigation, .admin-bar.page-template-pageDark
-	.woo-navigation,
-	.admin-bar.page-template-pageDarkNoHeading
-	.woo-navigation,
-	.admin-bar.page-template-pageFancyDark
-	.woo-navigation {
-		top: 6.5rem;
-		left: 5rem;
-		right: 5rem;
-	}
 	.primary-navigation > div,
 	.woo-navigation > div {
 		visibility: visible;
