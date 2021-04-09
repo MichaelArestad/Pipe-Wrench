@@ -3,6 +3,18 @@
 	flex: 0 0 100%;
 }
 
+
+.footer-widget-1 {
+	.widget {
+		margin: 0;
+	}
+
+	// .alignwide {
+	// 	margin: var(--page-margin);
+	// 	max-width: none;
+	// }
+}
+
 // Search widget styles
 .search-form {
 	display: flex;

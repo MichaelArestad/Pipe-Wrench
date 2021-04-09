@@ -2,7 +2,7 @@
 /**
  * Displays the footer widget area
  *
- * @package Seedlet
+ * @package Pipe Wrench
  * @since 1.0.0
  */
 

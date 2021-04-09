@@ -50,6 +50,28 @@ function pipewrench_fonts_url() {
 	return esc_url_raw( $fonts_url );
 }
 
+
+/**
+ * Register widget area.
+ *
+ * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
+ */
+function pipewrench_widgets_init() {
+
+	register_sidebar(
+		array(
+			'name'          => __( 'Tiny home page footer', 'pipewrench' ),
+			'id'            => 'sidebar-2',
+			'description'   => __( 'These widgets appear next to the blog links.', 'pipewrench' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
+}
+add_action( 'widgets_init', 'pipewrench_widgets_init' );
+
 /**
  * Add Parent styles
  */

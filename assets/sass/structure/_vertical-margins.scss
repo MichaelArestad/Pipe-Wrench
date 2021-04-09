@@ -57,9 +57,13 @@
 */
 .site-main {
 	margin: 0 var(--page-margin) var(--page-margin);
-	padding-bottom: rem(120px);
 	padding-left: rem(40px);
 	padding-right: rem(40px);
+	padding-bottom: rem(40px);
+	
+	@include break-xs {
+		padding-bottom: rem(120px);
+	}
 }
  
 /**

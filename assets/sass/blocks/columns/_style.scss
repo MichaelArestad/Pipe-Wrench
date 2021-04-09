@@ -1,5 +1,9 @@
 .wp-block-columns {
 	.wp-block-column {
+		@media (max-width: 800px) {
+			flex-basis: 100% !important;
+		}
+
 		& > * {
 			margin-top: calc(0.66 * #{rem(40px)});
 			margin-bottom: calc(0.66 * #{rem(40px)});
