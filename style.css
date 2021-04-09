@@ -4391,6 +4391,21 @@ img#wpstats {
 	display: none;
 }
 
+.search_search-results {
+	max-width: 37.5rem;
+	margin: 0 auto;
+}
+
+.search_search-results .entry-title {
+	font-size: var(--font-size-md);
+	margin: 1.5rem 0;
+	text-align: left;
+}
+
+.search_search-results .pagination {
+	margin-top: 2rem;
+}
+
 .page-title {
 	font-size: var(--font-size-lg);
 }

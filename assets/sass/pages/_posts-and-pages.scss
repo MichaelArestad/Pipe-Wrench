@@ -53,3 +53,18 @@
 .site-header .social-navigation {
 	display: none;
 }
+
+.search_search-results {
+	max-width: rem(600px);
+	margin: 0 auto;
+
+	.entry-title {
+		font-size: var(--font-size-md);
+		margin: rem(24px) 0;
+		text-align: left;
+	}
+
+	.pagination {
+		margin-top: rem(32px);
+	}
+}
