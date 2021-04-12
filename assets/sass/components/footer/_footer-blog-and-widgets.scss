@@ -88,7 +88,7 @@
 	text-align: left;
 	padding: var(--page-margin);
 	border-top: var(--page-margin) solid var(--color-5);
-	font-size: var(--font-size-xs);
+	font-size: var(--font-size-sm);
 
 	.widget-title {
 		font-size: var(--font-size-lg);
@@ -105,10 +105,4 @@
 		border-left: var(--page-margin) solid var(--color-5);
 		max-width: rem(400px);
 	}
-}
-
-.footer-widget-2 {
-	// .tiny-mega-blog + .widget-area & {
-	// 	border-left: var(--page-margin) solid var(--color-foreground);
-	// }
 }
