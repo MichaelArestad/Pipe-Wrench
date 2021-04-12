@@ -1,0 +1,13 @@
+.issue-number {
+	margin-top: 0;
+
+	.widget_text {
+		font-family: var(--font-family-display);
+		font-weight: 500;
+		font-size: var(--font-size-xs);
+
+		p {
+			line-height: 1.2;
+		}
+	}
+}

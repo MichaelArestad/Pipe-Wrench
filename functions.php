@@ -69,6 +69,17 @@ function pipewrench_widgets_init() {
 			'after_title'   => '</h2>',
 		)
 	);
+	register_sidebar(
+		array(
+			'name'          => __( 'Issue number - use text widget', 'pipewrench' ),
+			'id'            => 'sidebar-3',
+			'description'   => __( 'Appears on the home page', 'pipewrench' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
 }
 add_action( 'widgets_init', 'pipewrench_widgets_init' );
 

@@ -3006,6 +3006,20 @@ nav a {
 	}
 }
 
+.issue-number {
+	margin-top: 0;
+}
+
+.issue-number .widget_text {
+	font-family: var(--font-family-display);
+	font-weight: 500;
+	font-size: var(--font-size-xs);
+}
+
+.issue-number .widget_text p {
+	line-height: 1.2;
+}
+
 .menu-button-container {
 	justify-content: space-between;
 	position: absolute;

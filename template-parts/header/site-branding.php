@@ -68,6 +68,11 @@ $header_class = $show_title ? 'site-title' : 'screen-reader-text';
 				alt="Pipe Wrench" />
 		</a>
 	<?php endif; ?>
+
+	<?php if ( is_front_page() ): ?>
+		<?php get_template_part( 'template-parts/header/issue-number' ); ?>
+	<?php endif; ?>
+
 	<?php if ( ! empty( $blog_info ) && $show_title ) : ?>
 		<?php if ( is_front_page() && is_home() ) : ?>
 			<h1 class="<?php echo esc_attr( $header_class ); ?>"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo $blog_info; ?></a></h1>
