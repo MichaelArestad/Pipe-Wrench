@@ -8,7 +8,7 @@ Description: Pipe Wrench is a Seedlet child theme. It is designed for pipewrench
 Requires at least: 4.9.6
 Tested up to: 5.4.1
 Requires PHP: 5.6.2
-Version: 0.1.12
+Version: 0.1.13
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Template: seedlet
@@ -3494,20 +3494,7 @@ nav a {
 }
 
 .footer-blog-and-widgets {
-	align-items: stretch;
 	border: var(--page-margin) solid var(--color-5);
-}
-
-@media (min-width: 782px) {
-	.footer-blog-and-widgets {
-		display: flex;
-	}
-}
-
-.blog-and-search {
-	display: flex;
-	flex-direction: column;
-	flex-grow: 1;
 }
 
 .blog-and-search .search-form {
@@ -3521,64 +3508,15 @@ nav a {
 	border-top: var(--page-margin) solid var(--color-5);
 }
 
-.tiny-mega-blog {
-	text-align: left;
-	padding: var(--page-margin);
-}
-
-.tiny-mega-blog h2 {
-	font-size: 9.375rem;
-	font-weight: 500;
-	text-transform: uppercase;
-	display: inline-block;
-	line-height: .65;
-	margin-top: 0.75rem;
-	margin-bottom: 2.5rem;
-}
-
-.tiny-mega-blog h2 a {
-	display: inline-block;
-	border-bottom: 1rem solid currentColor;
-}
-
-.tiny-mega-blog ul {
-	list-style: none;
-	padding: 0;
-}
-
-.tiny-mega-blog li {
-	font-family: var(--font-family-display);
-	font-weight: 600;
-	font-size: var(--font-size-lg);
-	line-height: 1.1;
-	display: inline;
-}
-
-.tiny-mega-blog li:after {
-	content: " • ";
-	margin: 0 0.5rem;
-}
-
-.tiny-mega-blog li:last-child:after {
-	display: none;
-}
-
-.tiny-mega-blog a {
-	color: var(--color-5);
-	border-bottom: none;
-}
-
-.tiny-mega-blog a:focus, .tiny-mega-blog a:hover {
-	color: var(--color-4);
-}
-
 .blog-and-search .search-form .search-field,
 .blog-and-search .search-form .search-submit {
 	--color-foreground: var(--color-5);
 	--color-background: var(--color-1);
 }
 
-.footer-blog-and-widgets .widget-area {
+.footer-blog-and-widgets .widget-column {
+	display: flex;
+	flex-wrap: wrap;
 	margin: 0;
 	text-align: left;
 	padding: var(--page-margin);
@@ -3586,21 +3524,27 @@ nav a {
 	font-size: var(--font-size-sm);
 }
 
-.footer-blog-and-widgets .widget-area .widget-title {
+.footer-blog-and-widgets .widget-column .widget-title {
 	font-size: var(--font-size-lg);
 	font-weight: 500;
 }
 
-.footer-blog-and-widgets .widget-area p {
+.footer-blog-and-widgets .widget-column p {
 	margin: 1em 0;
 	line-height: 1.6;
 }
 
+.footer-blog-and-widgets .widget-column .widget {
+	margin-top: 0;
+}
+
 @media (min-width: 782px) {
-	.footer-blog-and-widgets .widget-area {
-		border-top: 0;
-		border-left: var(--page-margin) solid var(--color-5);
-		max-width: 25rem;
+	.footer-blog-and-widgets .widget-column .widget {
+		width: calc( 33% - var(--page-margin));
+		margin-right: var(--page-margin);
+	}
+	.footer-blog-and-widgets .widget-column .widget:last-child {
+		margin-right: 0;
 	}
 }
 
