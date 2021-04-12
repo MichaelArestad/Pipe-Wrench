@@ -2,8 +2,7 @@
 	text-align: center;
 
 	&.alignfull {
-		max-width: rem(1120px);
-		margin: 0 auto;
+		@extend %responsive-alignfuller-width;
 	}
 
 	figcaption {
