@@ -17,6 +17,10 @@
 	color: var(--color-3);
 }
 
+.has-quaternary-color.has-quaternary-color[class] {
+	color: var(--color-4);
+}
+
 .has-background-color.has-background-color[class] {
 	color: var(--color-5);
 }
@@ -42,6 +46,14 @@
 
 .has-tertiary-background-color[class] {
 	background-color: var(--color-3);
+
+	&:not(.has-text-color) {
+		color: var(--color-5);
+	}
+}
+
+.has-quaternary-background-color[class] {
+	background-color: var(--color-4);
 
 	&:not(.has-text-color) {
 		color: var(--color-5);

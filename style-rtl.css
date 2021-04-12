@@ -1061,7 +1061,7 @@ input[type="submit"],
 	font-family: var(--font-family-display);
 	font-size: 1.125rem;
 	background-color: var(--color-foreground);
-	border: 0;
+	border: 2px solid transparent;
 	border-radius: 0;
 	text-decoration: none;
 	padding: 0.625rem 1rem 0.5rem;
@@ -2603,6 +2603,10 @@ pre.wp-block-verse {
 	color: var(--color-3);
 }
 
+.has-quaternary-color.has-quaternary-color[class] {
+	color: var(--color-4);
+}
+
 .has-background-color.has-background-color[class] {
 	color: var(--color-5);
 }
@@ -2629,6 +2633,14 @@ pre.wp-block-verse {
 }
 
 .has-tertiary-background-color[class]:not(.has-text-color) {
+	color: var(--color-5);
+}
+
+.has-quaternary-background-color[class] {
+	background-color: var(--color-4);
+}
+
+.has-quaternary-background-color[class]:not(.has-text-color) {
 	color: var(--color-5);
 }
 

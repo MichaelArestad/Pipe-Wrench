@@ -139,6 +139,7 @@ if ( ! function_exists( 'pipewrench_setup' ) ) :
 	$secondary        = ( ! empty( $colors_theme_mod ) && 'default' === $colors_theme_mod || empty( get_theme_mod( 'pipewrench_--global--color-secondary' ) ) ) ? '#5A2F67' : get_theme_mod( 'pipewrench_--global--color-secondary' );
 	$foreground       = ( ! empty( $colors_theme_mod ) && 'default' === $colors_theme_mod || empty( get_theme_mod( 'pipewrench_--global--color-foreground' ) ) ) ? '#2F4C67' : get_theme_mod( 'pipewrench_--global--color-foreground' );
 	$tertiary         = ( ! empty( $colors_theme_mod ) && 'default' === $colors_theme_mod || empty( get_theme_mod( 'pipewrench_--global--color-tertiary' ) ) ) ? '#D33838' : get_theme_mod( 'pipewrench_--global--color-tertiary' );
+	$quaternary         = ( ! empty( $colors_theme_mod ) && 'default' === $colors_theme_mod || empty( get_theme_mod( 'pipewrench_--global--color-quaternary' ) ) ) ? '#50B28C' : get_theme_mod( 'pipewrench_--global--color-quaternary' );
 	$background       = ( ! empty( $colors_theme_mod ) && 'default' === $colors_theme_mod || empty( get_theme_mod( 'pipewrench_--global--color-background' ) ) ) ? '#FFFEFA' : get_theme_mod( 'pipewrench_--global--color-background' );
 
 	add_theme_support(
@@ -158,6 +159,11 @@ if ( ! function_exists( 'pipewrench_setup' ) ) :
 				'name'  => __( 'Tertiary', 'pipewrench' ),
 				'slug'  => 'tertiary',
 				'color' => $tertiary,
+			),
+			array(
+				'name'  => __( 'Quaternary', 'pipewrench' ),
+				'slug'  => 'quaternary',
+				'color' => $quaternary,
 			),
 			array(
 				'name'  => __( 'Background', 'pipewrench' ),
