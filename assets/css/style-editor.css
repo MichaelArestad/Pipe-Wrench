@@ -489,6 +489,12 @@ input[type="submit"]:not(.has-text-color):focus,
 	flex-direction: column;
 }
 
+@media (max-width: 781px) {
+	.is-toc .wp-block-buttons {
+		margin-top: 0 !important;
+	}
+}
+
 .is-toc .wp-block-buttons .wp-block-button {
 	margin-bottom: var(--page-margin);
 }
@@ -505,10 +511,22 @@ input[type="submit"]:not(.has-text-color):focus,
 	align-items: flex-end;
 }
 
+@media (min-width: 480px) {
+	.is-toc .wp-block-buttons .wp-block-button__link {
+		font-size: var(--font-size-lg);
+	}
+}
+
 .is-toc .wp-block-buttons em {
 	display: block;
 	font-size: 0.75rem;
 	font-family: var(--font-family-serif);
+}
+
+@media (min-width: 480px) {
+	.is-toc .wp-block-buttons em {
+		font-size: var(--font-size-xs);
+	}
 }
 
 .wp-block-button.wp-block-button {

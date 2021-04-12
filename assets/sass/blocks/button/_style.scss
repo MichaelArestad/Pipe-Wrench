@@ -92,9 +92,14 @@ input[type="submit"],
 	.is-toc & {
 		flex-direction: column;
 		
+		@media (max-width: 781px) {
+			margin-top: 0 !important;
+		}
+
 		.wp-block-button {
 			margin-bottom: var(--page-margin);
 		}
+
 		&.is-content-justification-center {
 			align-items: center;
 
@@ -105,10 +110,21 @@ input[type="submit"],
 		&.is-content-justification-right {
 			align-items: flex-end;
 		}
+
+		.wp-block-button__link {
+			@include break-xs {
+				font-size: var(--font-size-lg);
+			}
+		}
+
 		em {
 			display: block;
 			font-size: rem(12px);
 			font-family: var(--font-family-serif);
+
+			@include break-xs {
+				font-size: var(--font-size-xs);
+			}
 		}
 	}
 }
