@@ -124,21 +124,21 @@ body {
 	}
 }
 
-a:not(.wp-block-button__link) {
-	border-bottom: 1px solid currentColor;
+a {
 	color: var(--color-foreground);
 	text-decoration: none;
 }
 
-a:not(.wp-block-button__link):hover, a:not(.wp-block-button__link):focus {
+a:hover, a:focus {
 	color: var(--color-link-hover);
 }
 
-.entry-content p a:not(.wp-block-button__link) {
+p a {
+	border-bottom: 1px solid currentColor;
 	transition: all .1s ease-in-out;
 }
 
-.entry-content p a:not(.wp-block-button__link):hover, .entry-content p a:not(.wp-block-button__link):focus {
+p a:hover, p a:focus {
 	border-bottom-color: transparent;
 	color: var(--color-background);
 	background: var(--color-foreground);

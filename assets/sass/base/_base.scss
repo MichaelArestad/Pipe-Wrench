@@ -69,8 +69,7 @@ body {
 }
 
 // Links styles
-a:not(.wp-block-button__link) {
-	border-bottom: 1px solid currentColor;
+a {
 	color: var(--color-foreground);
 	text-decoration: none;
 
@@ -79,7 +78,8 @@ a:not(.wp-block-button__link) {
 		color: var(--color-link-hover);
 	}
 
-	.entry-content p & {
+	p & {
+		border-bottom: 1px solid currentColor;
 		transition: all .1s ease-in-out;
 
 		&:hover,
