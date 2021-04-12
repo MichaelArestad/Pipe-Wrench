@@ -29,7 +29,6 @@ $wpadmin-bar--height: rem(46px);
 	--font-size-base: #{rem(18px)};
 }
 
-
 	--page-margin: #{rem(16px)};
 
 	@include break-xs {
@@ -42,6 +41,13 @@ $wpadmin-bar--height: rem(46px);
 	--color-4: #50B28C;
 	--color-5: #FFFEFA;
 
+	// UGH
+	--wp--preset--color--primary: var(--color-1);
+	--wp--preset--color--secondary: var(--color-2);
+	--wp--preset--color--tertiary: var(--color-3);
+	--wp--preset--color--quaternary: var(--color-4);
+	--wp--preset--color--background: var(--color-5);
+	
 	--color-foreground: var(--color-1);
 	--color-background: var(--color-5);
 	--color-link-hover: var(--color-2);

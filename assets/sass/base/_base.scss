@@ -92,13 +92,22 @@ a {
 	}
 }
 
+
 // Enforce the custom link color even if a custom background color has been set.
 // The extra specificity here is required to override the background color styles.
 .has-background:not(.has-background-background-color) {
 	// Target both current level and nested block.
 	.has-link-color a,
 	&.has-link-color a {
-		// color: var( --wp--style--color--link, var(--color-foreground) );
+		color: var( --wp--style--color--link, var(--color-foreground) );
+
+		&:hover,
+		&:focus {
+			border-bottom-color: transparent;
+			color: var(--color-background);
+			background: var(--color-foreground);
+			box-shadow: 0 rem(-1px) 0 .5em var(--color-foreground);
+		}
 	}
 }
 

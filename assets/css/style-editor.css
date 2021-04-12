@@ -27,6 +27,11 @@ Breakpoint mixin - about as simple as it gets and mobile first
 	--color-3: #D33838;
 	--color-4: #50B28C;
 	--color-5: #FFFEFA;
+	--wp--preset--color--primary: var(--color-1);
+	--wp--preset--color--secondary: var(--color-2);
+	--wp--preset--color--tertiary: var(--color-3);
+	--wp--preset--color--quaternary: var(--color-4);
+	--wp--preset--color--background: var(--color-5);
 	--color-foreground: var(--color-1);
 	--color-background: var(--color-5);
 	--color-link-hover: var(--color-2);
@@ -134,6 +139,20 @@ a:hover, a:focus {
 }
 
 .entry-content p a:hover, .entry-content p a:focus {
+	border-bottom-color: transparent;
+	color: var(--color-background);
+	background: var(--color-foreground);
+	box-shadow: 0 -0.0625rem 0 0.5em var(--color-foreground);
+}
+
+.has-background:not(.has-background-background-color) .has-link-color a,
+.has-background:not(.has-background-background-color).has-link-color a {
+	color: var(--wp--style--color--link, var(--color-foreground));
+}
+
+.has-background:not(.has-background-background-color) .has-link-color a:hover, .has-background:not(.has-background-background-color) .has-link-color a:focus,
+.has-background:not(.has-background-background-color).has-link-color a:hover,
+.has-background:not(.has-background-background-color).has-link-color a:focus {
 	border-bottom-color: transparent;
 	color: var(--color-background);
 	background: var(--color-foreground);
