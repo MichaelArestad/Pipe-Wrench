@@ -1,22 +1,24 @@
 .site-header {
-  background: var(--color-background);
+	background: var(--color-background);
 	padding-top: rem(36px);
 	padding-bottom: rem(16px);
-
 	margin: var(--page-margin) var(--page-margin) 0;
 
-	.has-main-navigation & {
-		padding-top: rem(36px);
-	}
-
-	.home & {
-		padding-top: rem(56px);
-	}
 
 	@include break-m {
 		padding-bottom: rem(64px);
 	}
 	@include break-l {
 		padding-bottom: rem(72px);
+	}
+ 
+	.has-main-navigation & {
+		padding-top: rem(36px);
+
+	}
+
+	.home & {
+		padding-top: rem(56px);
+		padding-bottom: rem(16px);
 	}
 }

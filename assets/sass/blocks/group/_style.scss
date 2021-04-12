@@ -12,6 +12,10 @@
 		margin-right: 0;
 	}
 
+	&.alignfull {
+		@extend %responsive-alignfuller-width;
+	}
+
 	.wp-block-group__inner-container {
 		margin-left: auto;
 		margin-right: auto;

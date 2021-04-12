@@ -19,38 +19,6 @@
 	margin-left: auto;
 	margin-right: auto;
 }
- 
-.site-header {
-	padding-bottom: calc(3 * #{rem(40px)});
-	padding-top: rem(36px);
-	padding-bottom: rem(8px);
-	margin: rem(16px) rem(16px) 0;
-
-	@include break-xs {
-		padding-top: calc(3 * #{rem(40px)});
-		padding-bottom: calc(3 * #{rem(40px)});
-		margin: rem(40px) rem(40px) 0;
-	}
-
-	@include break-m {
-		padding-bottom: rem(64px);
-	}
-	@include break-l {
-		padding-bottom: rem(72px);
-	}
- 
-	.has-main-navigation & {
-		padding-top: rem(36px);
-
-		@include break-xs {
-			padding-top: calc(3 * #{rem(40px)});
-		}
-	}
-
-	.home & {
-		padding-top: rem(56px);
-	}
-}
 
 /**
 * Site-main 

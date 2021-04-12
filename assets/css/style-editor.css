@@ -234,7 +234,7 @@ hr.wp-block-separator.is-style-wide, .entry-content .wp-audio-shortcode, .post-t
 	margin-right: auto;
 }
 
-.full-max-width, .singular .post-thumbnail {
+.wp-block-group.alignfull {
 	width: auto;
 	max-width: none;
 	margin-left: calc( -1 * var(--page-margin) - 2.5rem);
@@ -242,10 +242,15 @@ hr.wp-block-separator.is-style-wide, .entry-content .wp-audio-shortcode, .post-t
 }
 
 @media (min-width: 480px) {
-	.full-max-width, .singular .post-thumbnail {
+	.wp-block-group.alignfull {
 		margin-left: calc( -2 * var(--page-margin));
 		margin-right: calc( -2 * var(--page-margin));
 	}
+}
+
+.full-max-width, .singular .post-thumbnail {
+	width: auto;
+	max-width: none;
 }
 
 /**
