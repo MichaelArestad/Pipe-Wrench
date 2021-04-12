@@ -27,37 +27,42 @@
 
 
 /* Custom background colors */
-
-.has-primary-background-color[class] {
-	background-color: var(--color-1);
-
+.has-primary-background-color[class],
+.has-secondary-background-color[class],
+.has-tertiary-background-color[class],
+.has-quaternary-background-color[class] {
 	&:not(.has-text-color) {
 		color: var(--color-5);
 	}
+
+	&:not(.has-link-color) {
+		a:not(.wp-block-button__link) {
+			color: var( --wp--style--color--link, var(--color-5) );
+	
+			&:hover,
+			&:focus {
+				color: var(--color-1);
+				background: var(--color-5);
+				box-shadow: 0 rem(-1px) 0 .5em var(--color-5);
+			}
+		}
+	}
+}
+
+.has-primary-background-color[class] {
+	background-color: var(--color-1);
 }
 
 .has-secondary-background-color[class] {
 	background-color: var(--color-2);
-
-	&:not(.has-text-color) {
-		color: var(--color-5);
-	}
 }
 
 .has-tertiary-background-color[class] {
 	background-color: var(--color-3);
-
-	&:not(.has-text-color) {
-		color: var(--color-5);
-	}
 }
 
 .has-quaternary-background-color[class] {
 	background-color: var(--color-4);
-
-	&:not(.has-text-color) {
-		color: var(--color-5);
-	}
 }
 
 .has-background-background-color[class] {

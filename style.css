@@ -8,7 +8,7 @@ Description: Pipe Wrench is a Seedlet child theme. It is designed for pipewrench
 Requires at least: 4.9.6
 Tested up to: 5.4.1
 Requires PHP: 5.6.2
-Version: 0.1.8
+Version: 0.1.9
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Template: seedlet
@@ -469,35 +469,35 @@ body {
 	}
 }
 
-a {
+a:not(.wp-block-button__link) {
 	border-bottom: 1px solid currentColor;
 	color: var(--color-foreground);
 	text-decoration: none;
 }
 
-a:hover, a:focus {
+a:not(.wp-block-button__link):hover, a:not(.wp-block-button__link):focus {
 	color: var(--color-link-hover);
 }
 
-.entry-content p a {
+.entry-content p a:not(.wp-block-button__link) {
 	transition: all .1s ease-in-out;
 }
 
-.entry-content p a:hover, .entry-content p a:focus {
+.entry-content p a:not(.wp-block-button__link):hover, .entry-content p a:not(.wp-block-button__link):focus {
 	border-bottom-color: transparent;
 	color: var(--color-background);
 	background: var(--color-foreground);
 	box-shadow: 0 -0.0625rem 0 0.5em var(--color-foreground);
 }
 
-.has-background:not(.has-background-background-color) .has-link-color a,
-.has-background:not(.has-background-background-color).has-link-color a {
+.has-background:not(.has-background-background-color) .has-link-color a:not(.wp-block-button__link),
+.has-background:not(.has-background-background-color).has-link-color a:not(.wp-block-button__link) {
 	color: var(--wp--style--color--link, var(--color-foreground));
 }
 
-.has-background:not(.has-background-background-color) .has-link-color a:hover, .has-background:not(.has-background-background-color) .has-link-color a:focus,
-.has-background:not(.has-background-background-color).has-link-color a:hover,
-.has-background:not(.has-background-background-color).has-link-color a:focus {
+.has-background:not(.has-background-background-color) .has-link-color a:not(.wp-block-button__link):hover, .has-background:not(.has-background-background-color) .has-link-color a:not(.wp-block-button__link):focus,
+.has-background:not(.has-background-background-color).has-link-color a:not(.wp-block-button__link):hover,
+.has-background:not(.has-background-background-color).has-link-color a:not(.wp-block-button__link):focus {
 	border-bottom-color: transparent;
 	color: var(--color-background);
 	background: var(--color-foreground);
@@ -2611,20 +2611,20 @@ pre.wp-block-verse {
 	color: var(--color-5);
 }
 
-.has-primary-background-color[class]:not(.has-link-color) a,
-.has-secondary-background-color[class]:not(.has-link-color) a,
-.has-tertiary-background-color[class]:not(.has-link-color) a,
-.has-quaternary-background-color[class]:not(.has-link-color) a {
+.has-primary-background-color[class]:not(.has-link-color) a:not(.wp-block-button__link),
+.has-secondary-background-color[class]:not(.has-link-color) a:not(.wp-block-button__link),
+.has-tertiary-background-color[class]:not(.has-link-color) a:not(.wp-block-button__link),
+.has-quaternary-background-color[class]:not(.has-link-color) a:not(.wp-block-button__link) {
 	color: var(--wp--style--color--link, var(--color-5));
 }
 
-.has-primary-background-color[class]:not(.has-link-color) a:hover, .has-primary-background-color[class]:not(.has-link-color) a:focus,
-.has-secondary-background-color[class]:not(.has-link-color) a:hover,
-.has-secondary-background-color[class]:not(.has-link-color) a:focus,
-.has-tertiary-background-color[class]:not(.has-link-color) a:hover,
-.has-tertiary-background-color[class]:not(.has-link-color) a:focus,
-.has-quaternary-background-color[class]:not(.has-link-color) a:hover,
-.has-quaternary-background-color[class]:not(.has-link-color) a:focus {
+.has-primary-background-color[class]:not(.has-link-color) a:not(.wp-block-button__link):hover, .has-primary-background-color[class]:not(.has-link-color) a:not(.wp-block-button__link):focus,
+.has-secondary-background-color[class]:not(.has-link-color) a:not(.wp-block-button__link):hover,
+.has-secondary-background-color[class]:not(.has-link-color) a:not(.wp-block-button__link):focus,
+.has-tertiary-background-color[class]:not(.has-link-color) a:not(.wp-block-button__link):hover,
+.has-tertiary-background-color[class]:not(.has-link-color) a:not(.wp-block-button__link):focus,
+.has-quaternary-background-color[class]:not(.has-link-color) a:not(.wp-block-button__link):hover,
+.has-quaternary-background-color[class]:not(.has-link-color) a:not(.wp-block-button__link):focus {
 	color: var(--color-1);
 	background: var(--color-5);
 	box-shadow: 0 -0.0625rem 0 0.5em var(--color-5);
@@ -2652,6 +2652,16 @@ pre.wp-block-verse {
 
 .has-background-background-color[class]:not(.has-text-color) {
 	color: var(--color-1);
+}
+
+.has-background-background-color[class]:not(.has-link-color) a:not(.wp-block-button__link) {
+	color: var(--wp--style--color--link, var(--color-1));
+}
+
+.has-background-background-color[class]:not(.has-link-color) a:not(.wp-block-button__link):hover, .has-background-background-color[class]:not(.has-link-color) a:not(.wp-block-button__link):focus {
+	color: var(--color-5);
+	background: var(--color-1);
+	box-shadow: 0 -0.0625rem 0 0.5em var(--color-1);
 }
 
 :root .is-tiny-text,

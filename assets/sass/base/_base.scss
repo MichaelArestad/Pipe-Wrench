@@ -69,7 +69,7 @@ body {
 }
 
 // Links styles
-a {
+a:not(.wp-block-button__link) {
 	border-bottom: 1px solid currentColor;
 	color: var(--color-foreground);
 	text-decoration: none;
@@ -97,8 +97,8 @@ a {
 // The extra specificity here is required to override the background color styles.
 .has-background:not(.has-background-background-color) {
 	// Target both current level and nested block.
-	.has-link-color a,
-	&.has-link-color a {
+	.has-link-color a:not(.wp-block-button__link),
+	&.has-link-color a:not(.wp-block-button__link) {
 		color: var( --wp--style--color--link, var(--color-foreground) );
 
 		&:hover,

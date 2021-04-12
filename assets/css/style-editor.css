@@ -124,35 +124,35 @@ body {
 	}
 }
 
-a {
+a:not(.wp-block-button__link) {
 	border-bottom: 1px solid currentColor;
 	color: var(--color-foreground);
 	text-decoration: none;
 }
 
-a:hover, a:focus {
+a:not(.wp-block-button__link):hover, a:not(.wp-block-button__link):focus {
 	color: var(--color-link-hover);
 }
 
-.entry-content p a {
+.entry-content p a:not(.wp-block-button__link) {
 	transition: all .1s ease-in-out;
 }
 
-.entry-content p a:hover, .entry-content p a:focus {
+.entry-content p a:not(.wp-block-button__link):hover, .entry-content p a:not(.wp-block-button__link):focus {
 	border-bottom-color: transparent;
 	color: var(--color-background);
 	background: var(--color-foreground);
 	box-shadow: 0 -0.0625rem 0 0.5em var(--color-foreground);
 }
 
-.has-background:not(.has-background-background-color) .has-link-color a,
-.has-background:not(.has-background-background-color).has-link-color a {
+.has-background:not(.has-background-background-color) .has-link-color a:not(.wp-block-button__link),
+.has-background:not(.has-background-background-color).has-link-color a:not(.wp-block-button__link) {
 	color: var(--wp--style--color--link, var(--color-foreground));
 }
 
-.has-background:not(.has-background-background-color) .has-link-color a:hover, .has-background:not(.has-background-background-color) .has-link-color a:focus,
-.has-background:not(.has-background-background-color).has-link-color a:hover,
-.has-background:not(.has-background-background-color).has-link-color a:focus {
+.has-background:not(.has-background-background-color) .has-link-color a:not(.wp-block-button__link):hover, .has-background:not(.has-background-background-color) .has-link-color a:not(.wp-block-button__link):focus,
+.has-background:not(.has-background-background-color).has-link-color a:not(.wp-block-button__link):hover,
+.has-background:not(.has-background-background-color).has-link-color a:not(.wp-block-button__link):focus {
 	border-bottom-color: transparent;
 	color: var(--color-background);
 	background: var(--color-foreground);
@@ -1815,36 +1815,46 @@ pre.wp-block-verse {
 }
 
 /* Custom background colors */
-.has-primary-background-color[class] {
-	background-color: var(--color-1);
+.has-primary-background-color[class]:not(.has-text-color),
+.has-secondary-background-color[class]:not(.has-text-color),
+.has-tertiary-background-color[class]:not(.has-text-color),
+.has-quaternary-background-color[class]:not(.has-text-color) {
+	color: var(--color-5);
 }
 
-.has-primary-background-color[class]:not(.has-text-color) {
-	color: var(--color-5);
+.has-primary-background-color[class]:not(.has-link-color) a:not(.wp-block-button__link),
+.has-secondary-background-color[class]:not(.has-link-color) a:not(.wp-block-button__link),
+.has-tertiary-background-color[class]:not(.has-link-color) a:not(.wp-block-button__link),
+.has-quaternary-background-color[class]:not(.has-link-color) a:not(.wp-block-button__link) {
+	color: var(--wp--style--color--link, var(--color-5));
+}
+
+.has-primary-background-color[class]:not(.has-link-color) a:not(.wp-block-button__link):hover, .has-primary-background-color[class]:not(.has-link-color) a:not(.wp-block-button__link):focus,
+.has-secondary-background-color[class]:not(.has-link-color) a:not(.wp-block-button__link):hover,
+.has-secondary-background-color[class]:not(.has-link-color) a:not(.wp-block-button__link):focus,
+.has-tertiary-background-color[class]:not(.has-link-color) a:not(.wp-block-button__link):hover,
+.has-tertiary-background-color[class]:not(.has-link-color) a:not(.wp-block-button__link):focus,
+.has-quaternary-background-color[class]:not(.has-link-color) a:not(.wp-block-button__link):hover,
+.has-quaternary-background-color[class]:not(.has-link-color) a:not(.wp-block-button__link):focus {
+	color: var(--color-1);
+	background: var(--color-5);
+	box-shadow: 0 -0.0625rem 0 0.5em var(--color-5);
+}
+
+.has-primary-background-color[class] {
+	background-color: var(--color-1);
 }
 
 .has-secondary-background-color[class] {
 	background-color: var(--color-2);
 }
 
-.has-secondary-background-color[class]:not(.has-text-color) {
-	color: var(--color-5);
-}
-
 .has-tertiary-background-color[class] {
 	background-color: var(--color-3);
 }
 
-.has-tertiary-background-color[class]:not(.has-text-color) {
-	color: var(--color-5);
-}
-
 .has-quaternary-background-color[class] {
 	background-color: var(--color-4);
-}
-
-.has-quaternary-background-color[class]:not(.has-text-color) {
-	color: var(--color-5);
 }
 
 .has-background-background-color[class] {

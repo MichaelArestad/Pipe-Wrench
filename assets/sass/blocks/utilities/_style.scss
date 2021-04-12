@@ -176,7 +176,7 @@
 	}
 
 	&:not(.has-link-color) {
-		a {
+		a:not(.wp-block-button__link) {
 			color: var( --wp--style--color--link, var(--color-5) );
 	
 			&:hover,
@@ -210,6 +210,19 @@
 
 	&:not(.has-text-color) {
 		color: var(--color-1);
+	}
+
+	&:not(.has-link-color) {
+		a:not(.wp-block-button__link) {
+			color: var( --wp--style--color--link, var(--color-1) );
+	
+			&:hover,
+			&:focus {
+				color: var(--color-5);
+				background: var(--color-1);
+				box-shadow: 0 rem(-1px) 0 .5em var(--color-1);
+			}
+		}
 	}
 }
 
