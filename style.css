@@ -1504,6 +1504,7 @@ h4 a, .h4 a,
 h5 a, .h5 a,
 h6 a, .h6 a {
 	border: 0;
+	text-decoration: underline;
 }
 
 h1, .h1 {
@@ -3735,6 +3736,7 @@ nav a {
 .entry-title a,
 .editor-post-title__block .editor-post-title__input a {
 	border: 0;
+	text-decoration: none;
 }
 
 /**

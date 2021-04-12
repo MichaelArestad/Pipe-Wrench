@@ -760,6 +760,7 @@ input[type="submit"]:not(.has-text-color):focus,
 .wp-block-heading h5 a, .wp-block-heading .h5 a,
 .wp-block-heading h6 a, .wp-block-heading .h6 a {
 	border: 0;
+	text-decoration: underline;
 }
 
 .wp-block-heading h1, .wp-block-heading .h1 {
@@ -891,6 +892,7 @@ h4 a, .h4 a,
 h5 a, .h5 a,
 h6 a, .h6 a {
 	border: 0;
+	text-decoration: underline;
 }
 
 h1, .h1 {
@@ -2060,6 +2062,7 @@ pre.wp-block-verse {
 .entry-title a,
 .editor-post-title__block .editor-post-title__input a {
 	border: 0;
+	text-decoration: none;
 }
 
 /**
