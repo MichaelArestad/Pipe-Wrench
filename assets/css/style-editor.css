@@ -565,11 +565,25 @@ input[type="submit"]:not(.has-text-color):focus,
 .wp-block-cover,
 .wp-block-cover-image {
 	background-color: var(--color-foreground);
-	min-height: 40vh;
+	min-height: 20vh;
 	margin-top: inherit;
 	margin-bottom: inherit;
 	/* default & custom background-color */
 	/* Treating H2 separately to account for legacy /core styles */
+}
+
+@media (min-width: 480px) {
+	.wp-block-cover,
+	.wp-block-cover-image {
+		min-height: 30vh;
+	}
+}
+
+@media (min-width: 960px) {
+	.wp-block-cover,
+	.wp-block-cover-image {
+		min-height: 40vh;
+	}
 }
 
 .wp-block-cover .wp-block-cover__inner-container,

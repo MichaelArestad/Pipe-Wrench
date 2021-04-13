@@ -5,9 +5,17 @@
 	}
 
 	background-color: var(--color-foreground);
-	min-height: 40vh;
+	min-height: 20vh;
 	margin-top: inherit;
 	margin-bottom: inherit;
+	
+	@include break-xs {
+		min-height: 30vh;
+	}
+
+	@include break-l {
+		min-height: 40vh;
+	}
 
 	.wp-block-cover__inner-container,
 	.wp-block-cover-image-text,
