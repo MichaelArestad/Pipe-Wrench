@@ -1,4 +1,5 @@
 .footer-blog-and-widgets {
+	clear: both;
 	// align-items: stretch;
 	border: var(--page-margin) solid var(--color-5);
 
@@ -18,9 +19,9 @@
 		max-width: none;
 		padding: var(--page-margin);
 	}
-	.tiny-mega-blog + .search-form {
-		border-top: var(--page-margin) solid var(--color-5);
-	}
+	// .tiny-mega-blog + .search-form {
+	// 	border-top: var(--page-margin) solid var(--color-5);
+	// }
 }
 
 
