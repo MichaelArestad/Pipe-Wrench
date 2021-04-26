@@ -4400,6 +4400,10 @@ nav a {
 	width: 100%;
 }
 
+.issue-number .widget:first-of-type {
+	margin-top: 0;
+}
+
 /* Utilities */
 img#wpstats {
 	position: absolute !important;
