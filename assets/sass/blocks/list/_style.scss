@@ -41,3 +41,20 @@ dd {
 	margin: 0;
 	padding-left: calc(2 * #{rem(40px)});
 }
+
+.block-editor-block-list__block,
+ {
+	a {
+		text-decoration: none;
+		border-bottom: 1px solid currentColor;
+		transition: all .1s ease-in-out;
+
+		&:hover,
+		&:focus {
+			border-bottom-color: transparent;
+			color: var(--color-background);
+			background: var(--color-foreground);
+			box-shadow: 0 rem(-1px) 0 .5em var(--color-foreground);
+		}
+	}
+}

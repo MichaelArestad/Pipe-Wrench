@@ -2,14 +2,32 @@
  * Entry Content
  */
 
-// .entry-content,
-// .entry-summary {
-// 	font-family: var(--entry-content--font-family);
-// }
- 
-.entry-content {
+.entry-content,
+.entry-summary {
 	p {
 		word-wrap: break-word;
+
+		a {
+			text-decoration: none;
+		}
+	}
+
+	li,
+	cite,
+	figcaption {
+		a {
+			text-decoration: none;
+			border-bottom: 1px solid currentColor;
+			transition: all .1s ease-in-out;
+	
+			&:hover,
+			&:focus {
+				border-bottom-color: transparent;
+				color: var(--color-background);
+				background: var(--color-foreground);
+				box-shadow: 0 rem(-1px) 0 .5em var(--color-foreground);
+			}
+		}
 	}
 
 	.more-link {
@@ -42,11 +60,6 @@
 		}
 	}
 
-	// Page links
-	// .page-links a {
-
-	// }
-
 	// Classic editor audio embeds.
 	.wp-audio-shortcode {
 		@extend %responsive-aligndefault-width;
@@ -70,4 +83,3 @@
 .entry-attachment {
 	text-align: center;
 }
- 

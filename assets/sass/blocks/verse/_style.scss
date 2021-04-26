@@ -1,4 +1,18 @@
 pre.wp-block-verse {
 	color: var(--color-foreground);
 	padding: 0;
+
+	a {
+		text-decoration: none;
+		border-bottom: 1px solid currentColor;
+		transition: all .1s ease-in-out;
+
+		&:hover,
+		&:focus {
+			border-bottom-color: transparent;
+			color: var(--color-background);
+			background: var(--color-foreground);
+			box-shadow: 0 rem(-1px) 0 .5em var(--color-foreground);
+		}
+	}
 }

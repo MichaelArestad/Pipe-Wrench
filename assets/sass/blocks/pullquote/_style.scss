@@ -1,4 +1,4 @@
-.wp-block-pullquote {
+.wp-block-pullquote.wp-block-pullquote {
 	padding: calc( 2 * #{rem(16px)} ) 0;
 	text-align: left;
 	color: var(--color-foreground);
@@ -20,7 +20,8 @@
 	}
 
 	a {
-		color: currentColor;
+		border: 0;
+		text-decoration: underline;
 	}
 
 	.wp-block-pullquote__citation,
@@ -55,11 +56,6 @@
 			@include  break-xs {
 				font-size: var(--font-size-md);
 			}
-		}
-
-		a {
-			border: 0;
-			text-decoration: underline;
 		}
 	}
 
