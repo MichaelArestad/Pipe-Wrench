@@ -1,6 +1,16 @@
+div.wp-block-image figure {
+	max-width: var(--responsive--aligndefault-width);
+}
 .wp-block-image {
 	text-align: center;
-	max-width: none !important;
+
+	// figure {
+	// 	@extend %responsive-aligndefault-width;
+	// }
+
+	// &.alignwide figure {
+	// 	@extend %responsive-alignwide-width;
+	// }
 
 	&.alignfull {
 		@extend %responsive-alignfuller-width;
