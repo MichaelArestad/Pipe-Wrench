@@ -1,3 +1,5 @@
+
+.editor-styles-wrapper .wp-block-pullquote.wp-block-pullquote,
 .wp-block-pullquote.wp-block-pullquote {
 	padding: calc( 2 * #{rem(16px)} ) 0;
 	text-align: left;
@@ -36,6 +38,8 @@
 	/**
 	 * Block Options
 	 */
+	.wp-block[data-align="left"] &,
+	.wp-block[data-align="right"] &,
 	&.alignleft,
 	&.alignright {
 		padding: rem(16px);
@@ -57,6 +61,11 @@
 				font-size: var(--font-size-md);
 			}
 		}
+	}
+
+	.wp-block[data-align="left"] &,
+	.wp-block[data-align="right"] & {
+		display: block;
 	}
 
 	.entry-content &.alignleft {

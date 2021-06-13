@@ -193,6 +193,8 @@
 	// Gutenberg injects a rule that limits the max width of .wp-block to 580px
 	// This line overrides it to use the responsive spacing rules for default width content
 	max-width: var(--responsive--aligndefault-width);
+	margin-left: auto;
+	margin-right: auto;
 
 	// Use the theme's max-width for wide alignment.
 	&[data-align="wide"],
@@ -219,12 +221,117 @@
 // 	}
 // }
 
+// .wp-block[data-align="left"],
 // .alignleft {
+// 	float: left;
 // 	margin: 0;
-// 	margin-right: var(--global--spacing-horizontal);
+// 	margin-right: rem(24px);
 // }
 
+// .wp-block[data-align="right"],
 // .alignright {
+// 	float: right;
 // 	margin: 0;
-// 	margin-left: var(--global--spacing-horizontal);
+// 	margin-left: rem(24px);
 // }
+
+// .entry-content > .alignleft {
+// 	max-width: var(--responsive--aligndefault-width);
+// }
+
+// @include break-xs {
+// 	.alignleft {
+
+// 		/*rtl:ignore*/
+// 		float: left;
+
+// 		/*rtl:ignore*/
+// 		margin-right: rem(24px);
+// 		margin-bottom: rem(40px);
+// 	}
+
+// 	.entry-content > .alignleft {
+// 		max-width: var(--responsive--alignrightleft-width);
+// 		/*rtl:ignore*/
+// 		margin-left:  calc( 50% - var(--responsive--alignrightleft-width));
+// 		/*rtl:ignore*/
+// 		margin-right: rem(24px);
+// 	}
+// }
+
+/**
+* .alignleft
+*/
+.wp-block[data-align="left"] {
+	/*rtl:ignore*/
+	display: block;
+	margin-top: 0;
+	margin-bottom: rem(40px);
+	height: auto;
+}
+ 
+
+// Targeting the .entry-content class is necessary to ensure these styles
+// only apply when the block isn't nested.
+
+.block-editor-block-list__layout > .wp-block[data-align="left"] {
+	max-width: var(--responsive--aligndefault-width);
+}
+
+@include break-xs {
+
+	.wp-block[data-align="left"] {
+
+		/*rtl:ignore*/
+		float: left;
+
+		/*rtl:ignore*/
+		margin-right: rem(24px);
+		margin-bottom: rem(40px);
+	}
+
+	.block-editor-block-list__layout > .wp-block[data-align="left"] {
+		max-width: var(--responsive--alignrightleft-width);
+		/*rtl:ignore*/
+		margin-left:  0;
+		/*rtl:ignore*/
+		margin-right: rem(24px);
+	}
+}
+
+
+/**
+ * .alignright
+ */
+ .wp-block[data-align="right"] {
+	display: block;
+	margin-top: 0;
+	margin-bottom: rem(40px);
+	height: auto;
+}
+
+// Targeting the .entry-content class is necessary to ensure these styles
+// only apply when the block isn't nested.
+.block-editor-block-list__layout > .wp-block[data-align="right"] {
+	max-width: var(--responsive--aligndefault-width);
+}
+
+@include break-xs {
+
+	.wp-block[data-align="right"] {
+
+		/*rtl:ignore*/
+		float: right;
+
+		/*rtl:ignore*/
+		margin-left: rem(24px);
+	}
+
+	.block-editor-block-list__layout > .wp-block[data-align="right"] {
+		max-width: var(--responsive--alignrightleft-width);
+		/*rtl:ignore*/
+		margin-left: rem(24px);
+		/*rtl:ignore*/
+		margin-right: 0;
+	}
+}
