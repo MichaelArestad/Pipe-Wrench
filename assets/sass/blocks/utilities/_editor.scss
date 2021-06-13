@@ -1,3 +1,10 @@
+/* No underline */
+.no-underline,
+.no-underline a {
+	text-decoration: none;
+	border: 0;
+}
+
 // Editor UI font styles
 .wp-block.block-editor-default-block-appender > textarea {
 	font-family: var(--font-family-serif);

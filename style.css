@@ -2550,6 +2550,13 @@ pre.wp-block-verse a:hover, pre.wp-block-verse a:focus {
 	vertical-align: middle;
 }
 
+/* No underline */
+.no-underline,
+.no-underline a {
+	text-decoration: none;
+	border: 0;
+}
+
 /* Block Alignments */
 /**
  * These selectors set the default max width for content appearing inside a post or page.

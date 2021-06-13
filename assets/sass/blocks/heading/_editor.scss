@@ -1,5 +1,9 @@
-.wp-block-heading {
+.wp-block-heading,
+.editor-styles-wrapper {
 	@import "style";
+	h2 a  {
+		background: red !important;
+	}
 }
 
 @import "style";

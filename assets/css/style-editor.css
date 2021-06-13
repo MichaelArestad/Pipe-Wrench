@@ -796,7 +796,19 @@ input[type="submit"]:not(.has-text-color):focus,
 .wp-block-heading h3, .wp-block-heading .h3,
 .wp-block-heading h4, .wp-block-heading .h4,
 .wp-block-heading h5, .wp-block-heading .h5,
-.wp-block-heading h6, .wp-block-heading .h6 {
+.wp-block-heading h6, .wp-block-heading .h6,
+.editor-styles-wrapper h1,
+.editor-styles-wrapper .h1,
+.editor-styles-wrapper h2,
+.editor-styles-wrapper .h2,
+.editor-styles-wrapper h3,
+.editor-styles-wrapper .h3,
+.editor-styles-wrapper h4,
+.editor-styles-wrapper .h4,
+.editor-styles-wrapper h5,
+.editor-styles-wrapper .h5,
+.editor-styles-wrapper h6,
+.editor-styles-wrapper .h6 {
 	clear: both;
 	font-family: var(--font-family-display);
 	font-weight: 400;
@@ -808,7 +820,19 @@ input[type="submit"]:not(.has-text-color):focus,
 .wp-block-heading h3 strong, .wp-block-heading .h3 strong,
 .wp-block-heading h4 strong, .wp-block-heading .h4 strong,
 .wp-block-heading h5 strong, .wp-block-heading .h5 strong,
-.wp-block-heading h6 strong, .wp-block-heading .h6 strong {
+.wp-block-heading h6 strong, .wp-block-heading .h6 strong,
+.editor-styles-wrapper h1 strong,
+.editor-styles-wrapper .h1 strong,
+.editor-styles-wrapper h2 strong,
+.editor-styles-wrapper .h2 strong,
+.editor-styles-wrapper h3 strong,
+.editor-styles-wrapper .h3 strong,
+.editor-styles-wrapper h4 strong,
+.editor-styles-wrapper .h4 strong,
+.editor-styles-wrapper h5 strong,
+.editor-styles-wrapper .h5 strong,
+.editor-styles-wrapper h6 strong,
+.editor-styles-wrapper .h6 strong {
 	font-weight: 600;
 }
 
@@ -817,110 +841,163 @@ input[type="submit"]:not(.has-text-color):focus,
 .wp-block-heading h3 a, .wp-block-heading .h3 a,
 .wp-block-heading h4 a, .wp-block-heading .h4 a,
 .wp-block-heading h5 a, .wp-block-heading .h5 a,
-.wp-block-heading h6 a, .wp-block-heading .h6 a {
+.wp-block-heading h6 a, .wp-block-heading .h6 a,
+.editor-styles-wrapper h1 a,
+.editor-styles-wrapper .h1 a,
+.editor-styles-wrapper h2 a,
+.editor-styles-wrapper .h2 a,
+.editor-styles-wrapper h3 a,
+.editor-styles-wrapper .h3 a,
+.editor-styles-wrapper h4 a,
+.editor-styles-wrapper .h4 a,
+.editor-styles-wrapper h5 a,
+.editor-styles-wrapper .h5 a,
+.editor-styles-wrapper h6 a,
+.editor-styles-wrapper .h6 a {
 	border: 0;
 	text-decoration: underline;
 }
 
-.wp-block-heading h1, .wp-block-heading .h1 {
+.wp-block-heading h1, .wp-block-heading .h1,
+.editor-styles-wrapper h1,
+.editor-styles-wrapper .h1 {
 	font-size: var(--font-size-md);
 }
 
 @media (min-width: 480px) {
-	.wp-block-heading h1, .wp-block-heading .h1 {
+	.wp-block-heading h1, .wp-block-heading .h1,
+	.editor-styles-wrapper h1,
+	.editor-styles-wrapper .h1 {
 		font-size: var(--font-size-xl);
 	}
 }
 
 @media (min-width: 960px) {
-	.wp-block-heading h1, .wp-block-heading .h1 {
+	.wp-block-heading h1, .wp-block-heading .h1,
+	.editor-styles-wrapper h1,
+	.editor-styles-wrapper .h1 {
 		font-size: var(--font-size-xxxl);
 	}
 }
 
-.wp-block-heading h2, .wp-block-heading .h2 {
+.wp-block-heading h2, .wp-block-heading .h2,
+.editor-styles-wrapper h2,
+.editor-styles-wrapper .h2 {
 	font-size: var(--font-size-md);
 	font-weight: 300;
 }
 
 @media (min-width: 480px) {
-	.wp-block-heading h2, .wp-block-heading .h2 {
+	.wp-block-heading h2, .wp-block-heading .h2,
+	.editor-styles-wrapper h2,
+	.editor-styles-wrapper .h2 {
 		font-size: 2.25rem;
 	}
 }
 
 @media (min-width: 960px) {
-	.wp-block-heading h2, .wp-block-heading .h2 {
+	.wp-block-heading h2, .wp-block-heading .h2,
+	.editor-styles-wrapper h2,
+	.editor-styles-wrapper .h2 {
 		font-size: var(--font-size-xxl);
 	}
 }
 
-.wp-block-heading h3, .wp-block-heading .h3 {
+.wp-block-heading h3, .wp-block-heading .h3,
+.editor-styles-wrapper h3,
+.editor-styles-wrapper .h3 {
 	font-size: 1.125rem;
 }
 
 @media (min-width: 480px) {
-	.wp-block-heading h3, .wp-block-heading .h3 {
+	.wp-block-heading h3, .wp-block-heading .h3,
+	.editor-styles-wrapper h3,
+	.editor-styles-wrapper .h3 {
 		font-size: var(--font-size-md);
 	}
 }
 
 @media (min-width: 960px) {
-	.wp-block-heading h3, .wp-block-heading .h3 {
+	.wp-block-heading h3, .wp-block-heading .h3,
+	.editor-styles-wrapper h3,
+	.editor-styles-wrapper .h3 {
 		font-size: var(--font-size-xl);
 	}
 }
 
-.wp-block-heading h4, .wp-block-heading .h4 {
+.wp-block-heading h4, .wp-block-heading .h4,
+.editor-styles-wrapper h4,
+.editor-styles-wrapper .h4 {
 	font-size: var(--font-size-sm);
 	line-height: 1.3;
 }
 
 @media (min-width: 480px) {
-	.wp-block-heading h4, .wp-block-heading .h4 {
+	.wp-block-heading h4, .wp-block-heading .h4,
+	.editor-styles-wrapper h4,
+	.editor-styles-wrapper .h4 {
 		font-size: 1.25rem;
 	}
 }
 
 @media (min-width: 960px) {
-	.wp-block-heading h4, .wp-block-heading .h4 {
+	.wp-block-heading h4, .wp-block-heading .h4,
+	.editor-styles-wrapper h4,
+	.editor-styles-wrapper .h4 {
 		font-size: var(--font-size-lg);
 	}
 }
 
-.wp-block-heading h5, .wp-block-heading .h5 {
+.wp-block-heading h5, .wp-block-heading .h5,
+.editor-styles-wrapper h5,
+.editor-styles-wrapper .h5 {
 	font-size: var(--font-size-xs);
 	line-height: 1.3;
 }
 
 @media (min-width: 480px) {
-	.wp-block-heading h5, .wp-block-heading .h5 {
+	.wp-block-heading h5, .wp-block-heading .h5,
+	.editor-styles-wrapper h5,
+	.editor-styles-wrapper .h5 {
 		font-size: var(--font-size-sm);
 	}
 }
 
 @media (min-width: 960px) {
-	.wp-block-heading h5, .wp-block-heading .h5 {
+	.wp-block-heading h5, .wp-block-heading .h5,
+	.editor-styles-wrapper h5,
+	.editor-styles-wrapper .h5 {
 		font-size: var(--font-size-md);
 	}
 }
 
-.wp-block-heading h6, .wp-block-heading .h6 {
+.wp-block-heading h6, .wp-block-heading .h6,
+.editor-styles-wrapper h6,
+.editor-styles-wrapper .h6 {
 	font-size: var(--font-size-xs);
 	line-height: 1.3;
 	font-weight: 300;
 }
 
 @media (min-width: 480px) {
-	.wp-block-heading h6, .wp-block-heading .h6 {
+	.wp-block-heading h6, .wp-block-heading .h6,
+	.editor-styles-wrapper h6,
+	.editor-styles-wrapper .h6 {
 		font-size: var(--font-size-sm);
 	}
 }
 
 @media (min-width: 960px) {
-	.wp-block-heading h6, .wp-block-heading .h6 {
+	.wp-block-heading h6, .wp-block-heading .h6,
+	.editor-styles-wrapper h6,
+	.editor-styles-wrapper .h6 {
 		font-weight: 600;
 	}
+}
+
+.wp-block-heading h2 a,
+.editor-styles-wrapper h2 a {
+	background: red !important;
 }
 
 h1, .h1,
@@ -1864,6 +1941,13 @@ pre.wp-block-verse a:hover, pre.wp-block-verse a:focus {
 	max-width: unset;
 	width: 100%;
 	vertical-align: middle;
+}
+
+/* No underline */
+.no-underline,
+.no-underline a {
+	text-decoration: none;
+	border: 0;
 }
 
 .wp-block.block-editor-default-block-appender > textarea {

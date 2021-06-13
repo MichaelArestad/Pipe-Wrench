@@ -1,3 +1,10 @@
+/* No underline */
+.no-underline,
+.no-underline a {
+	text-decoration: none;
+	border: 0;
+}
+
 /* Block Alignments */
 
 /**
