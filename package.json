@@ -40,5 +40,8 @@
     "build": "run-s \"build:*\"",
     "watch": "chokidar \"**/*.scss\" -c \"npm run build\" --initial",
     "child-theme": "sh ../theme-dev-utils/build-child-theme.sh"
+  },
+  "dependencies": {
+    "node-gyp": "^8.4.1"
   }
 }
